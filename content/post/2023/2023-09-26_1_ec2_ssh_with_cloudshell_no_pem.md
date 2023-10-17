@@ -22,7 +22,7 @@ CSV 파일은 심지어 패스워드도 안 걸리더라구요.
 위 2개 글을 참고했습니다.
 
 
-## EC2 인스턴스 생성
+## ⭐EC2 인스턴스 생성
 
 **먼저 EC2 인스턴스를 생성해줘야 합니다.**  
 
@@ -37,7 +37,7 @@ EC2 메뉴를 찾아들어가 다음과 같이 진행해줍니다.
 보통은 키 페어를 생성해주지만, 이러면 로컬에 pem 파일이 자동적으로 다운로드되므로 로컬에 흔적이 남게 됩니다.
 AWS 내에서만 처리해주려면 다른 방법으로 진행해야 합니다.
 
-## EC2 Instance Connect를 사용하여 연결
+## ⭐EC2 Instance Connect를 사용하여 연결
 
 [https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html](https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html)  
 ▲ AWS Document 공식 자료 참고
@@ -59,7 +59,7 @@ passwd
 #passwd: password updated successfully라는 문구가 나오면 성공
 ```
 
-## Cloudshell 실행
+## ⭐Cloudshell 실행
 
 이제 웹브라우저에서 새 탭을 열어 AWS 관리콘솔 중 아무 페이지나 들어가보면 상단에 콘솔 같은 아이콘이 보입니다.  
 클릭하여 cloudshell을 열어주고 전체 화면으로 키워주면 cloudshell이 새 탭으로 열립니다.  
@@ -75,7 +75,7 @@ cat id_rsa.pub
 마지막 명령어를 치면 공개키 파일의 내용이 보일겁니다.  
 Ctrl+C로 복사해두고, **EC2 인스턴스 콘솔 창**으로 돌아가서 다음과 같이 입력해줍니다.  
 
-## authorized_keys 파일 설정
+## ⭐authorized_keys 파일 설정
 
 ```bash
 cd .ssh
@@ -83,13 +83,13 @@ vi authorized_keys
 ```
 이제 아까 Ctrl+C로 복사해뒀던 공개키 파일의 내용을 Ctrl+V로 붙여넣고 저장해줍니다.
 
-## SSH 연결
+## ⭐SSH 연결
 
 EC2 -> 인스턴스 -> 연결  -> SSH 클라이언트 메뉴에 들어가,  
 맨 아래에 ssh -i "id_rsa" 어쩌고 하는 명령줄을 복사해서 cloudshell에서 그대로 실행합니다.  
 암호 입력 없이도 SSH 접속이 성공적으로 되는 것을 확인하실 수 있습니다.
 
-## 그 외
+## ⭐그 외
 
 지금까지는 Cloudshell을 이용한 방법을 알려드렸는데요,  
 방법을 더 찾아보니 AWS Session Manager를 사용하는 방법도 있습니다.  

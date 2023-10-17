@@ -14,7 +14,7 @@ published : false
 우분투와 Rocky 리눅스에서 Tomcat을 로컬로 설치해보았습니다.
 
 
-## OpenJDK 설치
+## ⭐OpenJDK 설치
 
 ```bash
 sudo su
@@ -23,7 +23,7 @@ tar -xzvf openjdk-21_linux-x64_bin.tar.gz -C /
 ```
 
 
-## 자바 환경설정
+## ⭐자바 환경설정
 
 ```bash
 export JAVA_HOME=/jdk-21
@@ -33,7 +33,7 @@ javac -version
 ```
 
 
-## tomcat용 그룹/사용자 생성
+## ⭐tomcat용 그룹/사용자 생성
 
 ```bash
 groupadd -g 10000 tomcat
@@ -41,7 +41,7 @@ useradd -u 10000 -g 10000 -d /home/tomcat -s /bin/false -mk /etc/skel tomcat
 ```
   
   
-## tomcat 설치 및 실행
+## ⭐tomcat 설치 및 실행
 
 ```bash
 #여기서 ubuntu는 사용자명으로, 사람마다 다름.

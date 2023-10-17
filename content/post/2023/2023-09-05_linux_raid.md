@@ -10,7 +10,7 @@ tags:
 ---
 Virtualbox를 이용하여 실습해보았습니다.
 
-## Virtualbox에서 디스크 추가
+## ⭐Virtualbox에서 디스크 추가
 [https://www.bearpooh.com/190](https://www.bearpooh.com/190)
 
 디스크 추가하는 법은 위 글을 참고하면 됩니다.
@@ -18,7 +18,7 @@ Virtualbox를 이용하여 실습해보았습니다.
 저는 RAID 5 기준으로 진행하였기에 vdi 유형으로 디스크를 3개 추가해주었습니다.
 
 
-## 디스크 파티션 확인
+## ⭐디스크 파티션 확인
 
 ```bash
 sudo fdisk -l
@@ -27,7 +27,7 @@ sudo fdisk -l
 위 명령어를 실행하면 /dev/sdb, /dev/sdc, /dev/sdd 같은 이름으로 디스크가 등록된 걸 볼 수 있습니다.
 
 
-## 디스크 파티션 만들기
+## ⭐디스크 파티션 만들기
 
 저는 평소에 루트 권한을 요구하는 명령어를 짧게 치기 위해서 sudo su를 먼저 해주는데,  
 RAID 구성을 할 때 그러면 디스크에 접근하려고 할 때 패스워드를 요구하더라구요.  
@@ -50,7 +50,7 @@ w : write. 변경 내용 기록.
 이 과정을 sdc, sdd에도 똑같이 반복해줍니다.
 
 
-## mdadm 설치
+## ⭐mdadm 설치
 
 ```bash
 # 우분투는 apt, 레드햇 계열은 yum 사용.
@@ -59,7 +59,7 @@ sudo yum install mdadm -y
 ```
 
 
-## RAID 설정
+## ⭐RAID 설정
 
 ```bash
 sudo mdadm --create /dev/md5 --level=5 --raid-devices=3 /dev/sdb /dev/sdc /dev/sdd
@@ -67,14 +67,14 @@ y
 ```
 
 
-## RAID 디스크 포맷
+## ⭐RAID 디스크 포맷
 
 ```bash
 sudo mkfs.ext4 /dev/md5
 ```
   
   
-## 자동마운트 설정
+## ⭐자동마운트 설정
 
 ```bash
 sudo blkid /dev/md5
