@@ -9,6 +9,9 @@ tags:
     - Virtualbox
     - Kubernetes
 ---
+
+**긴급 글 복구 중**
+
 쿠버네티스 설치하실 정도면 어느 정도는 기본기가 있으신 분이라고 가정하고 그냥 설명하겠습니다.
 
 ## Virtualbox에 Ubuntu 설치
