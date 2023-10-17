@@ -10,7 +10,8 @@ tags:
     - Virtualbox
 ---
 
-**글 복구 중입니다**
+> [!WARNING]  
+> 글 복구 중입니다
 
 ## ⭐SSH 설치
 
