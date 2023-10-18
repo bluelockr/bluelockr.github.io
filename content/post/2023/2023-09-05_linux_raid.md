@@ -92,12 +92,14 @@ sudo vi /etc/fstab
 ```
 /etc/fstab이 vi편집기로 열리게 됩니다.(vi대신 gedit같은 GUI텍스트편집기를 사용해도 무방합니다.)
 
-맨 밑에 다음과 같이 추가해주세요.
+맨 밑에 다음과 같이 추가해주세요.  
+uuid명에는 아까 Ctrl+Shift+C로 복사해넣었던 UUID를 Ctrl+Shift+V로 붙여넣으면 됩니다.
 
 ```bash
 /dev/disk/by-uuid/uuid명 /mnt/md5 auto nosuid,nodev,nofail,x-gvfs-show 0 0
 ```
-uuid명에는 아까 Ctrl+Shift+C로 복사해넣었던 UUID를 Ctrl+Shift+V로 붙여넣으면 됩니다.
+
+다 됐으면 재부팅합니다.
 
 ```bash
 sudo reboot

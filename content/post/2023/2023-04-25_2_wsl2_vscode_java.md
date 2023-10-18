@@ -98,22 +98,16 @@ sudo apt install openjdk-17-jdk openjdk-17-jre -y
 wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add -   
 sudo add-apt-repository 'deb https://apt.corretto.aws stable main'
 sudo apt-get update; sudo apt-get install -y java-17-amazon-corretto-jdk
-```
 
-
-설치가 완료되면 다음 명령어를 실행하여 제대로 설치되었는지 확인합니다.
-
-```bash
 java --version
 javac --version
-```
 
-다음 명령어를 입력하여 VSCODE를 실행합니다.
-
-```bash
 code .
 ```
 
+이렇게 하면 VSCODE가 열립니다.
+
+소스 코드 파일을 생성하고 내용을 작성한 뒤,  
 VSCODE에서 Extension 중에 **Extension Pack for Java**를 설치합니다.
 
 이제 자바 코드를 작성하고 실행할 수 있습니다.
