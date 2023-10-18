@@ -214,7 +214,7 @@ swapoff -a
 여기에 pod network addon을 설치해주어야 합니다.
 저는 Weave-net을 사용해주었습니다.
 
-[https://kubernetes.io/docs/concepts/cluster-administration/addons/#networking-and-network-policy](https://kubernetes.io/docs/concepts/cluster-administration/addons/#networking-and-network-policy)
+[https://kubernetes.io/docs/concepts/cluster-administration/addons/#networking-and-network-policy](https://kubernetes.io/docs/concepts/cluster-administration/addons/#networking-and-network-policy)  
 🔼Pod Network Addon 목록
 
 [https://www.weave.works/docs/net/latest/kubernetes/kube-addon/](https://www.weave.works/docs/net/latest/kubernetes/kube-addon/)  
@@ -241,6 +241,6 @@ kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/
 kubectl get nodes
 ```
 
-![Alt text](/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/4.png)  
+![Alt text](/../../images/2023/2023-09-21_2_ubuntu_kube/4.png)  
 
 ready 상태로 변환되기까지 시간이 좀 걸립니다. 기다려주세요.
