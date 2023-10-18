@@ -15,7 +15,7 @@ tags:
 
 다른 블로그의 글을 참조하시길 바랍니다.
 
-[https://mainia.tistory.com/2379](https://mainia.tistory.com/2379)
+[https://mainia.tistory.com/2379](https://mainia.tistory.com/2379)  
 🔼버추얼박스(VirtualBox) 이용해서 우분투(Ubuntu) 설치하기
 
 ## ⭐네트워크 설정
@@ -214,7 +214,7 @@ swapoff -a
 여기에 pod network addon을 설치해주어야 합니다.
 저는 Weave-net을 사용해주었습니다.
 
-[https://www.weave.works/docs/net/latest/kubernetes/kube-addon/](https://www.weave.works/docs/net/latest/kubernetes/kube-addon/)
+[https://www.weave.works/docs/net/latest/kubernetes/kube-addon/](https://www.weave.works/docs/net/latest/kubernetes/kube-addon/)  
 🔼Weave-net Pod Network 설치하는 법
 
 일반 사용자 모드에서 다음 명령어를 수행합니다.
@@ -228,5 +228,7 @@ kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/we
 ```bash
 kubectl get nodes
 ```
+
+![Alt text](/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/4.png)  
 
 ready 상태로 변환되기까지 시간이 좀 걸립니다. 기다려주세요.
