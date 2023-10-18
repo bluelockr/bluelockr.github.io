@@ -214,16 +214,28 @@ swapoff -a
 여기에 pod network addon을 설치해주어야 합니다.
 저는 Weave-net을 사용해주었습니다.
 
+[https://kubernetes.io/docs/concepts/cluster-administration/addons/#networking-and-network-policy](https://kubernetes.io/docs/concepts/cluster-administration/addons/#networking-and-network-policy)
+🔼Pod Network Addon 목록
+
 [https://www.weave.works/docs/net/latest/kubernetes/kube-addon/](https://www.weave.works/docs/net/latest/kubernetes/kube-addon/)  
 🔼Weave-net Pod Network 설치하는 법
 
 일반 사용자 모드에서 다음 명령어를 수행합니다.
 
+Weave-net, Flannel 중에 하나 선택하면 됩니다.
+
+<span style="color:darkcyan"> **\[Weave-net\]** </span>
 ```bash
 kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
 ```
+
+<span style="color:darkcyan"> **\[Flannel\]** </span>  
+[https://github.com/flannel-io/flannel#deploying-flannel-manually](https://github.com/flannel-io/flannel#deploying-flannel-manually)
+```bash
+kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+```
   
-  이제 제대로 됐는지 확인해봅니다.
+이제 제대로 됐는지 확인해봅니다.
 
 ```bash
 kubectl get nodes
