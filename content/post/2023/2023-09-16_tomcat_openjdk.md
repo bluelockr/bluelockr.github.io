@@ -10,7 +10,6 @@ tags:
     - Tomcat
 published : false
 ---
-
 우분투와 Rocky 리눅스에서 Tomcat을 로컬로 설치해보았습니다.
 
 

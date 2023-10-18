@@ -29,9 +29,9 @@ tags:
 
 ### 💧버추얼박스 자체 네트워크 설정
 
-![Alt text](/../../images/2023/2023-09-21_2_ubuntu_kube/1.png)  
-  
-![Alt text](/../../images/2023/2023-09-21_2_ubuntu_kube/2.png)  
+![Alt text](/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/1.png)  
+
+![Alt text](/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/2.png)  
 
 <span style="background-color:khaki"> **\[NAT Networks\]** </span>  
 **Name : NatNetwork**  
@@ -42,7 +42,7 @@ tags:
 
 ### 💧우분투가 설치된 가상머신(VM) 설정
 
-![Alt text](/../../images/2023/2023-09-21_2_ubuntu_kube/3.png)  
+![Alt text](/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/3.png)  
 
 <span style="background-color:khaki"> **\[어댑터 1\]** </span>  
 **NAT 네트워크**  
@@ -50,7 +50,7 @@ tags:
 
 ### 💧우분투 내부의 IP 설정 
 
-![Alt text](/../../images/2023/2023-09-21_2_ubuntu_kube/4.png)  
+![Alt text](/../../images/2023/2023-09-21_2_ubuntu_kube/1.png)
   
 **IPv4 Method : Manual(수동)**  
 **IP : 192.168.0.10**  
@@ -140,7 +140,7 @@ vi /etc/hosts
   
 ## ⭐worker 노드 IP, 호스트명 설정
 
-![Alt text](/../../images/2023/2023-09-21_2_ubuntu_kube/5.png)  
+![Alt text](/../../images/2023/2023-09-21_2_ubuntu_kube/2.png)  
 
 <span style="color:blueviolet"> **worker 노드를 실행한 뒤 다음과 같이 설정합니다.** </span>  
 **IPv4 Method : Manual**  
@@ -180,7 +180,7 @@ kubeadm init --control-plane-endpoint=master
 
 시간이 오래 걸립니다. 멈춘 거 아니에요ㅋㅋ
 
-![Alt text](/../../images/2023/2023-09-21_2_ubuntu_kube/6.png)  
+![Alt text](/../../images/2023/2023-09-21_2_ubuntu_kube/3.png)  
 
 다 끝나면 **kubeadm join** 어쩌고 하는 내용이 맨 뒤에 나오는데, 이를 복사해줍니다.
 

@@ -9,10 +9,6 @@ tags:
     - Linux
     - Virtualbox
 ---
-
-> [!WARNING]  
-> 글 복구 중입니다
-
 ## ⭐SSH 설치
 
 일단 가상 머신 내에 SSH를 설치해야 합니다.
@@ -71,7 +67,7 @@ sudo systemctl disable firewalld
 ```
 
 
-## 호스트 IP 확인
+## ⭐호스트 IP 확인
  
 CMD창에서 ipconfig로 IP 대역을 확인합니다.
 
@@ -85,50 +81,58 @@ Virtualbox 가상 머신(VM) 안의 IP 주소는 **게스트 주소**라고 합�
 저는 게스트 IP를 **192.168.0.10**으로 설정하기로 하고 진행해보겠습니다.
   
 
-## Virtualbox NAT Network 설정
+## ⭐Virtualbox NAT Network 설정
 
-먼저 Virtualbox를 실행하고, 위와 같이 선택해줍니다.
+![Alt text](/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/1.png)  
 
-그런 뒤 NAT Network 탭을 선택해주면 다음과 같은 화면이 나옵니다.
+![Alt text](/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/2.png)  
 
 **\[General Options\]**  
-이름 : NatNetwork
-IP : 192.168.0.0/24
-Enable DHCP
+이름 : NatNetwork  
+IP : 192.168.0.0/24  
+Enable DHCP  
 
 /24는 255.255.255.0과 같으며, 이는 192.168.0.1~192.168.0.255를 의미합니다.
 
 따라서 192.168.0까지 같으며, Prefix이기 때문에 나머지는 0으로 설정한 겁니다.
 
 만일 CMD로 확인한 내 컴퓨터의 IP(호스트 IP)가 192.168.50.2 였다면, 192.168.50.0 으로 설정하면 됩니다.
+
+![Alt text](/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/3.png)  
   
-  **\[포트포워딩\]**  
-호스트 IP : (공란)
-호스트 포트 : 2222
-게스트 IP : **192.168.0.10**
-게스트 포트 : 22
+**\[포트포워딩\]**  
+호스트 IP : (공란)  
+호스트 포트 : 22  
+게스트 IP : **192.168.0.10**  
+게스트 포트 : 22  
 
-저는 호스트 포트를 2222로 설정해주었습니다만, 22로 해도 상관없습니다.
-2222번 포트는 기본적으로 열려있지 않아서 방화벽 설정을 통해 열어주었습니다.
-
+저는 호스트 포트를 22로 열어줬습니다만 2222번 포트같은 다른 포트로 열어도 됩니다.
+  
+다만 2222번 포트는 기본적으로 열려있지 않아서 방화벽 설정을 통해 열어주어야 합니다.
+  
 Windows에서 방화벽 설정을 통해 포트를 여는 법은 아래 블로그 글을 참고해주세요.
+  
 [https://ansan-survivor.tistory.com/408](https://ansan-survivor.tistory.com/408)
+🔼 포트 방화벽 설정
   
-  
-## 가상머신 네트워크 설정
+## ⭐가상머신 네트워크 설정
+
+![Alt text](/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/4.png)  
 
 **\[어댑터 1\]**  
-네트워크 어댑터 사용하기
-다음에 연결됨 : NAT 네트워크
-이름 : NatNetwork
+네트워크 어댑터 사용하기  
+다음에 연결됨 : NAT 네트워크  
+이름 : NatNetwork  
   
 
-## 게스트 OS IP 설정
+## ⭐게스트 OS IP 설정
 
-IP : **192.168.0.10**
-SM : 255.255.255.0
-GW : 192.168.0.1
-DNS : 8.8.8.8
+![Alt text](/../../images/2023/2023-09-21_2_ubuntu_kube/4.png)  
+
+IP : **192.168.0.10**  
+SM : 255.255.255.0  
+GW : 192.168.0.1  
+DNS : 8.8.8.8  
   
 
 ## ⭐SSH 접속 (일반)
@@ -143,7 +147,9 @@ ssh -p 2222 ubuntu@localhost
 
 ubuntu는 가상머신(VM) 내 운영체제의 user명,
 
-@뒤에 오는 localhost는 주소를 의미합니다. 127.0.0.1과 같이 숫자로 써도 상관없습니다.
+@뒤에 오는 localhost는 주소를 의미합니다.  
+  
+127.0.0.1과 같이 숫자로 써도 상관없습니다.
   
 
 ## ⭐SSH 접속 (RSA 사용)
@@ -154,7 +160,7 @@ SSH 일반 연결까지 가능한 상태여야 합니다.
   
 RSA SSH 접속 시엔 다양한 툴을 사용할 수 있는데, 몇 가지만 설명해보겠습니다.
 
-### Putty Keygen을 사용하여 SSH RSA 접속하는 법
+### 💧Putty Keygen을 사용하여 SSH RSA 접속하는 법
 
 [https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)  
 먼저 위 링크에서 putty를 다운받아 설치합니다.
@@ -186,7 +192,7 @@ vi authorized_keys
 
 이렇게 비밀번호 입력없이 접속에 성공했습니다.
 
-### Git Bash를 사용하여 SSH RSA 접속하는 법
+### 💧Git Bash를 사용하여 SSH RSA 접속하는 법
 
 [https://light-tree.tistory.com/232](https://light-tree.tistory.com/232)
 [https://light-tree.tistory.com/234](https://light-tree.tistory.com/234)
