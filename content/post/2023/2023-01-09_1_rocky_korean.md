@@ -22,3 +22,8 @@ ibus-hangul 또한 Rocky Linux를 설치할 때 언어를 한국어로 설정했
 
 ## Rocky Linux 9 한글 입력 설정
 
+![Alt text](/../../images/2023/2023-01-09_1_rocky_korean/1.png)  
+
+![Alt text](/../../images/2023/2023-01-09_1_rocky_korean/2.png)  
+
+![Alt text](/../../images/2023/2023-01-09_1_rocky_korean/3.png)  

@@ -15,11 +15,14 @@ tags:
 
 쿠버네티스 설치하실 정도면 어느 정도는 기본기가 있으신 분이라고 가정하고 그냥 설명하겠습니다.
 
-## Virtualbox에 Ubuntu 설치
+## ⭐Virtualbox에 Ubuntu 설치
 
 다른 블로그의 글을 참조하시길 바랍니다.
 
-## 네트워크 설정
+[https://mainia.tistory.com/2379](https://mainia.tistory.com/2379)
+🔼버추얼박스(VirtualBox) 이용해서 우분투(Ubuntu) 설치하기
+
+## ⭐네트워크 설정
 
 [https://gonghakjoa.tistory.com/134](https://gonghakjoa.tistory.com/134)
 
@@ -47,7 +50,7 @@ tags:
 **DNS : 8.8.8.8**
 
 
-## Docker 설치
+## ⭐Docker 설치
 
 [https://docs.docker.com/engine/install/ubuntu/](https://docs.docker.com/engine/install/ubuntu/)
 
@@ -71,7 +74,7 @@ swapoff -a & sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 ```
 
 
-## 쿠버네티스 설치
+## ⭐쿠버네티스 설치
 
 [https://kubernetes.io/docs/setup/production-environment/container-runtimes/](https://kubernetes.io/docs/setup/production-environment/container-runtimes/)
 
@@ -114,7 +117,7 @@ vi /etc/hosts
 
 다했으면 마스터 노드를 종료합니다.
 
-## master 노드 복제
+## ⭐master 노드 복제
 
 복제할 때 이름은 worker로 해줍니다.
 
@@ -123,7 +126,7 @@ vi /etc/hosts
 [https://sidepower.tistory.com/511](https://sidepower.tistory.com/511)
   
   
-## worker 노드 IP, 호스트명 설정
+## ⭐worker 노드 IP, 호스트명 설정
 
 <span style="color:blueviolet"> **worker 노드를 실행한 뒤 다음과 같이 설정합니다.** </span>  
 **IPv4 Method : Manual**  
@@ -141,7 +144,7 @@ hostnamectl set-hostname worker
 
 그리고 재부팅합니다.
 
-## Kubernetes Cluster 설정
+## ⭐Kubernetes Cluster 설정
 
 <span style="color:blueviolet"> **master node VM을 실행합니다.** </span>  
 [https://velog.io/@makengi/K8s-%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EA%B5%AC%EC%84%B1%EC%A4%91-%EC%97%90%EB%9F%AC](https://velog.io/@makengi/K8s-%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EA%B5%AC%EC%84%B1%EC%A4%91-%EC%97%90%EB%9F%AC)
@@ -179,7 +182,7 @@ export KUBECONFIG=/etc/kubernetes/admin.conf
 export KUBECONFIG=$HOME/.kube/config
 ```
 
-## kubeadm join 설정
+## ⭐kubeadm join 설정
 
 <span style="color:blueviolet"> **이제 worker node VM으로 건너갑니다.** </span>
 
@@ -194,7 +197,7 @@ swapoff -a
 그리고 터미널에 아까 복사했던 kubeadm join 어쩌고 하는 값을 그대로 붙여넣고 실행합니다.
 
 
-## Pod Network Addon 설정
+## ⭐Pod Network Addon 설정
 
 <span style="color:blueviolet"> **다시 master node VM로 건너가서,** </span>
 여기에 pod network addon을 설치해주어야 합니다.

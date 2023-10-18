@@ -10,24 +10,11 @@ tags:
     - JAVA
     - WSL
 ---
-참고한 글 :
-
-[WSL & WSL2 설치와 VSCode 연동하기 (velog.io)](https://velog.io/@gidskql6671/WSL-WSL2-%EC%84%A4%EC%B9%98-VSCode-%EC%97%B0%EB%8F%99)
-
-[VS Code에서 WSL 2와 C++ 환경설정 하기 :: BEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEM (tistory.com)](https://skyqnaqna.tistory.com/entry/VS-Code%EC%97%90%EC%84%9C-WSL-2%EC%99%80-C-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0)
-
-[VS Code에서 WSL Remote환경을 이용하여 Java개발 환경 구성하기 (tistory.com)](https://zianlog.tistory.com/entry/VS-Code%EC%97%90%EC%84%9C-WSL-Remote%ED%99%98%EA%B2%BD%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-Java%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0)
-
-
-
 비주얼 스튜디오 코드를 사용하는데 Compile Run, 속도가 너무 느려서 결국 WSL2를 이용하기로 했습니다.
 
 VSCODE에서 자체적으로 제공하는 터미널로는 답이 없더라구요.
 
 비주얼 스튜디오 코드를 사용하는데 빌드 후 실행 속도가 너무 느리다! 이런 분들은 이 글을 봐주세요.
-
-물론 비주얼 스튜디오 코드로 프로그래밍을 하고 싶으신 분들도 이 글을 보시면 좋습니다.
-
 
 ## ⭐Visual Studio Code 설치
 
@@ -35,16 +22,16 @@ VSCODE에서 자체적으로 제공하는 터미널로는 답이 없더라구요
 
 위 링크에서 Visual Studio Code를 다운받아 설치합니다.
 
-![Image1](./content/images/2023/2023-04-25_1_wsl2_vscode_c/1.png){: width="60%" height="60%"}  
+![Alt text](/../../images/2023/2023-04-25_1_wsl2_vscode_c/1.png)
 
 이 때 주의할 점이 하나 있는데, 'PATH에 추가' 체크박스에 꼭 체크해주셔야 한다는 점입니다.  
 안 그러면 귀찮아집니다.
 
 ## ⭐Windows 기능 켜기/끄기
 
-![Image2](./content/images/2023/2023-04-25_1_wsl2_vscode_c/2.png){: width="60%" height="60%"}  
+![Alt text](/../../images/2023/2023-04-25_1_wsl2_vscode_c/2.png)
 
- 제어판 -> 프로그램 -> 프로그램 및 기능 -> Windows 기능 켜기/끄기에 들어가 **Linux용 Windows 하위 시스템** 과 **가상 머신 플랫폼**의 체크박스를 누르고 확인 버튼을 누릅니다.(재부팅 필요)
+제어판 -> 프로그램 -> 프로그램 및 기능 -> Windows 기능 켜기/끄기에 들어가 **Linux용 Windows 하위 시스템** 과 **가상 머신 플랫폼**의 체크박스를 누르고 확인 버튼을 누릅니다.(재부팅 필요)
 
 ## ⭐최신 WSL2 Linux커널 업데이트 패키지 설치
 
@@ -56,6 +43,8 @@ VSCODE에서 자체적으로 제공하는 터미널로는 답이 없더라구요
 ## ⭐Ubuntu 앱 설치 및 실행
 
 Microsoft Store에서 ubuntu를 설치하고 실행합니다.
+
+![Alt text](/../../images/2023/2023-04-25_1_wsl2_vscode_c/3.png)
 
 계정명과 비밀번호는 자신이 원하는 대로 해줍니다.
 
@@ -75,7 +64,10 @@ VERSION이 1로 설정되어있으면 다음 명령어를 입력해 2로 
 wsl --set-default-version 2
 ```
 
-그리고 VSCODE에서 Extension 중에 **WSL**를 설치합니다. 
+그리고 VSCODE에서 Extension 중에 **WSL**를 설치합니다.  
+
+[https://learn.microsoft.com/ko-kr/power-pages/configure/vs-code-extension](https://learn.microsoft.com/ko-kr/power-pages/configure/vs-code-extension)  
+🔼VSCODE Extension 설치법
   
 
 ## ⭐소스 파일 생성
@@ -125,3 +117,11 @@ code .
 VSCODE에서 Extension 중에 **Extension Pack for Java**를 설치합니다.
 
 이제 자바 코드를 작성하고 실행할 수 있습니다.
+
+참고한 글 :
+
+[WSL & WSL2 설치와 VSCode 연동하기 (velog.io)](https://velog.io/@gidskql6671/WSL-WSL2-%EC%84%A4%EC%B9%98-VSCode-%EC%97%B0%EB%8F%99)  
+
+[VS Code에서 WSL 2와 C++ 환경설정 하기 :: BEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEM (tistory.com)](https://skyqnaqna.tistory.com/entry/VS-Code%EC%97%90%EC%84%9C-WSL-2%EC%99%80-C-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0)  
+
+[VS Code에서 WSL Remote환경을 이용하여 Java개발 환경 구성하기 (tistory.com)](https://zianlog.tistory.com/entry/VS-Code%EC%97%90%EC%84%9C-WSL-Remote%ED%99%98%EA%B2%BD%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-Java%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0)  

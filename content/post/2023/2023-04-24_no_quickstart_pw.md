@@ -21,7 +21,7 @@ tags:
 ​
 리눅스 민트 21.1 xfce 기준입니다.  
   
-1\. 터미널을 열고 다음 명령어들을 차례대로 실행합니다.  
+우선 터미널을 열고 다음 명령어들을 차례대로 실행합니다.  
 (Open Terminal and Run these commands in following order.)  
 ​
 ```bash
@@ -33,5 +33,5 @@ rm -rf *.keyring
 여기서 username은 당연히 여러분이 설정한 사용자명을 말하는 겁니다.  
 ('username' here is your username you set.)  
 ​
-2\.아무것도 입력하지 않고 Enter키를 누르면 클릭만 해도 암호를 묻지 않고 실행하게 됩니다.  
+아무것도 입력하지 않고 Enter키를 누르면 클릭만 해도 암호를 묻지 않고 실행하게 됩니다.  
 (If you press Enter Key without putting any words, you will not be asked password again.)
