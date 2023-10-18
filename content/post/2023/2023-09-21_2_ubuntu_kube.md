@@ -18,6 +18,12 @@ tags:
 [https://mainia.tistory.com/2379](https://mainia.tistory.com/2379)  
 🔼버추얼박스(VirtualBox) 이용해서 우분투(Ubuntu) 설치하기
 
+[https://rainbow96bear.tistory.com/entry/Kubernetes-CNI-%EC%84%A4%EC%B9%98-%EB%B0%8F-pod-%EC%83%9D%EC%84%B1-Weave](https://rainbow96bear.tistory.com/entry/Kubernetes-CNI-%EC%84%A4%EC%B9%98-%EB%B0%8F-pod-%EC%83%9D%EC%84%B1-Weave)
+
+위 글에 따르면 버추얼박스 가상머신(VM)을 생성할 때 디스크 용량을 넉넉하게 잡아주는 게 좋다고 합니다.  
+50GB~100GB 정도로 설정해줍니다.  
+
+
 ## ⭐네트워크 설정
 
 **저는 호스트 아이피 대역이 192.168.0.0/24라서,**  
@@ -41,6 +47,8 @@ tags:
 <span style="background-color:khaki"> **\[어댑터 1\]** </span>  
 **NAT 네트워크**  
 **이름 : NatNetwork**
+
+*NAT Networks 대신에 '어댑터에 브리지' 옵션을 선택해줘도 됩니다.*
 
 ### 💧우분투 내부의 IP 설정 
 
@@ -186,6 +194,7 @@ export KUBECONFIG=/etc/kubernetes/admin.conf
 export KUBECONFIG=$HOME/.kube/config
 
 exit
+
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
