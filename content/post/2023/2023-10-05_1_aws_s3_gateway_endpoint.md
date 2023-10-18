@@ -144,11 +144,5 @@ aws s3 cp test s3://버킷명
 
 s3 > 버킷 > (버킷명 클릭) > 객체
 
-![스크린샷 2023-10-06 040627](https://github.com/bluelockr/bluelockr.github.io/assets/144516077/3f3f76e8-e25f-47ff-b36b-32d37e981a36)
-
-
-![스크린샷 2023-10-06 040740](https://github.com/bluelockr/bluelockr.github.io/assets/144516077/0e58f98c-f2a4-4a85-a382-2a39ba28224f)
-
-
 S3 버킷의 퍼블릭 액세스를 차단했고,  
 NAT게이트웨이와 인터넷 게이트웨이가 없어 외부 인터넷에 ping이 가지 않음에도 S3 버킷에 파일이 업로드 되었습니다.

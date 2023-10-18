@@ -9,10 +9,6 @@ tags:
     - Virtualbox
     - Kubernetes
 ---
-
-> [!WARNING]  
-> 글 복구 중입니다
-
 쿠버네티스 설치하실 정도면 어느 정도는 기본기가 있으신 분이라고 가정하고 그냥 설명하겠습니다.
 
 ## ⭐Virtualbox에 Ubuntu 설치
@@ -37,8 +33,6 @@ tags:
 **Name : NatNetwork**  
 **IP Prefix : 192.168.0.0/24**  
 **Enable DHCP**  
-
-
 
 ### 💧우분투가 설치된 가상머신(VM) 설정
 
@@ -84,7 +78,6 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 ```
-
 
 ## ⭐쿠버네티스 설치
 
