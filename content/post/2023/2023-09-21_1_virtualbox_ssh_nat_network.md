@@ -1,14 +1,12 @@
----
-title: Virtualbox 가상머신 안의 Linux에 NAT Network인 상태에서 SSH 접속(일반/RSA)하는 법
-description: SSH Connection(Common/RSA) to Virtualbox NAT Network
-slug: ssh_to_virtualbox_nat_network_common_rsa
-date: 2023-09-21 00:00:00+0000
-image: 
-tags:
-    - Windows
-    - Linux
-    - Virtualbox
----
++++
+title = "Virtualbox 가상머신 안의 Linux에 NAT Network인 상태에서 SSH 접속(일반/RSA)하는 법"
+summary = "SSH Connection(Common/RSA) to Virtualbox NAT Network"
+date = 2023-09-21T00:00:00+00:00
+cover = ""
+slug = "ssh_to_virtualbox_nat_network_common_rsa"
+tags = ['Windows', 'Linux', 'Virtualbox']
+draft = false
++++
 ## ⭐SSH 설치
 
 일단 가상 머신 내에 SSH를 설치해야 합니다.

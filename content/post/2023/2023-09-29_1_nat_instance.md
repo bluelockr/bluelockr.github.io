@@ -1,15 +1,12 @@
----
-title: NAT 인스턴스로 VPC 간 연결하기
-description: VPC Connection using NAT Instance
-slug: vpc_connection_using_nat_instance
-date: 2023-09-29 00:00:00+0000
-image: 
-tags:
-    - Network
-    - AWS
-published: true
----
-
++++
+title = "NAT 인스턴스로 VPC 간 연결하기"
+summary = "VPC Connection using NAT Instance"
+date = 2023-09-29T00:00:00+00:00
+cover = ""
+slug = "vpc_connection_using_nat_instance"
+tags = ['Network', 'AWS']
+draft = false
++++
 [https://docs.aws.amazon.com/vpc/latest/userguide/extend-intro.html](https://docs.aws.amazon.com/vpc/latest/userguide/extend-intro.html)
 
 오늘은 NAT 인스턴스를 사용해 프라이빗 서브넷에 있는 인스턴스에서 외부 인터넷과 통신해보도록 하겠습니다.

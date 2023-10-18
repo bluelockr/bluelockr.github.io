@@ -1,15 +1,12 @@
----
-title: AWS S3 게이트웨이 엔드포인트 설정하기
-description: How to set up S3 Gateway Endpoint
-slug: aws_s3_gateway_endpoint_configuration
-date: 2023-10-05 00:00:00+0000
-image: 
-tags:
-    - Network
-    - AWS
-published: true
----
-
++++
+title = "AWS S3 게이트웨이 엔드포인트 설정하기"
+summary = "How to set up S3 Gateway Endpoint"
+date = 2023-10-05T00:00:00+00:00
+cover = ""
+slug = "aws_s3_gateway_endpoint_configuration"
+tags = ['Network', 'AWS']
+draft = false
++++
 [https://tech.cloud.nongshim.co.kr/2023/03/16/%EC%86%8C%EA%B0%9C-vpc-endpoint%EB%9E%80/](https://tech.cloud.nongshim.co.kr/2023/03/16/%EC%86%8C%EA%B0%9C-vpc-endpoint%EB%9E%80/)
 [https://www.youtube.com/watch?v=He1DL3WiL_E](https://www.youtube.com/watch?v=He1DL3WiL_E)
 

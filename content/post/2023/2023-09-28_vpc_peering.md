@@ -1,15 +1,12 @@
----
-title: AWS VPC 피어링 연결하기
-description: AWS VPC Peering (feat. Cloudshell)
-slug: aws_vpc_peering_using_cloudshell
-date: 2023-09-28 00:00:00+0000
-image: 
-tags:
-    - Network
-    - AWS
-published: true
----
-
++++
+title = "AWS VPC 피어링 연결하기"
+summary = "AWS VPC Peering (feat. Cloudshell)"
+date = 2023-09-28T00:00:00+00:00
+cover = ""
+slug = "aws_vpc_peering_using_cloudshell"
+tags = ['Network', 'AWS']
+draft = false
++++
 [https://docs.aws.amazon.com/vpc/latest/userguide/extend-intro.html](https://docs.aws.amazon.com/vpc/latest/userguide/extend-intro.html)
 
 오늘은 VPC 피어링을 통해 서로 다른 리전에 있는 VPC끼리 통신이 이루어지도록 해보겠습니다.

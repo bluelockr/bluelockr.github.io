@@ -1,13 +1,12 @@
----
-title: Ubuntu에서 imwheel 설정 특정 프로그램만 적용하기
-description: How to apply imwheel settings to specific program in Ubuntu
-slug: imwheel_specific_in_ubuntu
-date: 2023-07-29 00:00:00+0000
-image: 
-tags:
-    - Ubuntu
-    - Imwheel
----
++++
+title = "Ubuntu에서 imwheel 설정 특정 프로그램만 적용하기"
+summary = "How to apply imwheel settings to specific program in Ubuntu"
+date = 2023-07-29T00:00:00+00:00
+cover = ""
+slug = "imwheel_specific_in_ubuntu"
+tags = ['Ubuntu', 'Imwheel']
+draft = false
++++
 [https://gist.github.com/Xarkam/4b48ae5bc77876f859c0d8121bdeca84](https://gist.github.com/Xarkam/4b48ae5bc77876f859c0d8121bdeca84)
 
 위 글에서 방법을 찾았습니다. 우분투 기준으로 서술합니다.

@@ -1,13 +1,12 @@
----
-title: 리눅스 민트 빠른 실행 아이콘 기본 키 암호 입력 없애기
-description: Disable Quick Launch Password Requirement
-slug: no_quick_launch_pw
-date: 2023-04-24 00:00:00+0000
-image: 
-tags:
-    - Ubuntu
-    - Linuxmint
----
++++
+title = "리눅스 민트 빠른 실행 아이콘 기본 키 암호 입력 없애기"
+summary = "Disable Quick Launch Password Requirement"
+date = 2023-04-25T00:00:00+00:00
+cover = ""
+slug = "no_quick_launch_pw"
+tags = ['Ubuntu', 'Linuxmint']
+draft = false
++++
 윈도우로 치자면 빠른 실행 아이콘에 해당되는 곳에 크롬(chrome) 아이콘을 등록시켜놨더니,  
 열받게 자꾸 암호를 입력하라고 하더라구요.  
   

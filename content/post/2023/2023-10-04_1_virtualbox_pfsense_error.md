@@ -1,15 +1,12 @@
----
-title: Virtualbox에 pfSense 설치 시 오류
-description: pfSense installation error in Virtualbox
-slug: pfsense_installation_error_in_virtualbox
-date: 2023-10-04 00:00:00+0000
-image: 
-tags:
-    - Linux
-    - Virtualbox
-published: true
----
-
++++
+title = "Virtualbox에 pfSense 설치 시 오류"
+summary = "pfSense installation error in Virtualbox"
+date = 2023-10-04T00:00:00+00:00
+cover = ""
+slug = "pfsense_installation_error_in_virtualbox"
+tags = ['Linux', 'Virtualbox']
+draft = false
++++
 ## ⭐panic : Could not malloc 163840 bytes with M_WAITOK from 오류
 
 > Consoles: internal video/keyboard  

@@ -1,13 +1,12 @@
----
-title: Linux RAID 설정하는 법
-description: How to Configure RAID in Linux
-slug: linux_raid
-date: 2023-09-05 00:00:00+0000
-image: 
-tags:
-    - Linux
-    - RAID
----
++++
+title = "Linux RAID 설정하는 법"
+summary = "How to Configure RAID in Linux"
+date = 2023-09-05T00:00:00+00:00
+cover = ""
+slug = "linux_raid"
+tags = ['Linux', 'RAID']
+draft = false
++++
 Virtualbox를 이용하여 실습해보았습니다.
 
 ## ⭐Virtualbox에서 디스크 추가

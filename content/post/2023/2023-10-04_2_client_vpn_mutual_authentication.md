@@ -1,17 +1,13 @@
----
-title: AWS Client VPN 상호 인증
-description: AWS Client VPN Mutual Authentication
-slug: aws_client_vpn_mutual_authentication
-date: 2023-10-04 00:00:00+0000
-image: 
-tags:
-    - Network
-    - AWS
-published: true
----
-
-[https://www.youtube.com/watch?v=spBZkk9fuxg](https://www.youtube.com/watch?v=spBZkk9fuxg)
-
++++
+title = "AWS Client VPN 상호 인증"
+summary = "AWS Client VPN Mutual Authentication"
+date = 2023-10-04T00:00:00+00:00
+cover = ""
+slug = "aws_client_vpn_mutual_authentication"
+tags = ['Network', 'AWS']
+draft = false
++++
+[https://www.youtube.com/watch?v=spBZkk9fuxg](https://www.youtube.com/watch?v=spBZkk9fuxg)  
 [https://1mini2.tistory.com/134](https://1mini2.tistory.com/134)
 
 ## ⭐IAM 사용자 생성

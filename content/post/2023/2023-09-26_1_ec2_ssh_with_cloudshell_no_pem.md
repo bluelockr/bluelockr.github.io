@@ -1,14 +1,12 @@
----
-title: CloudShell로 EC2 인스턴스 pem키 없이 SSH 접속하기
-description: SSH Connection to EC2 Instance without pem key using Cloudshell
-slug: ec2_ssh_with_cloudshell_no_pem
-date: 2023-09-26 00:00:00+0000
-image: 
-tags:
-    - Network
-    - AWS
-published: true
----
++++
+title = "CloudShell로 EC2 인스턴스 pem키 없이 SSH 접속하기"
+summary = "SSH Connection to EC2 Instance without pem key using Cloudshells"
+date = 2023-09-26T00:00:00+00:00
+cover = ""
+slug = "ec2_ssh_with_cloudshell_no_pem"
+tags = ['Network', 'AWS']
+draft = false
++++
 AWS EC2 인스턴스에 SSH 접속하려고 드니까 보안 관련된 파일들이 csv 파일로 내려받아지길래 기겁했습니다.  
 CSV 파일은 심지어 패스워드도 안 걸리더라구요.
 

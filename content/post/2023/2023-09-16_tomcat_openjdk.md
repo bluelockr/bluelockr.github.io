@@ -1,15 +1,12 @@
----
-title: 리눅스에 Tomcat 설치하는 법(feat.OpenJDK21)
-description: How to Install Tomcat in Linux with OpenJDK21
-slug: linux_tomcat_openjdk_installation
-date: 2023-09-16 00:00:00+0000
-image: 
-tags:
-    - Linux
-    - OpenJDK
-    - Tomcat
-published : false
----
++++
+title = "리눅스에 Tomcat 설치하는 법(feat.OpenJDK21)"
+summary = "How to Install Tomcat in Linux with OpenJDK21"
+date = 2023-09-16T00:00:00+00:00
+cover = ""
+slug = "linux_tomcat_openjdk_installation"
+tags = ['Linux', 'OpenJDK', 'Tomcat']
+draft = false
++++
 우분투와 Rocky 리눅스에서 Tomcat을 로컬로 설치해보았습니다.
 
 

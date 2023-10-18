@@ -1,15 +1,12 @@
----
-title: VSCODE Python 개발 환경 구축 (WSL2 사용)
-description: How to Set up Vscode Python Dev Env using WSL2
-slug: vscode_wsl2_python_dev_env
-date: 2023-04-25 00:00:00+0000
-image: 
-tags:
-    - Windows
-    - VSCODE
-    - Python
-    - WSL
----
++++
+title = "VSCODE Python 개발 환경 구축 (WSL2 사용)"
+summary = "How to Set up Vscode Python Dev Env using WSL2"
+date = 2023-04-25T00:00:00+00:00
+cover = ""
+slug = "vscode_wsl2_python_dev_env"
+tags = ['Windows', 'VSCODE', 'Python', 'WSL']
+draft = false
++++
 ## ⭐Visual Studio Code 설치
 
 [https://code.visualstudio.com/](https://code.visualstudio.com/)

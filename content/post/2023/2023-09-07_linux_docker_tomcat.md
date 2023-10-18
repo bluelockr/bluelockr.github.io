@@ -1,15 +1,12 @@
----
-title: 리눅스에 Docker로 Tomcat 설치하는 법
-description: How to install Tomcat in linux using Docker
-slug: linux_tomcat_docker
-date: 2023-09-16 00:00:00+0000
-image: 
-tags:
-    - Linux
-    - Docker
-    - Tomcat
-published : false
----
++++
+title = "리눅스에 Docker로 Tomcat 설치하는 법"
+summary = "How to install Tomcat in linux using Docker"
+date = 2023-09-07T00:00:00+00:00
+cover = ""
+slug = "linux_tomcat_docker"
+tags = ['Linux', 'Docker', 'Tomcat']
+draft = false
++++
 [https://www.youtube.com/watch?v=vn3aYbkLhmo](https://www.youtube.com/watch?v=vn3aYbkLhmo) 
 
 위 영상을 참고했습니다.  
