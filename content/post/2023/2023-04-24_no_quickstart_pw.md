@@ -31,6 +31,6 @@ rm -rf *.keyring
 ​
 여기서 username은 당연히 여러분이 설정한 사용자명을 말하는 겁니다.  
 ('username' here is your username you set.)  
-​
+​  
 아무것도 입력하지 않고 Enter키를 누르면 클릭만 해도 암호를 묻지 않고 실행하게 됩니다.  
 (If you press Enter Key without putting any words, you will not be asked password again.)

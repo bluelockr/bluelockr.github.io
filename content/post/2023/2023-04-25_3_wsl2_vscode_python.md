@@ -1,5 +1,5 @@
 +++
-title = "VSCODE Python 개발 환경 구축 (WSL2 사용)"
+title = "WSL2로 VSCODE Python 개발 환경 구축하기"
 summary = "How to Set up Vscode Python Dev Env using WSL2"
 date = 2023-04-25T00:00:00+00:00
 cover = ""
@@ -61,7 +61,21 @@ wsl --set-default-version 2
 🔼VSCODE Extension 설치법
   
 
-## ⭐소스 코드 생성
+## ⭐파이썬 설치
+
+우분투 앱에서 다음 명령어를 실행하여 파이썬 관련 프로그램을 설치합니다.
+  
+```bash
+sudo apt-get update
+sudo apt-get install python3 python3-pip -y
+
+python3 --version
+pip --version
+```
+
+## ⭐소스 파일 빌드
+
+### 💧프로그래밍 관련 폴더 생성
 
 우분투 앱으로 돌아가서 다음 명령어를 입력하여 프로그래밍을 위한 폴더를 생성합니다.
 
@@ -70,28 +84,26 @@ mkdir Coding
 cd Coding
 code .
 ```
-  
-우분투 앱에서 다음 명령어를 실행하여 파이썬 관련 프로그램을 설치합니다.
-  
-```bash
-sudo apt-get update
-sudo apt-get install python3 python3-pip -y
+
+이제 VSCODE가 실행됩니다.
+
+### 💧소스 파일 생성
+
+이제 파이썬 소스 코드를 작성해봅니다.  
+저는 python.py 라는 소스 파일을 다음과 같은 내용으로 작성하고 저장하였습니다.
+
+```python
+print('hello world')
 ```
   
-다음 명령어를 실행하여 제대로 설치되었는지 확인합니다.
-  
-```bash
-python3 --version
-pip --version
-```
-  
-다음 명령어를 실행하여 VSCODE를 엽니다.
-  
-```bash
-code .
-```
-  
+### 💧VSCODE Python 확장 프로그램 설치
+
 VSCODE에서 Extension 중에 **Python**을 설치합니다.  
+
+![Alt text](/../../images/2023/2023-04-25_3_wsl2_vscode_python/1.png)
   
-파이썬 소스 파일을 생성 후 내용을 작성한 뒤 실행합니다.  
+이제 Python 실행 버튼을 눌러 작성한 코드를 실행할 수 있습니다.  
 만일 실행 버튼이 나타나지 않는다면 Extension 중에서 **Run++**를 설치하면 됩니다.
+
+참고한 글 :  
+[WSL & WSL2 설치와 VSCode 연동하기 (velog.io)](https://velog.io/@gidskql6671/WSL-WSL2-%EC%84%A4%EC%B9%98-VSCode-%EC%97%B0%EB%8F%99)  

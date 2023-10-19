@@ -1,5 +1,5 @@
 +++
-title = "VSCODE Java 개발 환경 구축 (WSL2 사용)"
+title = "WSL2로 VSCODE Java 개발 환경 구축하기"
 summary = "How to Set up Vscode Java Dev Env using WSL2"
 date = 2023-04-25T00:00:00+00:00
 cover = ""
@@ -65,31 +65,23 @@ wsl --set-default-version 2
 
 [https://learn.microsoft.com/ko-kr/power-pages/configure/vs-code-extension](https://learn.microsoft.com/ko-kr/power-pages/configure/vs-code-extension)  
 🔼VSCODE Extension 설치법
-  
 
-## ⭐소스 파일 생성
+## ⭐자바 설치
 
-우분투 앱으로 돌아가서 다음 명령어를 입력하여 프로그래밍을 위한 폴더를 생성합니다.
-
-```bash
-mkdir Coding
-cd Coding
-code .
-```
-
-VSCODE가 실행되면 우분투 앱에서 다음 명령어를 실행하여 OpenJDK를 설치해줍니다.
+우분투 앱으로 돌아가서 다음 명령어를 입력합니다.
 
 ```bash
 sudo apt-get update
 sudo apt install openjdk-17-jdk openjdk-17-jre -y
+
+java --version
+javac --version
 ```
 
-(2023년 4월 현재 기준으로 17이 LTS버전이기 때문)
-
-
-[https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/generic-linux-install.html](https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/generic-linux-install.html)
-
 다음 명령어를 대신 사용해도 됩니다. 아마존에서 제공하는 Amazon Corretto를 설치하는 명령어입니다.
+
+[https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/generic-linux-install.html](https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/generic-linux-install.html)  
+🔼Amazon Corretto 설치하는 법
 
 ```bash
 wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add -   
@@ -98,21 +90,41 @@ sudo apt-get update; sudo apt-get install -y java-17-amazon-corretto-jdk
 
 java --version
 javac --version
+```
+  
+## ⭐소스 파일 빌드
 
+### 💧프로그래밍 관련 폴더 생성
+
+```bash
+mkdir Coding
+cd Coding
 code .
 ```
 
-이렇게 하면 VSCODE가 열립니다.
+그러면 VSCODE가 실행됩니다.
 
-소스 코드 파일을 생성하고 내용을 작성한 뒤,  
+### 💧소스 파일 생성
+
+hello.java 파일을 생성해주고 다음과 같이 입력하고 저장합니다.
+
+```java
+public class Hello {
+    public static void main(String[] args){
+        System.out.println("Hello World");
+    }
+}
+```
+
+### 💧VSCODE Java 확장 프로그램 설치
+
 VSCODE에서 Extension 중에 **Extension Pack for Java**를 설치합니다.
 
-이제 자바 코드를 작성하고 실행할 수 있습니다.
+![Alt text](/../../images/2023/2023-04-25_2_wsl2_vscode_java/1.png)
 
-참고한 글 :
-
+이제 자바 코드를 작성하고 실행할 수 있습니다.  
+  
+참고한 글 :  
 [WSL & WSL2 설치와 VSCode 연동하기 (velog.io)](https://velog.io/@gidskql6671/WSL-WSL2-%EC%84%A4%EC%B9%98-VSCode-%EC%97%B0%EB%8F%99)  
-
 [VS Code에서 WSL 2와 C++ 환경설정 하기 :: BEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEM (tistory.com)](https://skyqnaqna.tistory.com/entry/VS-Code%EC%97%90%EC%84%9C-WSL-2%EC%99%80-C-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0)  
-
 [VS Code에서 WSL Remote환경을 이용하여 Java개발 환경 구성하기 (tistory.com)](https://zianlog.tistory.com/entry/VS-Code%EC%97%90%EC%84%9C-WSL-Remote%ED%99%98%EA%B2%BD%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-Java%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0)  
