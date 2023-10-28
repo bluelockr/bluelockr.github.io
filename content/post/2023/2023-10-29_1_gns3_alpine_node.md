@@ -5,7 +5,7 @@ date = 2023-10-29T00:00:00+00:00
 cover = ""
 slug = "gns3_alpine_node_telnet"
 tags = ['Network', 'AWS']
-draft = false
+draft = true
 +++
 
 GNS3 설치 과정과 IOU 불러오는 과정 등은 생략하겠습니다.
