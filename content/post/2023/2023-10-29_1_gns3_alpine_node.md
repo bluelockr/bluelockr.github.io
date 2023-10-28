@@ -4,7 +4,7 @@ summary = "Telnet to GNS3 Node from Alpine Linux Node"
 date = 2023-10-29T00:00:00+00:00
 cover = ""
 slug = "gns3_alpine_node_telnet"
-tags = ['Network', 'AWS']
+tags = ['Network', 'GNS3']
 draft = true
 +++
 
