@@ -1,7 +1,7 @@
 +++
 title = "GNS3에서 Alpine Linux 노드에서 라우터로 텔넷 접속하기"
 summary = "Telnet to GNS3 Node from Alpine Linux Node"
-date = 2023-10-29T00:00:00+00:00
+date = 2023-10-28T00:00:00+00:00
 cover = ""
 slug = "gns3_alpine_node_telnet"
 tags = ['Network', 'GNS3']
@@ -12,23 +12,23 @@ GNS3 설치 과정과 IOU 불러오는 과정 등은 생략하겠습니다.
 
 ## ⭐템플릿 불러오기
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/1.png)  
+![Alt text](/../../images/2023/2023-10-28_1_gns3_alpine_node/1.png)  
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/2.png)  
+![Alt text](/../../images/2023/2023-10-28_1_gns3_alpine_node/2.png)  
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/3.png)  
+![Alt text](/../../images/2023/2023-10-28_1_gns3_alpine_node/3.png)  
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/4.png)  
+![Alt text](/../../images/2023/2023-10-28_1_gns3_alpine_node/4.png)  
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/5.png)  
+![Alt text](/../../images/2023/2023-10-28_1_gns3_alpine_node/5.png)  
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/6.png)  
+![Alt text](/../../images/2023/2023-10-28_1_gns3_alpine_node/6.png)  
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/7.png)  
+![Alt text](/../../images/2023/2023-10-28_1_gns3_alpine_node/7.png)  
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/8.png)  
+![Alt text](/../../images/2023/2023-10-28_1_gns3_alpine_node/8.png)  
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/9.png)  
+![Alt text](/../../images/2023/2023-10-28_1_gns3_alpine_node/9.png)  
 
 ## ⭐알파인 리눅스 노드 텔넷 설정
 
@@ -40,7 +40,7 @@ vi /etc/network/interfaces
 
 아래 파일과 같이 주석(#)을 삭제하여 DHCP를 활성화 시킵니다.
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/10.png)  
+![Alt text](/../../images/2023/2023-10-28_1_gns3_alpine_node/10.png)  
 
 저장한 뒤 아래 명령어를 사용하여 네트워크를 활성화 시킨 뒤 텔넷 관련 프로그램을 설치합니다.
 
@@ -57,7 +57,7 @@ vi /etc/network/interfaces
 
 저는 192.168.0.10/24 에 게이트웨이는 192.168.0.1로 설정하였습니다.
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/11.png)  
+![Alt text](/../../images/2023/2023-10-28_1_gns3_alpine_node/11.png)  
 
 ```bash
 ifdown eth0
@@ -91,7 +91,7 @@ R1# copy running-config startup-config
 
 알파인 리눅스 터미널 창을 가서 다음과 같이 입력합니다.
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/12.png)  
+![Alt text](/../../images/2023/2023-10-28_1_gns3_alpine_node/12.png)  
 
 ```bash
 telnet 192.168.0.2
