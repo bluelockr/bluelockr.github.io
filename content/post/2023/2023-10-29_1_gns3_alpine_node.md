@@ -1,6 +1,6 @@
 +++
 title = "GNS3에서 Alpine Linux 노드에서 라우터로 텔넷 접속하기"
-summary = "Telnet to GNS3 Node from Alpine Linux Node"
+summary = "How to Telnet to GNS3 Node from Alpine Linux Node"
 date = 2023-10-29T00:00:00+00:00
 cover = ""
 slug = "gns3_alpine_node_telnet"
@@ -73,11 +73,17 @@ ifup eth0
 
 케이블 연결이 끝나면 라우터를 'start'한 뒤 더블 클릭하여 터미널로 접속하고 아래 명령어를 입력하여 텔넷 접속 설정합니다.
 
+[https://jeongzzang.com/39](https://jeongzzang.com/39) 
+🔼라우터에 텔넷, SSH 접속하는 법
+
 ```bash
 R1> enable
 R1# configure terminal
 R1(config)# line vty 0 4
+R1(config-line)# transport input telnet
 R1(config-line)# password cisco
+# 전역 설정 모드 진입을 위해 필요함
+R1(config-line)# enable password
 R1(config-line)# exit
 R1(config)# interface fastEthernet0/0
 R1(config-if)# no shutdown
