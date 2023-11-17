@@ -3,7 +3,7 @@ title = "Rocky Linux 9.2 서버 네트워크 설정 실습"
 summary = ""
 date = 2023-11-17T00:00:00+00:00
 cover = ""
-slug = ""
+slug = "rocky_server_network_configuration"
 tags = ['RHEL']
 draft = false
 +++
@@ -106,6 +106,9 @@ firewall-cmd --reload
 ```
 
 그래도 안 된다면 ROOT SSH 접속이 허용된 상태인지 확인하고 수정합니다.
+
+[https://unix.stackexchange.com/questions/343781/root-password-not-working-but-can-ssh-via-sudo-user-centos](https://unix.stackexchange.com/questions/343781/root-password-not-working-but-can-ssh-via-sudo-user-centos)  
+🔼ROOT SSH 접속 설정법
 
 ```bash
 vi /etc/ssh/sshd_config
