@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on bluelockr&#39;s blog</title>
+    <link>http://localhost:1313/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on bluelockr&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Sat, 03 Aug 2024 22:55:35 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>우분투 서버 네트워크 설정 실습</title>
+      <link>http://localhost:1313/post/2023/2023-11-17_2_ubuntu_server_network_configuration/</link>
+      <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/2023-11-17_2_ubuntu_server_network_configuration/</guid>
+      <description>*** 이 글은 공부 중 실습용으로 작성한 것으로, 실제 서비스에 적용하지 마시기 바랍니다. ***&#xA;⭐로그인 우분투 설치 장면은 생략하겠습니다.&#xA;서버 부팅에 성공하면 우선 로그인해줘야 합니다.</description>
+    </item>
+    <item>
+      <title>Virtualbox Ubuntu 22.04에 Kubernetes Cluster 설치하는 법</title>
+      <link>http://localhost:1313/post/2023/ubuntu_kube_cluster_setup/</link>
+      <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/ubuntu_kube_cluster_setup/</guid>
+      <description>How to set Kubernetes Cluster to Ubuntu 22.04 in Virtualbox</description>
+    </item>
+    <item>
+      <title>Ubuntu에서 imwheel 설정 특정 프로그램만 적용하기</title>
+      <link>http://localhost:1313/post/2023/imwheel_specific_in_ubuntu/</link>
+      <pubDate>Sat, 29 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/imwheel_specific_in_ubuntu/</guid>
+      <description>How to apply imwheel settings to specific program in Ubuntu</description>
+    </item>
+    <item>
+      <title>리눅스 민트 빠른 실행 아이콘 기본 키 암호 입력 없애기</title>
+      <link>http://localhost:1313/post/2023/no_quick_launch_pw/</link>
+      <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/no_quick_launch_pw/</guid>
+      <description>Disable Quick Launch Password Requirement</description>
+    </item>
+  </channel>
+</rss>

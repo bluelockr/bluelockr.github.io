@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Network on bluelockr&#39;s blog</title>
+    <link>http://localhost:1313/tags/network/</link>
+    <description>Recent content in Network on bluelockr&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Sat, 03 Aug 2024 22:55:35 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GNS3에서 Alpine Linux 노드에서 라우터로 텔넷 접속하기</title>
+      <link>http://localhost:1313/post/2023/gns3_alpine_node_telnet/</link>
+      <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/gns3_alpine_node_telnet/</guid>
+      <description>How to Telnet to GNS3 Node from Alpine Linux Node</description>
+    </item>
+    <item>
+      <title>AWS S3 게이트웨이 엔드포인트 설정하기</title>
+      <link>http://localhost:1313/post/2023/aws_s3_gateway_endpoint_configuration/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/aws_s3_gateway_endpoint_configuration/</guid>
+      <description>How to set up S3 Gateway Endpoint</description>
+    </item>
+    <item>
+      <title>AWS Client VPN 상호 인증</title>
+      <link>http://localhost:1313/post/2023/aws_client_vpn_mutual_authentication/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/aws_client_vpn_mutual_authentication/</guid>
+      <description>AWS Client VPN Mutual Authentication</description>
+    </item>
+    <item>
+      <title>NAT 인스턴스로 VPC 간 연결하기</title>
+      <link>http://localhost:1313/post/2023/vpc_connection_using_nat_instance/</link>
+      <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/vpc_connection_using_nat_instance/</guid>
+      <description>VPC Connection using NAT Instance</description>
+    </item>
+    <item>
+      <title>AWS VPC 피어링 연결하기</title>
+      <link>http://localhost:1313/post/2023/aws_vpc_peering_using_cloudshell/</link>
+      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/aws_vpc_peering_using_cloudshell/</guid>
+      <description>AWS VPC Peering (feat. Cloudshell)</description>
+    </item>
+    <item>
+      <title>CloudShell로 EC2 인스턴스 pem키 없이 SSH 접속하기</title>
+      <link>http://localhost:1313/post/2023/ec2_ssh_with_cloudshell_no_pem/</link>
+      <pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/ec2_ssh_with_cloudshell_no_pem/</guid>
+      <description>SSH Connection to EC2 Instance without pem key using Cloudshells</description>
+    </item>
+  </channel>
+</rss>

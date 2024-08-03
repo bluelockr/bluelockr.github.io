@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GNS3 on bluelockr&#39;s blog</title>
+    <link>http://localhost:1313/tags/gns3/</link>
+    <description>Recent content in GNS3 on bluelockr&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Sat, 03 Aug 2024 22:55:35 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/gns3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GNS3에서 Alpine Linux 노드에서 라우터로 텔넷 접속하기</title>
+      <link>http://localhost:1313/post/2023/gns3_alpine_node_telnet/</link>
+      <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/gns3_alpine_node_telnet/</guid>
+      <description>How to Telnet to GNS3 Node from Alpine Linux Node</description>
+    </item>
+  </channel>
+</rss>

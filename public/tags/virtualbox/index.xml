@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Virtualbox on bluelockr&#39;s blog</title>
+    <link>http://localhost:1313/tags/virtualbox/</link>
+    <description>Recent content in Virtualbox on bluelockr&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Sat, 03 Aug 2024 22:55:35 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Virtualbox에 pfSense 설치 시 오류</title>
+      <link>http://localhost:1313/post/2023/pfsense_installation_error_in_virtualbox/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/pfsense_installation_error_in_virtualbox/</guid>
+      <description>pfSense installation error in Virtualbox</description>
+    </item>
+    <item>
+      <title>Virtualbox Rocky Linux 9.2에 Kubernetes Cluster 설치하는 법</title>
+      <link>http://localhost:1313/post/2023/rocky_kube_cluster_setup/</link>
+      <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/rocky_kube_cluster_setup/</guid>
+      <description>How to set Kubernetes Cluster to Rocky Linux 9.2 in Virtualbox</description>
+    </item>
+    <item>
+      <title>Virtualbox Ubuntu 22.04에 Kubernetes Cluster 설치하는 법</title>
+      <link>http://localhost:1313/post/2023/ubuntu_kube_cluster_setup/</link>
+      <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/ubuntu_kube_cluster_setup/</guid>
+      <description>How to set Kubernetes Cluster to Ubuntu 22.04 in Virtualbox</description>
+    </item>
+    <item>
+      <title>Virtualbox 가상머신 안의 Linux에 NAT Network인 상태에서 SSH 접속(일반/RSA)하는 법</title>
+      <link>http://localhost:1313/post/2023/ssh_to_virtualbox_nat_network_common_rsa/</link>
+      <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/ssh_to_virtualbox_nat_network_common_rsa/</guid>
+      <description>SSH Connection(Common/RSA) to Virtualbox NAT Network</description>
+    </item>
+    <item>
+      <title>Virtualbox에서 Linux 클립보드(복사-붙여넣기) 사용하는 법</title>
+      <link>http://localhost:1313/post/2023/virtualbox_clipboard/</link>
+      <pubDate>Sun, 17 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/virtualbox_clipboard/</guid>
+      <description>How to Share Clipboard between hosts and guests in Virtualbox</description>
+    </item>
+  </channel>
+</rss>

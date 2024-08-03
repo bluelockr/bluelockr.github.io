@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on bluelockr&#39;s blog</title>
+    <link>http://localhost:1313/tags/linux/</link>
+    <description>Recent content in Linux on bluelockr&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Sat, 03 Aug 2024 22:55:35 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Virtualbox에 pfSense 설치 시 오류</title>
+      <link>http://localhost:1313/post/2023/pfsense_installation_error_in_virtualbox/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/pfsense_installation_error_in_virtualbox/</guid>
+      <description>pfSense installation error in Virtualbox</description>
+    </item>
+    <item>
+      <title>Virtualbox 가상머신 안의 Linux에 NAT Network인 상태에서 SSH 접속(일반/RSA)하는 법</title>
+      <link>http://localhost:1313/post/2023/ssh_to_virtualbox_nat_network_common_rsa/</link>
+      <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/ssh_to_virtualbox_nat_network_common_rsa/</guid>
+      <description>SSH Connection(Common/RSA) to Virtualbox NAT Network</description>
+    </item>
+    <item>
+      <title>Virtualbox에서 Linux 클립보드(복사-붙여넣기) 사용하는 법</title>
+      <link>http://localhost:1313/post/2023/virtualbox_clipboard/</link>
+      <pubDate>Sun, 17 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/virtualbox_clipboard/</guid>
+      <description>How to Share Clipboard between hosts and guests in Virtualbox</description>
+    </item>
+    <item>
+      <title>리눅스에 Tomcat 설치하는 법(feat.OpenJDK21)</title>
+      <link>http://localhost:1313/post/2023/linux_tomcat_openjdk_installation/</link>
+      <pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/linux_tomcat_openjdk_installation/</guid>
+      <description>How to Install Tomcat in Linux with OpenJDK21</description>
+    </item>
+    <item>
+      <title>리눅스에 Docker로 Tomcat 설치하는 법</title>
+      <link>http://localhost:1313/post/2023/linux_tomcat_docker/</link>
+      <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/linux_tomcat_docker/</guid>
+      <description>How to install Tomcat in linux using Docker</description>
+    </item>
+    <item>
+      <title>Linux RAID 설정하는 법</title>
+      <link>http://localhost:1313/post/2023/linux_raid/</link>
+      <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/linux_raid/</guid>
+      <description>How to Configure RAID in Linux</description>
+    </item>
+  </channel>
+</rss>

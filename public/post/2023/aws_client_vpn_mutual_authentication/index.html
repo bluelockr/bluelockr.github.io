@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='http://localhost:1313/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='http://localhost:1313/css/frameworks.min.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/github.min.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/github-style.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/light.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/dark.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/syntax.css' />
+    <title>AWS Client VPN 상호 인증 - bluelockr&#39;s blog</title>
+    
+    <link rel="icon" type="image/x-icon" href='/images/github.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    
+    <meta name="description"
+  content="AWS Client VPN Mutual Authentication" />
+<meta name="keywords"
+  content='blog, google analytics' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="http://localhost:1313/post/2023/aws_client_vpn_mutual_authentication/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="AWS Client VPN 상호 인증 - bluelockr&#39;s blog" />
+<meta name="twitter:description"
+  content="AWS Client VPN Mutual Authentication" />
+<meta name="twitter:site" content="http://localhost:1313/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image"
+  content="http://localhost:1313/">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="AWS Client VPN 상호 인증 - bluelockr&#39;s blog">
+<meta property="og:description"
+  content="AWS Client VPN Mutual Authentication" />
+<meta property="og:url" content="http://localhost:1313/post/2023/aws_client_vpn_mutual_authentication/" />
+<meta property="og:site_name" content="AWS Client VPN 상호 인증" />
+<meta property="og:image"
+  content="http://localhost:1313/">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2023-10-04 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="http://localhost:1313/">
+        <svg class="octicon" height="32" viewBox="0 0 16 16" version="1.1" width="32">
+          <path fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+          </path>
+        </svg>
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd"
+            d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          <form target="_blank" action="https://www.google.com/search" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+              <input type="hidden" name="q" value="site:http://localhost:1313/">
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="http://localhost:1313/">
+        <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+          width="32">
+          <path fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+          </path>
+        </svg>
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+  
+<div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="http://localhost:1313/">
+                  <img class=" avatar-user"
+                    src="http://localhost:1313/images/avatar.png"
+                    width="32" height="32"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="http://localhost:1313/">Bluelockr</a></span><span
+                    class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
+                      href="http://localhost:1313/post/2023/aws_client_vpn_mutual_authentication/">AWS Client VPN 상호 인증</a></strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Wed, 04 Oct 2023 00:00:00 &#43;0000"
+                    class="no-wrap">
+                    Wed, 04 Oct 2023 00:00:00 &#43;0000</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Sat, 03 Aug 2024 22:55:35 &#43;0900"
+                    class="no-wrap">
+                    Sat, 03 Aug 2024 22:55:35 &#43;0900</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      1411 Words
+                    
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                    
+                    <a class="muted-link mr-3" href="/tags/network">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      Network
+                    </a>
+                    
+                    <a class="muted-link mr-3" href="/tags/aws">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      AWS
+                    </a>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><p><a href="https://www.youtube.com/watch?v=spBZkk9fuxg">https://www.youtube.com/watch?v=spBZkk9fuxg</a><br>
+<a href="https://1mini2.tistory.com/134">https://1mini2.tistory.com/134</a></p>
+<h2 id="iam-사용자-생성">⭐IAM 사용자 생성</h2>
+<p>IAM &gt; 사용자 &gt; 사용자 생성</p>
+<ul>
+<li>사용자 이름 : student</li>
+<li>AWS Management Console에 대한 사용자 액세스 권한 제공 : 체크</li>
+<li>IAM 사용자를 생성하고 싶음 : 선택</li>
+<li>콘솔 암호 : 자동 생성된 암호</li>
+<li>사용자는 다음 로그인 시 새 암호를 생성해야 합니다 : 체크</li>
+<li>권한 옵션 : 직접 정책 연결</li>
+<li>권한 정책 : AWSCertificateManagerFullAccess</li>
+<li>.csv 파일 다운로드</li>
+</ul>
+<p>IAM &gt; 사용자 &gt; (student 클릭) &gt; 보안 자격 증명 &gt; MFA 디바이스 할당</p>
+<ul>
+<li>디바이스 이름 : app</li>
+</ul>
+<p>IAM &gt; 사용자 &gt; (student 클릭) &gt; 보안 자격 증명 &gt; 액세스 키 만들기</p>
+<ul>
+<li>사용 사례 : Command Line Interface(CLI)</li>
+<li>위의 권장 사항을 이해했으며 액세스 키 생성을 계속하려고 합니다. : 체크</li>
+<li>.csv 파일 다운로드</li>
+</ul>
+<h2 id="vpc-생성">⭐VPC 생성</h2>
+<p>VPC &gt; VPC &gt; VPC 생성</p>
+<ul>
+<li>생성할 리소스 : VPC 등</li>
+<li>이름 태그 : client-vpn-vpc (client-vpn까지만 입력하면 -vpc가 뒤에 자동으로 붙음)</li>
+<li>IPv4 CIDR : 10.0.0.0/16</li>
+<li>가용 영역(AZ) 수 : 1</li>
+<li>퍼블릭 서브넷 수 : 0</li>
+<li>프라이빗 서브넷 수 : 1</li>
+<li>NAT 게이트웨이 : 없음</li>
+<li>VPC 엔드포인트 : 없음</li>
+</ul>
+<h2 id="프라이빗-서브넷-인스턴스-생성-및-연결">⭐프라이빗 서브넷 인스턴스 생성 및 연결</h2>
+<p>EC2 &gt; 인스턴스 &gt; 인스턴스 시작</p>
+<!-- raw HTML omitted -->
+<h2 id="aws-cli-설치-및-설정">⭐AWS CLI 설치 및 설정</h2>
+<p><a href="https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/getting-started-install.html">https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/getting-started-install.html</a></p>
+<p>위 링크에서 설치 파일(*.msi) 다운받아 설치 후 윈도우 터미널을 열고 다음 명령어 실행</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws configure
+</span></span><span class="line"><span class="cl"><span class="o">(</span>액세스 ID 입력<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>액세스 시크릿 키 입력<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Default region name : ap-northeast-2
+</span></span><span class="line"><span class="cl">Default output format : json
+</span></span></code></pre></div><h2 id="easyrsa-다운로드-및-acm-설정">⭐EasyRSA 다운로드 및 ACM 설정</h2>
+<p><a href="https://docs.aws.amazon.com/ko_kr/vpn/latest/clientvpn-admin/mutual.html">https://docs.aws.amazon.com/ko_kr/vpn/latest/clientvpn-admin/mutual.html</a></p>
+<p><a href="https://github.com/OpenVPN/easy-rsa/releases">https://github.com/OpenVPN/easy-rsa/releases</a></p>
+<p>바로 윗 링크에서 easy-rsa zip 파일을 다운로드합니다.<br>
+저는 윈도우 64비트이므로 EasyRSA-3.1.6-win64.zip 파일을 다운받아 압축해제해줬습니다.<br>
+(반디집의 알아서 풀기 기능을 이용하면 더더욱 좋습니다.)<br>
+다운로드 경로는 기본적으로 &lsquo;다운로드&rsquo; 폴더 안입니다.</p>
+<p>다운받은 폴더 안쪽으로 들어간 뒤 우클릭해 터미널을 열고 다음 명령어를 실행합니다.</p>
+<p>한 줄씩 차근차근 실행해줍니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">.<span class="se">\E</span>asyRSA-Start.bat
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">./easyrsa init-pki
+</span></span><span class="line"><span class="cl">./easyrsa build-ca nopass
+</span></span><span class="line"><span class="cl"><span class="o">(</span>엔터<span class="o">)</span>
+</span></span><span class="line"><span class="cl">./easyrsa build-server-full server nopass
+</span></span><span class="line"><span class="cl">yes
+</span></span><span class="line"><span class="cl">./easyrsa build-client-full client1.domain.tld nopass
+</span></span><span class="line"><span class="cl">yes
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mkdir C:<span class="se">\e</span>asyrsa
+</span></span><span class="line"><span class="cl">copy pki<span class="se">\c</span>a.crt C:<span class="se">\e</span>asyrsa
+</span></span><span class="line"><span class="cl">copy pki<span class="se">\i</span>ssued<span class="se">\s</span>erver.crt C:<span class="se">\e</span>asyrsa
+</span></span><span class="line"><span class="cl">copy pki<span class="se">\p</span>rivate<span class="se">\s</span>erver.key C:<span class="se">\e</span>asyrsa
+</span></span><span class="line"><span class="cl">copy pki<span class="se">\i</span>ssued<span class="se">\c</span>lient1.domain.tld.crt C:<span class="se">\e</span>asyrsa
+</span></span><span class="line"><span class="cl">copy pki<span class="se">\p</span>rivate<span class="se">\c</span>lient1.domain.tld.key C:<span class="se">\e</span>asyrsa
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> C:<span class="se">\e</span>asyrsa
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">aws acm import-certificate --certificate fileb://server.crt --private-key fileb://server.key --certificate-chain fileb://ca.crt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">aws acm import-certificate --certificate fileb://client1.domain.tld.crt --private-key fileb://client1.domain.tld.key --certificate-chain fileb://ca.crt
+</span></span></code></pre></div><h2 id="client-vpn-엔드포인트-설정">⭐Client VPN 엔드포인트 설정</h2>
+<p>VPC &gt; Client VPN 엔드포인트 &gt; 클라이언트 VPN 엔드포인트 생성</p>
+<ul>
+<li>이름 태그 : cvpn-endpoint</li>
+<li>클라이언트 IPv4 CIDR : 172.0.0.0/22 (VPC CIDR 대역과 겹치지 않아야 함)</li>
+<li>서버 인증서 ARN : (아까 생성한 ACM server 인증서)</li>
+<li>상호 인증 사용 : 체크</li>
+<li>클라이언트 인증서 ARN : (아까 생성한 ACM client 인증서)</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>분할 터널 활성화를 반드시 해주셔야 합니다!</strong></p>
+<p>VPC &gt; Client VPN 엔드포인트 &gt; 대상 네트워크 연결&gt; 대상 네트워크 연결</p>
+<ul>
+<li>VPC : client-vpn-vpc</li>
+<li>서브넷 : client-vpn-subnet-private어쩌고</li>
+</ul>
+<p>VPC &gt; Client VPN 엔드포인트 &gt; 권한 부여 규칙 &gt; 권한 부여 규칙 추가</p>
+<ul>
+<li>액세스를 활성화할 대상 네트워크 : 10.0.0.0/16 (클라이언트 VPN 엔드포인트에 연결된 VPC의 CIDR)</li>
+</ul>
+<p>VPC &gt; Client VPN 엔드포인트 &gt; 클라이언트 구성 다운로드</p>
+<p>다운로드한 클라이언트 구성 파일에 다음과 같은 내용을 추가하고 저장합니다.</p>
+<pre tabindex="0"><code>&lt;cert&gt;
+(client1.domain.tld.crt 파일의 내용 복붙)
+&lt;/cert&gt;
+
+&lt;key&gt;
+(client1.domain.tld.key 파일의 내용 복붙)
+&lt;/key&gt;
+</code></pre><p>client1.domain.tld.crt나 key 파일의 내용을 복붙할 떄는 아까와 마찬가지로 begin, end절까지 모두 포함시킵니다.</p>
+<p>client1.domain.tld.crt나 key 파일은 C드라이브의 easyrsa 폴더 안에 있습니다.</p>
+<h2 id="aws-client-vpn-설치-및-연결">⭐AWS Client VPN 설치 및 연결</h2>
+<p><a href="https://aws.amazon.com/ko/vpn/client-vpn-vpc-download/">https://aws.amazon.com/ko/vpn/client-vpn-vpc-download/</a></p>
+<p>위 링크에서 윈도우 64bit 버전용을 다운받아 설치합니다.</p>
+<p>AWS VPN Client 프로그램을 실행하고 파일 &gt; 프로필 관리 &gt; 프로필 추가</p>
+<ul>
+<li>표시 이름 : aws_vpn_client</li>
+<li>VPN 구성 파일 : (아까 전에 다운받은 vpc-client-endpoint 구성 파일)</li>
+</ul>
+<h2 id="프라이빗-서브넷-ec2-인스턴스-직접-접속">⭐프라이빗 서브넷 EC2 인스턴스 직접 접속</h2>
+<p>VPN이 활성화 되었으니 이 상태로 프라이빗 인스턴스로 직접 SSH 접속해보겠습니다.</p>
+<p>EC2 &gt; 인스턴스 &gt; (private-server 체크) &gt; 연결 &gt; SSH 클라이언트</p>
+<ul>
+<li>맨 밑에 예 : ssh -i &ldquo;vpn-key.pem&rdquo; ec2-user@xxxxxxxx 형식으로 되어있는 명령어 복사</li>
+</ul>
+<p>이제 *pem 키 파일을 다운받은 곳으로 이동하여 해당 폴더에서 터미널을 열어주고 복붙한 명령어를 실행합니다.</p>
+<p>이렇게 하면 NAT 게이트웨이나 Bastion Host 같은 것 없이도 프라이빗 서브넷에 있는 EC2 인스턴스에 바로 SSH 접속할 수 있습니다.</p>
+</article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='http://localhost:1313/js/toc.js'></script>
+<link rel="stylesheet" href='http://localhost:1313/css/toc.css' />
+<script src="https://utteranc.es/client.js"
+        repo="bluelockr/blog-comments"
+        issue-term="pathname"
+        label="utterances"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="http://localhost:1313/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+</body>
+
+<script type="application/javascript" src="http://localhost:1313/js/github-style.js"></script>
+
+
+
+
+</html>

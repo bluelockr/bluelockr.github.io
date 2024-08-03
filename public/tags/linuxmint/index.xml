@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linuxmint on bluelockr&#39;s blog</title>
+    <link>http://localhost:1313/tags/linuxmint/</link>
+    <description>Recent content in Linuxmint on bluelockr&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Sat, 03 Aug 2024 22:55:35 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/linuxmint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리눅스 민트 빠른 실행 아이콘 기본 키 암호 입력 없애기</title>
+      <link>http://localhost:1313/post/2023/no_quick_launch_pw/</link>
+      <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/no_quick_launch_pw/</guid>
+      <description>Disable Quick Launch Password Requirement</description>
+    </item>
+  </channel>
+</rss>

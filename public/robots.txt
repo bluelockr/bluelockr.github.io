@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bluelockr.github.io/sitemap.xml

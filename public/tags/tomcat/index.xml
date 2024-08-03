@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tomcat on bluelockr&#39;s blog</title>
+    <link>http://localhost:1313/tags/tomcat/</link>
+    <description>Recent content in Tomcat on bluelockr&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Sat, 03 Aug 2024 22:55:35 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tomcat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리눅스에 Tomcat 설치하는 법(feat.OpenJDK21)</title>
+      <link>http://localhost:1313/post/2023/linux_tomcat_openjdk_installation/</link>
+      <pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/linux_tomcat_openjdk_installation/</guid>
+      <description>How to Install Tomcat in Linux with OpenJDK21</description>
+    </item>
+    <item>
+      <title>리눅스에 Docker로 Tomcat 설치하는 법</title>
+      <link>http://localhost:1313/post/2023/linux_tomcat_docker/</link>
+      <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/linux_tomcat_docker/</guid>
+      <description>How to install Tomcat in linux using Docker</description>
+    </item>
+  </channel>
+</rss>

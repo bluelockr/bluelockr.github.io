@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='http://localhost:1313/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='http://localhost:1313/css/frameworks.min.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/github.min.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/github-style.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/light.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/dark.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/syntax.css' />
+    <title>Windows에서 AWS Vault 설치 및 사용 - bluelockr&#39;s blog</title>
+    
+    <link rel="icon" type="image/x-icon" href='/images/github.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    
+    <meta name="description"
+  content="AWS Vault Quick Start in Windows" />
+<meta name="keywords"
+  content='blog, google analytics' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="http://localhost:1313/post/2023/windows_aws_vault_quick_start/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Windows에서 AWS Vault 설치 및 사용 - bluelockr&#39;s blog" />
+<meta name="twitter:description"
+  content="AWS Vault Quick Start in Windows" />
+<meta name="twitter:site" content="http://localhost:1313/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image"
+  content="http://localhost:1313/">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Windows에서 AWS Vault 설치 및 사용 - bluelockr&#39;s blog">
+<meta property="og:description"
+  content="AWS Vault Quick Start in Windows" />
+<meta property="og:url" content="http://localhost:1313/post/2023/windows_aws_vault_quick_start/" />
+<meta property="og:site_name" content="Windows에서 AWS Vault 설치 및 사용" />
+<meta property="og:image"
+  content="http://localhost:1313/">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2023-09-27 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="http://localhost:1313/">
+        <svg class="octicon" height="32" viewBox="0 0 16 16" version="1.1" width="32">
+          <path fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+          </path>
+        </svg>
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd"
+            d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          <form target="_blank" action="https://www.google.com/search" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+              <input type="hidden" name="q" value="site:http://localhost:1313/">
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="http://localhost:1313/">
+        <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+          width="32">
+          <path fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+          </path>
+        </svg>
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+  
+<div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="http://localhost:1313/">
+                  <img class=" avatar-user"
+                    src="http://localhost:1313/images/avatar.png"
+                    width="32" height="32"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="http://localhost:1313/">Bluelockr</a></span><span
+                    class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
+                      href="http://localhost:1313/post/2023/windows_aws_vault_quick_start/">Windows에서 AWS Vault 설치 및 사용</a></strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Wed, 27 Sep 2023 00:00:00 &#43;0000"
+                    class="no-wrap">
+                    Wed, 27 Sep 2023 00:00:00 &#43;0000</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Sat, 03 Aug 2024 22:55:35 &#43;0900"
+                    class="no-wrap">
+                    Sat, 03 Aug 2024 22:55:35 &#43;0900</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      1109 Words
+                    
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                    
+                    <a class="muted-link mr-3" href="/tags/windows">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      Windows
+                    </a>
+                    
+                    <a class="muted-link mr-3" href="/tags/aws">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      AWS
+                    </a>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><p><!-- raw HTML omitted --> 주의! <!-- raw HTML omitted --><br>
+<!-- raw HTML omitted -->학습하면서 얻은 정보를 토대로 적은 것이므로 부정확하거나 미비한 정보가 있을 수 있습니다.<!-- raw HTML omitted --><br>
+<!-- raw HTML omitted -->이 점에 유의하면서 학습용 자료로서만 참고해주시기 바랍니다.<!-- raw HTML omitted --></p>
+<p><a href="https://github.com/99designs/aws-vault/blob/master/USAGE.md">https://github.com/99designs/aws-vault/blob/master/USAGE.md</a></p>
+<p>전체적인 내용은 이 글을 참고하였습니다.</p>
+<p>이 방식의 장점은 .aws 폴더 안에 있는 credential 파일 없이도 AWS CLI 작업이 가능하다는 점으로,
+액세스 키 등의 민감한 사항들이 평문으로 노출되지 않습니다.</p>
+<p>따라서 aws-vault를 설치하고 제대로 세팅하고 나면 credential 파일은 오히려 삭제하는 것이 권장됩니다.</p>
+<p>참고 : <a href="https://namejsjeongkr.tistory.com/2">https://namejsjeongkr.tistory.com/2</a></p>
+<h2 id="iam-user-및-mfa-인증-설정">IAM USER 및 MFA 인증 설정</h2>
+<p>먼저 AWS 관리 콘솔에서 IAM 메뉴로 들어갑니다.</p>
+<p>여기서 IAM 사용자를 생성해야 하며, 해당 IAM 사용자에 액세스 키를 생성해줍니다.<br>
+**이 때 액세스 키와 시크릿 키는 단 한 번만 노출되므로, 따로 어딘가 안전하게 보관해둬야 합니다.
+안 그러면 키를 지우고 다시 액세스 키를 생성해줘야 합니다.</p>
+<p>MFA 인증도 하면 좋기에 MFA 인증 설정도 해줍니다.</p>
+<h2 id="aws-vault-설치">AWS Vault 설치</h2>
+<p><a href="https://scoop.sh/">https://scoop.sh/</a></p>
+<p>Powershell을 실행하고 다음 명령어를 입력합니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser <span class="c1"># Optional: Needed to run a remote script the first time</span>
+</span></span><span class="line"><span class="cl">a
+</span></span><span class="line"><span class="cl">irm get.scoop.sh <span class="p">|</span> iex
+</span></span><span class="line"><span class="cl">scoop install aws-vault
+</span></span></code></pre></div><h2 id="aws-vault-프로필-추가">AWS Vault 프로필 추가</h2>
+<p>IAM USER명이 student라는 가정하에 진행해보겠습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws-vault add student
+</span></span><span class="line"><span class="cl"><span class="o">(</span>액세스 키 입력<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>시크릿 키 입력<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 프로필 목록 확인</span>
+</span></span><span class="line"><span class="cl">aws-vault ls
+</span></span></code></pre></div><p>프로필과 credential은 정상적으로 추가됐지만 아직 세션은 열리지 않은 상태입니다.</p>
+<h2 id="region-및-mfa-인증-설정">Region 및 MFA 인증 설정</h2>
+<p>IAM USER명이 <strong>student</strong>,<br>
+내 윈도우 유저명이 <strong>myhost</strong>,<br>
+MFA 사용자 지정명이 <strong>mymfa</strong> (AWS 관리 콘솔의 IAM 메뉴에서 student 사용자 쪽 설정을 잘 찾아보면 나옴)<br>
+라고 가정하면,</p>
+<p><strong>C:\Users\myhost\.aws</strong> 폴더로 이동하면 안에 <strong>config</strong> 파일이 있습니다.<br>
+열어보면 Vault에 추가해준 프로필이 등록되어있습니다.<br>
+여기에 MFA 설정을 다음과 같이 집어넣고 저장합니다.</p>
+<blockquote>
+<p>[profile <strong>student</strong>]
+region = ap-northeast-2
+mfa_serial = arn:aws:iam::<strong>123456789101</strong>:mfa/<strong>mymfa</strong></p>
+</blockquote>
+<h2 id="aws-vault-작동-확인">AWS Vault 작동 확인</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 임시 credential을 사용하여 aws s3 목록 확인</span>
+</span></span><span class="line"><span class="cl">aws-vault <span class="nb">exec</span> student -- aws s3 ls
+</span></span><span class="line"><span class="cl"><span class="c1"># 임시 credential을 사용하지 않으면 정상작동 안 됨</span>
+</span></span><span class="line"><span class="cl">aws s3 ls
+</span></span></code></pre></div><p>MFA 코드 인증하라고 떠야 합니다.<br>
+그리고 명령어 실행 결과, 오류가 없으면 성공입니다.
+(s3 버킷을 생성한 적이 없다면 당연히 아무런 결과도 나오지 않습니다. 오류만 안 나오면 됩니다.)</p>
+<p>만일 진짜로 작동하는 건지 의문이라면 AWS 서비스 하나를 생성하고 실행해봅니다.<br>
+저는 VPC를 하나 생성해보겠습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 임시 credential을 사용하여 vpc 생성</span>
+</span></span><span class="line"><span class="cl">aws-vault <span class="nb">exec</span> student -- aws ec2 create-vpc --cidr-block 10.0.0.0/24 --query Vpc.VpcId --output text
+</span></span><span class="line"><span class="cl"><span class="c1">#웹브라우저에서 student 사용자의 AWS 관리 콘솔 열기</span>
+</span></span><span class="line"><span class="cl">aws-vault login student
+</span></span></code></pre></div><p>이렇게 하면 웹브라우저에서 student IAM USER 사용자의 AWS 관리 콘솔이 열립니다.<br>
+VPC 서비스 쪽으로 가보면 VPC 하나가 생성되어있는 걸 확인하실 수 있습니다.</p>
+<h2 id="기타-알아두면-좋은-명령어">기타 알아두면 좋은 명령어</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 웹브라우저에서 student 사용자의 AWS 관리 콘솔 열기</span>
+</span></span><span class="line"><span class="cl">aws-vault login student
+</span></span><span class="line"><span class="cl"><span class="c1"># student 프로필/credential 삭제</span>
+</span></span><span class="line"><span class="cl">aws-vault remove student
+</span></span><span class="line"><span class="cl"><span class="c1"># 전체 세션 삭제</span>
+</span></span><span class="line"><span class="cl">aws-vault clear
+</span></span><span class="line"><span class="cl"><span class="c1"># student 사용자의 세션만 삭제</span>
+</span></span><span class="line"><span class="cl">aws-vault clear student
+</span></span></code></pre></div><p>이래도 저래도 안 되면 그냥 config 파일을 삭제하고 처음부터 다시해줍니다.<br>
+<strong>C:\Users\myhost\.aws</strong> 폴더로 이동하면 안에 <strong>config</strong> 파일이 있습니다.
+(여기서 myhost는 윈도우 사용자명)</p>
+</article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='http://localhost:1313/js/toc.js'></script>
+<link rel="stylesheet" href='http://localhost:1313/css/toc.css' />
+<script src="https://utteranc.es/client.js"
+        repo="bluelockr/blog-comments"
+        issue-term="pathname"
+        label="utterances"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="http://localhost:1313/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+</body>
+
+<script type="application/javascript" src="http://localhost:1313/js/github-style.js"></script>
+
+
+
+
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='http://localhost:1313/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='http://localhost:1313/css/frameworks.min.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/github.min.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/github-style.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/light.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/dark.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/syntax.css' />
+    <title>AWS VPC 피어링 연결하기 - bluelockr&#39;s blog</title>
+    
+    <link rel="icon" type="image/x-icon" href='/images/github.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    
+    <meta name="description"
+  content="AWS VPC Peering (feat. Cloudshell)" />
+<meta name="keywords"
+  content='blog, google analytics' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="http://localhost:1313/post/2023/aws_vpc_peering_using_cloudshell/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="AWS VPC 피어링 연결하기 - bluelockr&#39;s blog" />
+<meta name="twitter:description"
+  content="AWS VPC Peering (feat. Cloudshell)" />
+<meta name="twitter:site" content="http://localhost:1313/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image"
+  content="http://localhost:1313/">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="AWS VPC 피어링 연결하기 - bluelockr&#39;s blog">
+<meta property="og:description"
+  content="AWS VPC Peering (feat. Cloudshell)" />
+<meta property="og:url" content="http://localhost:1313/post/2023/aws_vpc_peering_using_cloudshell/" />
+<meta property="og:site_name" content="AWS VPC 피어링 연결하기" />
+<meta property="og:image"
+  content="http://localhost:1313/">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2023-09-28 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="http://localhost:1313/">
+        <svg class="octicon" height="32" viewBox="0 0 16 16" version="1.1" width="32">
+          <path fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+          </path>
+        </svg>
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd"
+            d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          <form target="_blank" action="https://www.google.com/search" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+              <input type="hidden" name="q" value="site:http://localhost:1313/">
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="http://localhost:1313/">
+        <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+          width="32">
+          <path fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+          </path>
+        </svg>
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+  
+<div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="http://localhost:1313/">
+                  <img class=" avatar-user"
+                    src="http://localhost:1313/images/avatar.png"
+                    width="32" height="32"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="http://localhost:1313/">Bluelockr</a></span><span
+                    class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
+                      href="http://localhost:1313/post/2023/aws_vpc_peering_using_cloudshell/">AWS VPC 피어링 연결하기</a></strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Thu, 28 Sep 2023 00:00:00 &#43;0000"
+                    class="no-wrap">
+                    Thu, 28 Sep 2023 00:00:00 &#43;0000</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Sat, 03 Aug 2024 22:55:35 &#43;0900"
+                    class="no-wrap">
+                    Sat, 03 Aug 2024 22:55:35 &#43;0900</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      1873 Words
+                    
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                    
+                    <a class="muted-link mr-3" href="/tags/network">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      Network
+                    </a>
+                    
+                    <a class="muted-link mr-3" href="/tags/aws">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      AWS
+                    </a>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><p><a href="https://docs.aws.amazon.com/vpc/latest/userguide/extend-intro.html">https://docs.aws.amazon.com/vpc/latest/userguide/extend-intro.html</a></p>
+<p>오늘은 VPC 피어링을 통해 서로 다른 리전에 있는 VPC끼리 통신이 이루어지도록 해보겠습니다.</p>
+<p>전체적인 구조는 다음과 같습니다.</p>
+<ul>
+<li>두 리전 간 VPC 피어링 연결 수립</li>
+<li>라우팅 테이블 설정(인터넷 게이트웨이 관련, VPC 연결 관련)</li>
+<li>보안 그룹 설정(80번 포트, ICMPv4 허용)</li>
+<li>퍼블릭 서브넷 내 EC2 인스턴스의 퍼블릭 IPv4 주소 사용 (EIP 부여하면 좋음)</li>
+</ul>
+<p>이런 작업들이 필요합니다.<br>
+저는 아래와 같이 진행해주었습니다.</p>
+<h2 id="vpc-피어링">⭐VPC 피어링</h2>
+<h3 id="서울-쪽-vpc서브넷-설정">서울 쪽 VPC/서브넷 설정</h3>
+<p>VPC &gt; VPC &gt; 생성</p>
+<ul>
+<li>생성할 리소스 : vpc만</li>
+<li>이름 태그 : vpc-kr</li>
+<li>IPv4 CIDR : 10.0.0.0/16</li>
+</ul>
+<p>VPC &gt; 서브넷 &gt; 서브넷 생성</p>
+<ul>
+<li>VPC ID : vpc-kr 선택</li>
+<li>서브넷 이름 : kr-public-subnet</li>
+<li>IPv4 subnet CIDR block : 10.0.1.0/24</li>
+</ul>
+<p>VPC &gt; 서브넷 &gt; (kr-public-subnet 서브넷 체크) &gt; 작업 &gt; 서브넷 설정 편집</p>
+<ul>
+<li>퍼블릭 IPv4 주소 자동 할당 활성화</li>
+</ul>
+<p>VPC &gt; 서브넷 &gt; 서브넷 생성</p>
+<ul>
+<li>VPC ID : vpc-kr 선택</li>
+<li>서브넷 이름 : kr-private-subnet</li>
+<li>IPv4 subnet CIDR block : 10.0.2.0/24</li>
+</ul>
+<h3 id="도쿄-쪽-vpc서브넷-설정">도쿄 쪽 VPC/서브넷 설정</h3>
+<p>VPC &gt; VPC &gt; 생성</p>
+<ul>
+<li>이름 태그 : vpc-jp</li>
+<li>IPv4 CIDR : 20.0.0.0/16</li>
+</ul>
+<p>VPC &gt; 서브넷 &gt; 서브넷 생성</p>
+<ul>
+<li>VPC ID : vpc-jp 선택</li>
+<li>서브넷 이름 : jp-public-subnet</li>
+<li>IPv4 subnet CIDR block : 20.0.1.0/24</li>
+</ul>
+<p>VPC &gt; 서브넷 &gt; (jp-public-subnet 서브넷 체크) &gt; 작업 &gt; 서브넷 설정 편집</p>
+<ul>
+<li>퍼블릭 IPv4 주소 자동 할당 활성화</li>
+</ul>
+<p>VPC &gt; 서브넷 &gt; 서브넷 생성</p>
+<ul>
+<li>VPC ID : vpc-jp 선택</li>
+<li>서브넷 이름 : jp-private-subnet</li>
+<li>IPv4 subnet CIDR block : 20.0.2.0/24</li>
+</ul>
+<h3 id="도쿄-인터넷-게이트웨이-설정">도쿄 인터넷 게이트웨이 설정</h3>
+<p>저는 EC2 Connect를 사용하여 인스턴스에 접속해줄 것이기 때문에 인터넷 게이트웨이가 필요합니다.</p>
+<p><a href="https://rainbound.tistory.com/entry/AWS-EC2-SSH-%EB%B0%8F-%EC%97%B0%EA%B2%B0-%ED%95%A0%EB%95%8C-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%84%A4%EC%A0%95">참고 링크</a></p>
+<p>VPC &gt; 인터넷 게이트웨이 &gt; 인터넷 게이트웨이 생성</p>
+<ul>
+<li>이름 태그 : igw-jp</li>
+</ul>
+<p>VPC &gt; 인터넷 게이트웨이 &gt; (jp-igw 체크) &gt; 작업 &gt; VPC에 연결</p>
+<ul>
+<li>vpc-jp 선택</li>
+</ul>
+<h3 id="서울-인터넷-게이트웨이-설정">서울 인터넷 게이트웨이 설정</h3>
+<p>VPC &gt; 인터넷 게이트웨이 &gt; 인터넷 게이트웨이 생성</p>
+<ul>
+<li>이름 태그 : igw-kr</li>
+</ul>
+<p>VPC &gt; 인터넷 게이트웨이 &gt; (kr-igw 체크) &gt; 작업 &gt; VPC에 연결</p>
+<ul>
+<li>vpc-kr 선택</li>
+</ul>
+<h3 id="vpc-피어링-요청">VPC 피어링 요청</h3>
+<p>어느 쪽에서 요청을 보내도 상관 없지만,
+저는 서울에서 보내는 걸로 해봤습니다.</p>
+<p>우선 도쿄 리전에서 vpc-jp의 VPC-ID를 복사해둡니다.<br>
+(VPC 메뉴에서 잘 찾아보면 나옵니다.)</p>
+<p>그리고 서울 리전으로 이동합니다.</p>
+<p>VPC &gt; 피어링 연결 &gt; 피어링 연결 생성</p>
+<ul>
+<li>이름 : vpcpeer</li>
+<li>피어링할 로컬 VPC 선택 : vpc-kr</li>
+<li>리전 : 다른 리전, 아시아 태평양(도쿄)(ap-northeast-1)</li>
+<li>VPC ID(수락자) : (아까 복사해둔 vpc-jp의 vpc-id 붙여넣기)</li>
+</ul>
+<p>다시 도쿄 리전으로 이동합니다.</p>
+<h3 id="vpc-피어링-요청-수락">VPC 피어링 요청 수락</h3>
+<p>VPC &gt; 피어링 연결 &gt; 작업 &gt; 요청 수락</p>
+<p>VPC 피어링이 이렇게 연결되었습니다.</p>
+<h2 id="vpc간-라우팅-설정">⭐VPC간 라우팅 설정</h2>
+<p>인터넷 게이트웨이 관련 라우팅, VPC 피어링 라우팅이 필요합니다.</p>
+<h3 id="도쿄-vpc-라우팅-테이블-설정">도쿄 VPC 라우팅 테이블 설정</h3>
+<p>VPC &gt; 라우팅 테이블 &gt; (vpc-jp에 연결된 라우팅 테이블 체크) &gt; 작업 &gt; 라우팅 편집</p>
+<ul>
+<li>대상(왼쪽) : 0.0.0.0/0, 대상(오른쪽) : 인터넷 게이트웨이(jp-igw)</li>
+<li>대상(왼쪽) : 10.0.0.0/16, 대상(오른쪽) : 피어링 연결</li>
+</ul>
+<h3 id="서울-vpc-라우팅-테이블-설정">서울 VPC 라우팅 테이블 설정</h3>
+<p>VPC &gt; 라우팅 테이블 &gt; (vpc-kr에 연결된 라우팅 테이블 체크) &gt; 작업 &gt; 라우팅 편집</p>
+<ul>
+<li>대상(왼쪽) : 0.0.0.0/0, 대상(오른쪽) : 인터넷 게이트웨이(kr-igw)</li>
+<li>대상(왼쪽) : 20.0.0.0/16, 대상(오른쪽) : 피어링 연결</li>
+</ul>
+<h2 id="인스턴스-설정">⭐인스턴스 설정</h2>
+<h3 id="서울-ec2-인스턴스-생성">서울 EC2 인스턴스 생성</h3>
+<p>인스턴스 타입은 가급적 프리티어 적용되는 t2.micro로 해주되,<br>
+만일 안 되면 t3.micro도 무방합니다.</p>
+<p>EC2 &gt; 인스턴스 &gt; 인스턴스 시작</p>
+<ul>
+<li>이름 : kr-public-server</li>
+<li>Quick Start : Amazon Linux</li>
+<li>인스턴스 유형 : t2.micro</li>
+<li>키 페어 : (필요 없음)</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>EC2 &gt; 인스턴스 &gt; 인스턴스 시작</p>
+<ul>
+<li>이름 : kr-private-server</li>
+<li>Quick Start : Amazon Linux</li>
+<li>인스턴스 유형 : t2.micro</li>
+<li>키 페어 : (필요 없음)</li>
+</ul>
+<!-- raw HTML omitted -->
+<h3 id="도쿄-ec2-인스턴스-생성">도쿄 EC2 인스턴스 생성</h3>
+<p>EC2 &gt; 인스턴스 &gt; 인스턴스 시작</p>
+<ul>
+<li>이름 : jp-public-server</li>
+<li>Quick Start : Amazon Linux</li>
+<li>인스턴스 유형 : t2.micro</li>
+<li>키 페어 : (필요 없음)</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>EC2 &gt; 인스턴스 &gt; 인스턴스 시작</p>
+<ul>
+<li>이름 : jp-private-server</li>
+<li>Quick Start : Amazon Linux</li>
+<li>인스턴스 유형 : t2.micro</li>
+<li>키 페어 : (필요 없음)</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="ec2-인스턴스-연결-엔드포인트-생성">⭐EC2 인스턴스 연결 엔드포인트 생성</h2>
+<p>도쿄 리전의 프라이빗 서브넷 인스턴스에 연결하기 위해 다음과 같이 진행합니다.</p>
+<p>VPC &gt; 엔드포인트 &gt; 엔드포인트 생성</p>
+<ul>
+<li>이름 태그 : jp-instance-connect-endpoint</li>
+<li>서비스 범주 : EC2 인스턴스 연결 엔드포인트</li>
+<li>VPC : vpc-jp</li>
+<li>보안 그룹 : sec-jp</li>
+<li>서브넷 : jp-private-subnet</li>
+</ul>
+<p>서울 리전에서도 동일하게 해줍니다.</p>
+<p>VPC &gt; 엔드포인트 &gt; 엔드포인트 생성</p>
+<ul>
+<li>이름 태그 : kr-instance-connect-endpoint</li>
+<li>서비스 범주 : EC2 인스턴스 연결 엔드포인트</li>
+<li>VPC : vpc-kr</li>
+<li>보안 그룹 : sec-kr</li>
+<li>서브넷 : kr-private-subnet</li>
+</ul>
+<h2 id="핑-테스트">⭐핑 테스트</h2>
+<p><strong>각 리전에 있는 총 4개의 인스턴스의 프라이빗 IP 주소를 따로 적어둡니다.</strong><br>
+(VPC &gt; 인스턴스 &gt; 인스턴스 ID 클릭하시면 나옵니다.)</p>
+<p>이제 EC2 인스턴스 연결 엔드포인트를 사용하여 연결해봅니다.<br>
+저는 먼저 kr-private-server에 연결해보겠습니다.</p>
+<p>EC2 &gt; 인스턴스 &gt; (kr-private-server 체크) &gt; 연결 &gt; EC2 인스턴스 연결</p>
+<ul>
+<li>연결 유형 : EC2 인스턴스 연결 엔드포인트를 사용하여 연결</li>
+<li>사용자 이름 : ec2-user</li>
+<li>EC2 인스턴스 연결 엔드포인트 : (목록에 있는 거 선택)</li>
+</ul>
+<p>여기까지 다 완료하고 핑테스트를 진행하면 프라이빗 서브넷에서 나머지 3개의 인스턴스로 핑이 가는 걸 볼 수 있습니다.</p>
+<p>ping테스트를 해보고 ping이 안 가면 EC2 인스턴스 연결 엔드포인트가 구성되기까지 시간이 걸려서 안 되는 것일 수도 있으므로 라우팅 테이블, 보안 그룹, 피어링 연결 등의 설정을 검토하면서 기다려줍니다.</p>
+<p>NAT 게이트웨이 없이도 통신이 잘 되는 걸 확인하실 수 있습니다.</p>
+</article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='http://localhost:1313/js/toc.js'></script>
+<link rel="stylesheet" href='http://localhost:1313/css/toc.css' />
+<script src="https://utteranc.es/client.js"
+        repo="bluelockr/blog-comments"
+        issue-term="pathname"
+        label="utterances"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="http://localhost:1313/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+</body>
+
+<script type="application/javascript" src="http://localhost:1313/js/github-style.js"></script>
+
+
+
+
+</html>
