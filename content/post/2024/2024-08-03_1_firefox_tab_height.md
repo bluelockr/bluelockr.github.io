@@ -8,6 +8,13 @@ tags = ['web_browser']
 draft = false
 +++
 
+```bash
+# Environment
+Firefox Version : 128.0.3
+OS : Windows 11
+```
+<br>
+
 ## 1️⃣
 <kbd>
     <img src="/../../images/2024/2024-08-03_1_firefox_tab_height/1.png" width="600">
