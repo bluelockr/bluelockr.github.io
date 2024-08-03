@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sat, 03 Aug 2024 22:55:35 &#43;0900"
+                  Modified <relative-time datetime="Sun, 04 Aug 2024 01:51:38 &#43;0900"
                     class="no-wrap">
-                    Sat, 03 Aug 2024 22:55:35 &#43;0900</relative-time>
+                    Sun, 04 Aug 2024 01:51:38 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -225,28 +225,28 @@
               <div class="Box-body px-5 pb-5" style="z-index: 1">
                 <article class="markdown-body entry-content container-lg"><h2 id="ssh-설치">⭐SSH 설치</h2>
 <p>일단 가상 머신 내에 SSH를 설치해야 합니다.</p>
-<p><!-- raw HTML omitted --> <strong>[Ubuntu의 경우]</strong> <!-- raw HTML omitted --></p>
+<p><span style="color:#dd4814"> <strong>[Ubuntu의 경우]</strong> </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install openssh-server -y
 </span></span><span class="line"><span class="cl">sudo systemctl start ssh
 </span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> ssh
-</span></span></code></pre></div><p><!-- raw HTML omitted --> <strong>[Rocky Linux의 경우]</strong> <!-- raw HTML omitted --></p>
+</span></span></code></pre></div><p><span style="color:darkcyan"> <strong>[Rocky Linux의 경우]</strong> </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo yum install openssh-server -y
 </span></span><span class="line"><span class="cl">sudo systemctl start sshd
 </span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> sshd
 </span></span></code></pre></div><h2 id="방화벽-설정">⭐방화벽 설정</h2>
 <p>방화벽에서 해당 포트를 열어줘야 합니다.</p>
-<p><!-- raw HTML omitted --> <strong>[Ubuntu의 경우]</strong> <!-- raw HTML omitted --></p>
+<p><span style="color:#dd4814"> <strong>[Ubuntu의 경우]</strong> </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ufw allow <span class="m">22</span>
 </span></span><span class="line"><span class="cl">sudo ufw reload
-</span></span></code></pre></div><p><!-- raw HTML omitted --> <strong>[Rocky Linux의 경우]</strong> <!-- raw HTML omitted --></p>
+</span></span></code></pre></div><p><span style="color:darkcyan"> <strong>[Rocky Linux의 경우]</strong> </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo firewall-cmd --permanent --zone<span class="o">=</span>public --add-port<span class="o">=</span>22/tcp
 </span></span><span class="line"><span class="cl">sudo firewall-cmd --reload
 </span></span><span class="line"><span class="cl">sudo firewall-cmd --list-ports
 </span></span></code></pre></div><p>만일 가상머신에서 실험하는 용도로 사용할 거라면 <strong>아예 방화벽 자체를 비활성하는 방법도 있습니다.</strong></p>
-<p><!-- raw HTML omitted --> <strong>[Ubuntu의 경우]</strong> <!-- raw HTML omitted --></p>
+<p><span style="color:#dd4814"> <strong>[Ubuntu의 경우]</strong> </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl stop ufw
 </span></span><span class="line"><span class="cl">sudo systemctl disable ufw
-</span></span></code></pre></div><p><!-- raw HTML omitted --> <strong>[Rocky Linux의 경우]</strong> <!-- raw HTML omitted --></p>
+</span></span></code></pre></div><p><span style="color:darkcyan"> <strong>[Rocky Linux의 경우]</strong> </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl stop firewalld
 </span></span><span class="line"><span class="cl">sudo systemctl disable firewalld
 </span></span></code></pre></div><h2 id="호스트-ip-확인">⭐호스트 IP 확인</h2>

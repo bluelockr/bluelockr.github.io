@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sat, 03 Aug 2024 22:55:35 &#43;0900"
+                  Modified <relative-time datetime="Sun, 04 Aug 2024 01:51:38 &#43;0900"
                     class="no-wrap">
-                    Sat, 03 Aug 2024 22:55:35 &#43;0900</relative-time>
+                    Sun, 04 Aug 2024 01:51:38 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -182,7 +182,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      1411 Words
+                      1555 Words
                     
 
                   </div>
@@ -252,7 +252,23 @@
 </ul>
 <h2 id="프라이빗-서브넷-인스턴스-생성-및-연결">⭐프라이빗 서브넷 인스턴스 생성 및 연결</h2>
 <p>EC2 &gt; 인스턴스 &gt; 인스턴스 시작</p>
-<!-- raw HTML omitted -->
+<ul>
+  <li>이름 : private-server<li>
+  <li>Quick Start : Amazon Linux 2023</li>
+  <li>키 페어 이름 : vpn-key</li>
+  <li>네트워크 설정 > 편집</li>
+    <ul>
+      <li>vpc : client-vpn-vpc</li>
+      <li>서브넷 : client-vpn-subnet-private어쩌고</li>
+      <li>퍼블릭 IP 자동할당 : 비활성화</li>
+      <li>보안 그룹 : vpn-sec</li>
+          <li>인바운드 보안 그룹 규칙</li>
+            <ul>
+              <li>SSH, 소스 : 0.0.0.0/0</li>
+            </ul>
+        </ul>
+    </ul>
+</ul>
 <h2 id="aws-cli-설치-및-설정">⭐AWS CLI 설치 및 설정</h2>
 <p><a href="https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/getting-started-install.html">https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/getting-started-install.html</a></p>
 <p>위 링크에서 설치 파일(*.msi) 다운받아 설치 후 윈도우 터미널을 열고 다음 명령어 실행</p>
@@ -301,7 +317,17 @@
 <li>상호 인증 사용 : 체크</li>
 <li>클라이언트 인증서 ARN : (아까 생성한 ACM client 인증서)</li>
 </ul>
-<!-- raw HTML omitted -->
+<ul>
+  <li>기타 파라미터</li>
+    <ul>
+      <li>DNS 서버 활성화 : 켜기</li>
+      <li>전송 프로토콜 : UDP</li>
+      <li>분할 터널 활성화 : 켜기</li>
+      <li>VPC ID : client-vpn-vpc</li>
+      <li>보안 그룹 ID : vpn-sec</li>
+      <li>VPN 포트 : 443</li>
+    </ul>
+</ul>
 <p><strong>분할 터널 활성화를 반드시 해주셔야 합니다!</strong></p>
 <p>VPC &gt; Client VPN 엔드포인트 &gt; 대상 네트워크 연결&gt; 대상 네트워크 연결</p>
 <ul>

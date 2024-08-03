@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sat, 03 Aug 2024 22:55:35 &#43;0900"
+                  Modified <relative-time datetime="Sun, 04 Aug 2024 01:51:38 &#43;0900"
                     class="no-wrap">
-                    Sat, 03 Aug 2024 22:55:35 &#43;0900</relative-time>
+                    Sun, 04 Aug 2024 01:51:38 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -182,7 +182,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      1642 Words
+                      1872 Words
                     
 
                   </div>
@@ -242,18 +242,34 @@ VPC &gt; 서브넷 으로 가서 vpc-kr 로 시작하는 서브넷의 IPv4 CIDR�
 <h2 id="ec2-인스턴스-생성">⭐EC2 인스턴스 생성</h2>
 <h3 id="ec2-인스턴스-생성-1">EC2 인스턴스 생성</h3>
 <p>EC2 &gt; 인스턴스 &gt; 인스턴스 시작</p>
-<!-- raw HTML omitted -->
+<ul>
+  <li>이름 : nat-instance</li>
+  <li>Quick Start : Amazon Linux</li>
+  <li>키 페어(로그인) : 새 키 페어 생성</li>
+    <ul>
+        <li>키 페어 이름 : mykeypair</li>
+        <li>프라이빗 키 파일 형식 : *.pem</li>
+    </ul>
+  <li>네트워크 설정 > 편집</li>
+    <ul>
+      <li>VPC : vpc-kr-vpc</li>
+      <li>서브넷 : vpc-kr-subnet-public1으로 시작하는 서브넷</li>
+      <li>퍼블릭 IP 자동 할당 : 활성화</li>
+      <li>방화벽(보안 그룹) : 보안 그룹 생성(보안 그룹 이름: sec-kr)</li>
+    </ul>
+  </li>
+</ul>
 <h2 id="보안-그룹-편집">⭐보안 그룹 편집</h2>
 <p>VPC &gt; 보안 그룹 &gt; (sec-kr 체크) &gt; 작업 &gt; 인바운드 규칙 편집 &gt; 규칙 추가<br>
--유형 : HTTP 소스 10.0.128.0/20<!-- raw HTML omitted --><br>
--유형 : HTTPS, 소스 10.0.128.0/20<!-- raw HTML omitted --><br>
--유형 : SSH, 소스 0.0.0.0/0<!-- raw HTML omitted --><br>
--모든 ICMP-IPv4, 소스 0.0.0.0/0<!-- raw HTML omitted --></p>
+-유형 : HTTP 소스 10.0.128.0/20</li><br>
+-유형 : HTTPS, 소스 10.0.128.0/20</li><br>
+-유형 : SSH, 소스 0.0.0.0/0</li><br>
+-모든 ICMP-IPv4, 소스 0.0.0.0/0</li></p>
 <p>VPC &gt; 보안 그룹 &gt; (sec-kr 체크) &gt; 작업 &gt; 아웃바운드 규칙 편집 &gt; 규칙 추가<br>
--유형 : HTTP 목적 10.0.128.0/20<!-- raw HTML omitted --><br>
--유형 : HTTPS, 목적 10.0.128.0/20<!-- raw HTML omitted --><br>
--유형 : SSH, 목적 0.0.0.0/0<!-- raw HTML omitted --><br>
--모든 ICMP-IPv4, 목적 0.0.0.0/0<!-- raw HTML omitted --></p>
+-유형 : HTTP 목적 10.0.128.0/20</li><br>
+-유형 : HTTPS, 목적 10.0.128.0/20</li><br>
+-유형 : SSH, 목적 0.0.0.0/0</li><br>
+-모든 ICMP-IPv4, 목적 0.0.0.0/0</li></p>
 <p>저는 어차피 그냥 실습 목적이고 바로 삭제해줄거라서 이렇게 했지만 여러분은 이러시면 안됩니다 ㅇㅅㅇ;;</p>
 <h2 id="nat-인스턴스-설정">⭐NAT 인스턴스 설정</h2>
 <p>EC2 &gt; 인스턴스 &gt; (nat-instance 체크) &gt; 연결 &gt; SSH 클라이언트</p>
@@ -296,7 +312,19 @@ ssh -i &ldquo;mykeypair.pem&rdquo; ec2-user@xxxxxxxx 형식으로 되어있는 �
 <h2 id="프라이빗-서브넷-인스턴스-작업">⭐프라이빗 서브넷 인스턴스 작업</h2>
 <h3 id="프라이빗-서브넷에-ec2-인스턴스-생성">프라이빗 서브넷에 EC2 인스턴스 생성</h3>
 <p>EC2 &gt; 인스턴스 &gt; 인스턴스 시작</p>
-<!-- raw HTML omitted -->
+<ul>
+  <li>이름 : private-instance</li>
+  <li>Quick Start : Amazon Linux</li>
+  <li>키 페어(로그인) : mykeypair</li>
+  <li>네트워크 설정 > 편집</li>
+    <ul>
+      <li>VPC : vpc-kr-vpc</li>
+      <li>서브넷 : vpc-kr-subnet-private1으로 시작하는 서브넷</li>
+      <li>퍼블릭 IP 자동 할당 : 비활성화</li>
+      <li>방화벽(보안 그룹) : 기존 보안 그룹 선택(sec-kr)</li>
+    </ul>
+  </li>
+</ul>
 <p>프라이빗 인스턴스기 떄문에 퍼블릭 IP는 할당하지 않습니다.</p>
 <h2 id="핑-테스트">⭐핑 테스트</h2>
 <h3 id="인터넷-nat-인스턴스-간-통신">인터넷-NAT 인스턴스 간 통신</h3>

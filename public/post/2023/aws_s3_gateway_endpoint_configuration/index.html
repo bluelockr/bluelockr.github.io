@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sat, 03 Aug 2024 22:55:35 &#43;0900"
+                  Modified <relative-time datetime="Sun, 04 Aug 2024 01:51:38 &#43;0900"
                     class="no-wrap">
-                    Sat, 03 Aug 2024 22:55:35 &#43;0900</relative-time>
+                    Sun, 04 Aug 2024 01:51:38 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -182,7 +182,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      1174 Words
+                      1286 Words
                     
 
                   </div>
@@ -259,7 +259,26 @@
 </ul>
 <h2 id="프라이빗-서브넷-인스턴스-생성">⭐프라이빗 서브넷 인스턴스 생성</h2>
 <p>EC2 &gt; 인스턴스 &gt; 인스턴스 시작</p>
-<!-- raw HTML omitted -->
+<ul>
+  <li>이름 : private-server<li>
+  <li>Quick Start : Amazon Linux</li>
+  <li>키 페어 : (설정 안 함)</li>
+  <li>네트워크 설정 > 편집</li>
+    <ul>
+      <li>vpc : practice-vpc</li>
+      <li>서브넷 : practice-subnet-private어쩌고</li>
+      <li>퍼블릭 IP 자동할당 : 비활성화</li>
+      <li>보안 그룹 생성</li>
+        <ul>
+          <li>보안 그룹 이름: practice-sec</li>
+          <li>인바운드 보안 그룹 규칙</li>
+            <ul>
+              <li>SSH, 소스 : 0.0.0.0/0</li>
+            </ul>
+        </ul>
+    </ul>
+    <li>키 페어 없이 계속 진행</li>
+</ul>
 <h2 id="vpc-s3-gateway-endpoint-생성">⭐VPC S3 Gateway Endpoint 생성</h2>
 <p>VPC &gt; 엔드포인트 &gt; 엔드포인트 생성</p>
 <ul>

@@ -8,14 +8,28 @@ tags = ['web_browser']
 draft = false
 +++
 
-![alt text](../../images/2024/2024-08-03_1_firefox_tab_height/1.png)
+## 1️⃣
+<img src="/../../images/2024/2024-08-03_1_firefox_tab_height/1.png" width="600">
 
-![alt text](../../images/2024/2024-08-03_1_firefox_tab_height/2.png)
+## 2️⃣
+<img src="/../../images/2024/2024-08-03_1_firefox_tab_height/2.png" width="600">
 
-![alt text](../../images/2024/2024-08-03_1_firefox_tab_height/3.png)
+## 3️⃣
+<img src="/../../images/2024/2024-08-03_1_firefox_tab_height/3.png" width="600">
 
-![alt text](../../images/2024/2024-08-03_1_firefox_tab_height/4.png)
+## 4️⃣
+<img src="/../../images/2024/2024-08-03_1_firefox_tab_height/4.png" width="300">
 
-![alt text](../../images/2024/2024-08-03_1_firefox_tab_height/5.png)
+## 5️⃣
+<img src="/../../images/2024/2024-08-03_1_firefox_tab_height/5.png" width="300">
 
-![alt text](../../images/2024/2024-08-03_1_firefox_tab_height/6.png)
+## 6️⃣
+<img src="/../../images/2024/2024-08-03_1_firefox_tab_height/6.png" width="500">
+
+<br>
+<br>
+<br>
+
+참고 :
+<br>
+[https://support.mozilla.org/bm/questions/1339088](https://support.mozilla.org/bm/questions/1339088)

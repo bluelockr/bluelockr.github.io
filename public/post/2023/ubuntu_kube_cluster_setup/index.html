@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sat, 03 Aug 2024 22:55:35 &#43;0900"
+                  Modified <relative-time datetime="Sun, 04 Aug 2024 01:51:38 &#43;0900"
                     class="no-wrap">
-                    Sat, 03 Aug 2024 22:55:35 &#43;0900</relative-time>
+                    Sun, 04 Aug 2024 01:51:38 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -237,13 +237,13 @@
 <h3 id="버추얼박스-자체-네트워크-설정">💧버추얼박스 자체 네트워크 설정</h3>
 <p><img src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/1.png" alt="Alt text"></p>
 <p><img src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/2.png" alt="Alt text"></p>
-<p><!-- raw HTML omitted --> <strong>[NAT Networks]</strong> <!-- raw HTML omitted --><br>
+<p><span style="background-color:khaki"> <strong>[NAT Networks]</strong> </span><br>
 <strong>Name : NatNetwork</strong><br>
 <strong>IP Prefix : 192.168.0.0/24</strong><br>
 <strong>Enable DHCP</strong></p>
 <h3 id="우분투가-설치된-가상머신vm-설정">💧우분투가 설치된 가상머신(VM) 설정</h3>
 <p><img src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/3.png" alt="Alt text"></p>
-<p><!-- raw HTML omitted --> <strong>[어댑터 1]</strong> <!-- raw HTML omitted --><br>
+<p><span style="background-color:khaki"> <strong>[어댑터 1]</strong> </span><br>
 <strong>NAT 네트워크</strong><br>
 <strong>이름 : NatNetwork</strong></p>
 <p><em>NAT Networks 대신에 &lsquo;어댑터에 브리지&rsquo; 옵션을 선택해줘도 됩니다.</em></p>
@@ -308,7 +308,7 @@
 🔼Virtualbox VM 복제하는 법</p>
 <h2 id="worker-노드-ip-호스트명-설정">⭐worker 노드 IP, 호스트명 설정</h2>
 <p><img src="/../../images/2023/2023-09-21_2_ubuntu_kube/2.png" alt="Alt text"></p>
-<p><!-- raw HTML omitted --> <strong>worker 노드를 실행한 뒤 다음과 같이 설정합니다.</strong> <!-- raw HTML omitted --><br>
+<p><span style="color:blueviolet"> <strong>worker 노드를 실행한 뒤 다음과 같이 설정합니다.</strong> </span><br>
 <strong>IPv4 Method : Manual</strong><br>
 <strong>IP : 192.168.0.20</strong><br>
 <strong>SM : 255.255.255.0</strong><br>
@@ -319,7 +319,7 @@
 </span></span></code></pre></div><p>그리고 재부팅합니다.</p>
 <h2 id="kubernetes-cluster-설정">⭐Kubernetes Cluster 설정</h2>
 <h3 id="kubeadm-init">💧Kubeadm init</h3>
-<p><!-- raw HTML omitted --> <strong>master node VM을 실행합니다.</strong> <!-- raw HTML omitted --><br>
+<p><span style="color:blueviolet"> <strong>master node VM을 실행합니다.</strong> </span><br>
 <a href="https://velog.io/@makengi/K8s-%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EA%B5%AC%EC%84%B1%EC%A4%91-%EC%97%90%EB%9F%AC">https://velog.io/@makengi/K8s-%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EA%B5%AC%EC%84%B1%EC%A4%91-%EC%97%90%EB%9F%AC</a></p>
 <p>kubeadm init 과정 중 에러가 발생하기 때문에 아래 명령어를 실행해줘야 합니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo su
@@ -346,7 +346,7 @@
 </span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">KUBECONFIG</span><span class="o">=</span>/etc/kubernetes/admin.conf
 </span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">KUBECONFIG</span><span class="o">=</span><span class="nv">$HOME</span>/.kube/config
 </span></span></code></pre></div><h3 id="kubeadm-join">💧Kubeadm join</h3>
-<p><!-- raw HTML omitted --> <strong>이제 worker node VM으로 건너갑니다.</strong> <!-- raw HTML omitted --></p>
+<p><span style="color:blueviolet"> <strong>이제 worker node VM으로 건너갑니다.</strong> </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo su
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">rm /etc/containerd/config.toml
@@ -354,7 +354,7 @@
 </span></span><span class="line"><span class="cl">swapoff -a
 </span></span></code></pre></div><p>그리고 터미널에 아까 복사했던 kubeadm join 어쩌고 하는 값을 그대로 붙여넣고 실행합니다.</p>
 <h3 id="pod-network-addon-설치">💧Pod Network Addon 설치</h3>
-<p><!-- raw HTML omitted --> <strong>다시 master node VM로 건너가서,</strong> <!-- raw HTML omitted -->
+<p><span style="color:blueviolet"> <strong>다시 master node VM로 건너가서,</strong> </span>
 여기에 pod network addon을 설치해주어야 합니다.
 저는 Weave-net을 사용해주었습니다.</p>
 <p><a href="https://kubernetes.io/docs/concepts/cluster-administration/addons/#networking-and-network-policy">https://kubernetes.io/docs/concepts/cluster-administration/addons/#networking-and-network-policy</a><br>
@@ -363,9 +363,9 @@
 🔼Weave-net Pod Network 설치하는 법</p>
 <p>일반 사용자 모드에서 다음 명령어를 수행합니다.</p>
 <p>Weave-net, Flannel 중에 하나 선택하면 됩니다.</p>
-<p><!-- raw HTML omitted --> <strong>[Weave-net]</strong> <!-- raw HTML omitted --></p>
+<p><span style="color:darkcyan"> <strong>[Weave-net]</strong> </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
-</span></span></code></pre></div><p><!-- raw HTML omitted --> <strong>[Flannel]</strong> <!-- raw HTML omitted --><br>
+</span></span></code></pre></div><p><span style="color:darkcyan"> <strong>[Flannel]</strong> </span><br>
 <a href="https://github.com/flannel-io/flannel#deploying-flannel-manually">https://github.com/flannel-io/flannel#deploying-flannel-manually</a></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 </span></span></code></pre></div><p>이제 제대로 됐는지 확인해봅니다.</p>

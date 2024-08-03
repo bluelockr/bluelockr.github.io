@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sat, 03 Aug 2024 22:55:35 &#43;0900"
+                  Modified <relative-time datetime="Sun, 04 Aug 2024 01:51:38 &#43;0900"
                     class="no-wrap">
-                    Sat, 03 Aug 2024 22:55:35 &#43;0900</relative-time>
+                    Sun, 04 Aug 2024 01:51:38 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -237,13 +237,13 @@
 <h3 id="버추얼박스-자체-네트워크-설정">💧버추얼박스 자체 네트워크 설정</h3>
 <p><img src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/1.png" alt="Alt text"></p>
 <p><img src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/2.png" alt="Alt text"></p>
-<p><!-- raw HTML omitted --> <strong>[NAT Networks]</strong> <!-- raw HTML omitted --><br>
+<p><span style="background-color:khaki"> <strong>[NAT Networks]</strong> </span><br>
 <strong>Name : NatNetwork</strong><br>
 <strong>IP Prefix : 192.168.0.0/24</strong><br>
 <strong>Enable DHCP</strong></p>
 <h3 id="rocky-linux가-설치된-가상머신vm-설정">💧Rocky Linux가 설치된 가상머신(VM) 설정</h3>
 <p><img src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/3.png" alt="Alt text"></p>
-<p><!-- raw HTML omitted --> <strong>[어댑터 1]</strong> <!-- raw HTML omitted --><br>
+<p><span style="background-color:khaki"> <strong>[어댑터 1]</strong> </span><br>
 <strong>NAT 네트워크</strong><br>
 <strong>이름 : NatNetwork</strong></p>
 <p><em>NAT Networks 대신에 &lsquo;어댑터에 브리지&rsquo; 옵션을 선택해줘도 됩니다.</em></p>
@@ -320,11 +320,11 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">shutdown now
 </span></span></code></pre></div><h2 id="master-노드-복제">⭐master 노드 복제</h2>
-<p><!-- raw HTML omitted --> <strong>master node VM이 종료되면 master node VM을 복제합니다.</strong> <!-- raw HTML omitted --></p>
+<p><span style="color:blueviolet"> <strong>master node VM이 종료되면 master node VM을 복제합니다.</strong> </span></p>
 <p>복제할 때 이름은 worker로 해줍니다.</p>
 <h2 id="worker-노드-ip-호스트명-설정">⭐worker 노드 IP, 호스트명 설정</h2>
 <p><img src="/../../images/2023/2023-09-21_2_ubuntu_kube/2.png" alt="Alt text"></p>
-<p><!-- raw HTML omitted --> <strong>worker node VM을 실행합니다.</strong> <!-- raw HTML omitted --></p>
+<p><span style="color:blueviolet"> <strong>worker node VM을 실행합니다.</strong> </span></p>
 <p><strong>IPv4 Method : Manual</strong><br>
 <strong>IP : 192.168.0.20</strong><br>
 <strong>SM : 255.255.255.0</strong><br>
@@ -336,7 +336,7 @@
 </span></span></code></pre></div><p>그리고 재부팅합니다.</p>
 <h2 id="kubernetes-cluster-설정">⭐Kubernetes Cluster 설정</h2>
 <h3 id="kubeadmin-init">💧kubeadmin init</h3>
-<p><!-- raw HTML omitted --> <strong>master node VM을 실행합니다.</strong> <!-- raw HTML omitted --></p>
+<p><span style="color:blueviolet"> <strong>master node VM을 실행합니다.</strong> </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo su
 </span></span><span class="line"><span class="cl">sudo kubeadm init --control-plane-endpoint<span class="o">=</span>master
 </span></span></code></pre></div><p>시간이 오래 걸립니다. 멈춘 거 아니에요ㅋㅋ</p>
@@ -351,10 +351,10 @@
 </span></span><span class="line"><span class="cl">sudo cp -i /etc/kubernetes/admin.conf <span class="nv">$HOME</span>/.kube/config
 </span></span><span class="line"><span class="cl">sudo chown <span class="k">$(</span>id -u<span class="k">)</span>:<span class="k">$(</span>id -g<span class="k">)</span> <span class="nv">$HOME</span>/.kube/config
 </span></span></code></pre></div><h3 id="kubeadm-join">💧kubeadm join</h3>
-<p><!-- raw HTML omitted --> <strong>이제 worker node VM으로 건너갑니다.</strong> <!-- raw HTML omitted --></p>
+<p><span style="color:blueviolet"> <strong>이제 worker node VM으로 건너갑니다.</strong> </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo su
 </span></span></code></pre></div><p>그리고 터미널에 아까 복사했던 kubeadm join 어쩌고 하는 값을 그대로 붙여넣고 실행합니다.</p>
-<p><!-- raw HTML omitted --> <strong>다시 master node VM로 건너가서,</strong> <!-- raw HTML omitted --></p>
+<p><span style="color:blueviolet"> <strong>다시 master node VM로 건너가서,</strong> </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get nodes
 </span></span></code></pre></div><p>아직은 not ready 상태입니다.</p>
 <h3 id="pod-network-addon-설치">Pod Network Addon 설치</h3>
@@ -362,9 +362,9 @@
 <p><a href="https://kubernetes.io/docs/concepts/cluster-administration/addons/#networking-and-network-policy">https://kubernetes.io/docs/concepts/cluster-administration/addons/#networking-and-network-policy</a><br>
 🔼Pod Network Addon 목록</p>
 <p>Calico, Flannel 등이 있으며, 이 중에 하나만 설치해줘도 됩니다.</p>
-<p><!-- raw HTML omitted --> <strong>[Calico]</strong> <!-- raw HTML omitted --></p>
+<p><span style="color:darkcyan"> <strong>[Calico]</strong> </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/manifests/calico.yaml
-</span></span></code></pre></div><p><!-- raw HTML omitted --> <strong>[Flannel]</strong> <!-- raw HTML omitted --><br>
+</span></span></code></pre></div><p><span style="color:darkcyan"> <strong>[Flannel]</strong> </span><br>
 <a href="https://github.com/flannel-io/flannel#deploying-flannel-manually">https://github.com/flannel-io/flannel#deploying-flannel-manually</a></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get nodes
