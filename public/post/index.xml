@@ -16,13 +16,6 @@
       <description>*** 이 글은 공부 중 실습용으로 작성한 것으로, 실제 서비스에 적용하지 마시기 바랍니다. ***&#xA;⭐로그인 Rocky Linux 설치 장면은 생략하겠습니다.&#xA;서버 부팅에 성공하면 우선 로그인해줘야 합니다.&#xA;ID : root 비번 : (Rocky Linux 설치할 때 지정했던 비밀번호) ⭐네트워크 설정 https://docs.rockylinux.org/guides/network/basic_network_configuration/&#xA;🔼록키 리눅스 네트워크 설정법&#xA;먼저 터미널에 다음 명령어를 입력하여 네트워크 관리자를 엽니다.&#xA;nmtui 다음으로는 아래와 같이 진행합니다. IP는 본인에게 적합하게 설정합니다. 버추얼박스 네트워크 설정의 경우 어떻게 설정해야할지 모르겠다면 다음 글을 참고해주세요</description>
     </item>
     <item>
-      <title>우분투 서버 네트워크 설정 실습</title>
-      <link>http://localhost:1313/post/2023/2023-11-17_2_ubuntu_server_network_configuration/</link>
-      <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/2023-11-17_2_ubuntu_server_network_configuration/</guid>
-      <description>*** 이 글은 공부 중 실습용으로 작성한 것으로, 실제 서비스에 적용하지 마시기 바랍니다. ***&#xA;⭐로그인 우분투 설치 장면은 생략하겠습니다.&#xA;서버 부팅에 성공하면 우선 로그인해줘야 합니다.</description>
-    </item>
-    <item>
       <title>GNS3에서 Alpine Linux 노드에서 라우터로 텔넷 접속하기</title>
       <link>http://localhost:1313/post/2023/gns3_alpine_node_telnet/</link>
       <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>

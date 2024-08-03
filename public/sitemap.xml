@@ -17,12 +17,6 @@
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-08-03T22:55:35+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ubuntu/</loc>
-    <lastmod>2024-08-03T22:55:35+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/2023/2023-11-17_2_ubuntu_server_network_configuration/</loc>
-    <lastmod>2024-08-03T22:55:35+09:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/gns3/</loc>
     <lastmod>2024-08-03T22:55:35+09:00</lastmod>
   </url><url>
@@ -72,6 +66,9 @@
     <lastmod>2024-08-03T22:55:35+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/kubernetes/</loc>
+    <lastmod>2024-08-03T22:55:35+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ubuntu/</loc>
     <lastmod>2024-08-03T22:55:35+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/2023/rocky_kube_cluster_setup/</loc>
