@@ -6,7 +6,7 @@
     <description>Recent content in Tags on bluelockr&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ko</language>
-    <lastBuildDate>Sat, 03 Aug 2024 22:55:35 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 04 Aug 2024 01:40:17 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RHEL</title>
@@ -153,6 +153,13 @@
       <link>http://localhost:1313/tags/wsl/</link>
       <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/wsl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web_browser</title>
+      <link>http://localhost:1313/tags/web_browser/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/web_browser/</guid>
       <description></description>
     </item>
   </channel>

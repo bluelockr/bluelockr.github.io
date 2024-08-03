@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web_browser on bluelockr&#39;s blog</title>
+    <link>http://localhost:1313/tags/web_browser/</link>
+    <description>Recent content in Web_browser on bluelockr&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Sun, 04 Aug 2024 01:45:57 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/web_browser/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>파이어폭스 탭 높이 좁게 만들기</title>
+      <link>http://localhost:1313/post/2024/firefox_tab_height/</link>
+      <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2024/firefox_tab_height/</guid>
+      <description>How to Adjust Firefox Tab Height</description>
+    </item>
+  </channel>
+</rss>
