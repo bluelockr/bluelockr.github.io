@@ -22,7 +22,7 @@ pygmentsUseClasses = true
   lastmod = true
   favicon = "/images/github.png"
   location = "South Korea"
-  userStatusEmoji = "🐼"
+  userStatusEmoji = "💬"
   [[params.links]]
     title = "Link"
     href = "https://github.com/bluelockr"
@@ -35,4 +35,4 @@ pygmentsUseClasses = true
   lastmod = ["lastmod", ":fileModTime", ":default"]
 
 [markup.goldmark.renderer]
-  unsafe = true # Allow HTML in md files
+  unsafe = true # Enable HTML in Markdown Files.

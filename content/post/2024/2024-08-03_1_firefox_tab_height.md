@@ -9,23 +9,34 @@ draft = false
 +++
 
 ## 1️⃣
-<img src="/../../images/2024/2024-08-03_1_firefox_tab_height/1.png" width="600">
+<kbd>
+    <img src="/../../images/2024/2024-08-03_1_firefox_tab_height/1.png" width="600">
+</kbd>
 
 ## 2️⃣
-<img src="/../../images/2024/2024-08-03_1_firefox_tab_height/2.png" width="600">
+<kbd>
+    <img src="/../../images/2024/2024-08-03_1_firefox_tab_height/2.png" width="600">
+</kbd>
 
 ## 3️⃣
-<img src="/../../images/2024/2024-08-03_1_firefox_tab_height/3.png" width="600">
+<kbd>
+    <img src="/../../images/2024/2024-08-03_1_firefox_tab_height/3.png" width="600">
+</kbd>
 
 ## 4️⃣
-<img src="/../../images/2024/2024-08-03_1_firefox_tab_height/4.png" width="300">
+<kbd>
+    <img src="/../../images/2024/2024-08-03_1_firefox_tab_height/4.png" width="300">
+</kbd>
 
 ## 5️⃣
-<img src="/../../images/2024/2024-08-03_1_firefox_tab_height/5.png" width="300">
+<kbd>
+    <img src="/../../images/2024/2024-08-03_1_firefox_tab_height/5.png" width="300">
+</kbd>
 
 ## 6️⃣
-<img src="/../../images/2024/2024-08-03_1_firefox_tab_height/6.png" width="500">
-
+<kbd>
+    <img src="/../../images/2024/2024-08-03_1_firefox_tab_height/6.png" width="500">
+</kbd>
 <br>
 <br>
 <br>
