@@ -6,14 +6,14 @@
     <description>Recent content on bluelockr&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ko</language>
-    <lastBuildDate>Mon, 05 Aug 2024 05:48:44 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 06 Aug 2024 09:21:16 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>윈도우에서 Ctrl, Shift, Alt키를 토글키로 변경하기</title>
       <link>http://localhost:1313/post/2024/windows_toggle_key/</link>
       <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/post/2024/windows_toggle_key/</guid>
-      <description>How to toggle in windows</description>
+      <description>How to toggle Ctrl, Shift, Alt key in windows</description>
     </item>
     <item>
       <title>파이어폭스 탭 높이 좁게 만들기</title>
