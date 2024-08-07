@@ -1,5 +1,10 @@
 .post-title {  //본문 제목 색상
-  color: $dark-color;
+  color: #474747;
+  background: linear-gradient(to right, #b2b2b2 0%, #e0e0e0 100%);
+  border-radius: 15px;
+  padding: 0.3em;
+  padding-left: 0.7em;
+  font-weight: 1000;
 }
 
 .post-meta > div {

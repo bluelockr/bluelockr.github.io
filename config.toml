@@ -25,11 +25,6 @@ paginate = 8
     name = "Tags"
     url = "/tags/"
     weight = 3
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 4
 
 [params]
   author = "Bluelockr"
@@ -62,7 +57,7 @@ paginate = 8
 
   # Red theme
   [params.style]
-    darkestColor = "#000000"
+    darkestColor = "#474747"
     darkColor = "#995560"
     lightColor = "#d3d3d3"
     lightestColor = "#e3e3e3"

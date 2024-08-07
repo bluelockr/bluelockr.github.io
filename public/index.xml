@@ -183,12 +183,5 @@
       <guid>//localhost:1313/post/2023/rocky_korean_input/</guid>
       <description>Rocky Linux 9 Korean Input Settings</description>
     </item>
-    <item>
-      <title>About</title>
-      <link>//localhost:1313/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/about/</guid>
-      <description>공부하면서 또는 컴퓨터를 다루면서 얻은 지식을 기록하는 블로그입니다.</description>
-    </item>
   </channel>
 </rss>
