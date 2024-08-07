@@ -24,11 +24,13 @@
   .highlight > pre,
   .highlight > div {
     border-left: 0.4em solid rgba($primary-color, .8);
+    border-radius: 10px;
     padding: 1em 1em;
   }
 
   blockquote {
     border-left: 0.4em solid rgba($primary-color, .8);
+    border-radius: 10px;
     margin: 1em 0em;
     padding: .5em 1em;
     background: $darkest-color;
@@ -40,5 +42,7 @@
 
   img {
     max-width: 100%;
+    border-radius: 15px;
+    border:1px solid #000000;
   }
 }

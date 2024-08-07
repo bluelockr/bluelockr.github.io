@@ -24,7 +24,7 @@ vi ~/.imwheelrc
 여기서 gwenview는 프로그램 이름입니다.  
 (And Paste following Lines.)
 
-```
+```bash
 "^gwenview$"  
 @Exclude
   

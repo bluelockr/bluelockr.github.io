@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Bluelockr" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="/css/main.min.4ae327075a8a0c993422d70c9ce22138a24b686f2161f3980c8a4ebad007b775.css" />
+    <link rel="stylesheet" href="/css/main.min.a7f7947c8a599453266be94af309a96a6a0ea69f000f7197aa7e39863a0be018.css" />
     
 
     
@@ -52,7 +52,7 @@
       <p>Bluelockr&#39;s Github Blog</p>
       <div class="app-header-social">
         
-          <a href="https://github.com/gohugoio" target="_blank" rel="noreferrer noopener me">
+          <a href="https://github.com/bluelockr" target="_blank" rel="noreferrer noopener me">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
   <title>Github</title>
   <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -94,20 +94,23 @@
     <div class="post-content">
       <p>GNS3 설치 과정과 IOU 불러오는 과정 등은 생략하겠습니다.</p>
 <h2 id="템플릿-불러오기">⭐템플릿 불러오기</h2>
-<p><img src="/../../images/2023/2023-10-29_1_gns3_alpine_node/1.png" alt="Alt text"></p>
-<p><img src="/../../images/2023/2023-10-29_1_gns3_alpine_node/2.png" alt="Alt text"></p>
-<p><img src="/../../images/2023/2023-10-29_1_gns3_alpine_node/3.png" alt="Alt text"></p>
-<p><img src="/../../images/2023/2023-10-29_1_gns3_alpine_node/4.png" alt="Alt text"></p>
-<p><img src="/../../images/2023/2023-10-29_1_gns3_alpine_node/5.png" alt="Alt text"></p>
-<p><img src="/../../images/2023/2023-10-29_1_gns3_alpine_node/6.png" alt="Alt text"></p>
-<p><img src="/../../images/2023/2023-10-29_1_gns3_alpine_node/7.png" alt="Alt text"></p>
-<p><img src="/../../images/2023/2023-10-29_1_gns3_alpine_node/8.png" alt="Alt text"></p>
-<p><img src="/../../images/2023/2023-10-29_1_gns3_alpine_node/9.png" alt="Alt text"></p>
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/1.png" width="300">
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/2.png" width="800">
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/3.png" width="400">
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/4.png" width="600">
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/5.png" width="600">
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/6.png" width="600">
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/7.png" width="600">
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/8.png" width="600">
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/9.png" width="800">
+<br>
+<br>
+<br>
 <h2 id="알파인-리눅스-노드-텔넷-설정">⭐알파인 리눅스 노드 텔넷 설정</h2>
 <h3 id="패키지-설치">💧패키지 설치</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vi /etc/network/interfaces
 </span></span></code></pre></div><p>아래 파일과 같이 주석(#)을 삭제하여 DHCP를 활성화 시킵니다.</p>
-<p><img src="/../../images/2023/2023-10-29_1_gns3_alpine_node/10.png" alt="Alt text"></p>
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/10.png" width="800">
 <p>저장한 뒤 아래 명령어를 사용하여 네트워크를 활성화 시킨 뒤 텔넷 관련 프로그램을 설치합니다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ifup eth0
 </span></span><span style="display:flex;"><span>ping 8.8.8.8
@@ -117,10 +120,13 @@
 </span></span><span style="display:flex;"><span>vi /etc/network/interfaces
 </span></span></code></pre></div><p>아래 파일과 같이 주석(#)을 추가하고 삭제하여 DHCP를 비활성화 시키고 정적 IP를 활성화 시킵니다.</p>
 <p>저는 192.168.0.10/24 에 게이트웨이는 192.168.0.1로 설정하였습니다.</p>
-<p><img src="/../../images/2023/2023-10-29_1_gns3_alpine_node/11.png" alt="Alt text"></p>
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/11.png" width="800">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ifdown eth0
 </span></span><span style="display:flex;"><span>ifup eth0
-</span></span></code></pre></div><h2 id="라우터-텔넷-설정">⭐라우터 텔넷 설정</h2>
+</span></span></code></pre></div><br>
+<br>
+<br>
+<h2 id="라우터-텔넷-설정">⭐라우터 텔넷 설정</h2>
 <p>먼저 알파인 리눅스와 NAT 간에 연결되어있던 케이블을 클릭한 뒤 Delete 키를 눌러 케이블을 삭제해줍니다.<br>
 그리고 알파인 리눅스와 라우터 간에 케이블을 연결해줍니다.</p>
 <p>저는 라우터의 FastEthernet0/0 포트와 알파인 리눅스 노드를 서로 연결해주겠습니다.</p>
@@ -141,9 +147,12 @@
 </span></span><span style="display:flex;"><span>R1<span style="color:#f92672">(</span>config-if<span style="color:#f92672">)</span><span style="color:#75715e"># ip address 192.168.0.1 255.255.255.0</span>
 </span></span><span style="display:flex;"><span>R1<span style="color:#f92672">(</span>config-if<span style="color:#f92672">)</span><span style="color:#75715e"># end</span>
 </span></span><span style="display:flex;"><span>R1# copy running-config startup-config
-</span></span></code></pre></div><h2 id="텔넷-접속">⭐텔넷 접속</h2>
+</span></span></code></pre></div><br>
+<br>
+<br>
+<h2 id="텔넷-접속">⭐텔넷 접속</h2>
 <p>알파인 리눅스 터미널 창을 가서 다음과 같이 입력합니다.</p>
-<p><img src="/../../images/2023/2023-10-29_1_gns3_alpine_node/12.png" alt="Alt text"></p>
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/12.png" width="300">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>telnet 192.168.0.2
 </span></span></code></pre></div><p>암호를 입력하면 접속 가능합니다.</p>
 
