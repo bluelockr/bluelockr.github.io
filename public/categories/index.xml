@@ -6,8 +6,15 @@
     <description>Recent content in Categories on </description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 03 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Aug 2024 09:16:45 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows</title>
+      <link>//localhost:1313/categories/windows/</link>
+      <pubDate>Sun, 04 Aug 2024 09:16:45 +0000</pubDate>
+      <guid>//localhost:1313/categories/windows/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Application</title>
       <link>//localhost:1313/categories/application/</link>
@@ -34,13 +41,6 @@
       <link>//localhost:1313/categories/programming/</link>
       <pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/categories/programming/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Windows</title>
-      <link>//localhost:1313/categories/windows/</link>
-      <pubDate>Thu, 04 Aug 2022 09:16:45 +0000</pubDate>
-      <guid>//localhost:1313/categories/windows/</guid>
       <description></description>
     </item>
   </channel>

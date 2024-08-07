@@ -5,11 +5,13 @@
   font-size: 0.9em;
   border-radius: 0.2em;
   white-space: nowrap;
-  background: rgba(255, 255, 255, 0.1);
+  background: $light-color; // 본문 속 태그 배경색
+  color: $dark-color; // 본문 속 태그 폰트 색
+
   transition: color 0.35s, background 0.35s;
 
   &:hover {
     transition: color 0.25s, background 0.05s;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3); //본문 속 태그에 커서 올려놨을 때의 색상
   }
 }

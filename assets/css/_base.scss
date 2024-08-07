@@ -18,12 +18,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: $darkest-color; //링크 색상
+  color: $darkest-color ; //링크 색상
   transition: color 0.35s;
   text-decoration: none;
 
   &:hover {
-    color: $light-color;
+    color: #ffffff; //링크 위에 커서 올려놨을 때의 색상
   }
 }
 

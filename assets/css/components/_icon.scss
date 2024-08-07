@@ -3,4 +3,9 @@
   width: 1em;
   height: 1em;
   margin-top: -0.125em;
+  color: $darkest-color; //프로필 아래 SNS 아이콘
+  
+  &:hover {
+    color: $lightest-color; //링크 위에 커서 올려놨을 때의 색상
+  }
 }

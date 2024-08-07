@@ -1,5 +1,5 @@
 .post-title {  //본문 제목 색상
-  color: $darkest-color;
+  color: $dark-color;
 }
 
 .post-meta > div {
@@ -8,9 +8,11 @@
   flex-wrap: wrap;
   gap: 0.2em;
   font-size: 0.8em;
+  color: $dark-color; //본문 날짜, 시간 색상
 
   > .icon {
-    margin-right: 0.4em;
+    margin-right: 0.4em; //본문 아이콘 색상
+    color: $dark-color;
   }
 }
 
