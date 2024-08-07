@@ -38,6 +38,9 @@ paginate = 8
     #icon = "twitter"
     #name = "Twitter"
     #url = "https://twitter.com/gohugoio"
+  [[params.comments]]
+    repo="bluelockr/comments"
+    theme="github-light"
 
   # Default theme
   #[params.style]
