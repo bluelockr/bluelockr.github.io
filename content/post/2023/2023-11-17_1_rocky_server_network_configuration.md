@@ -4,7 +4,8 @@ summary = ""
 date = 2023-11-17T00:00:00+00:00
 cover = ""
 slug = "rocky_server_network_configuration"
-tags = ['RHEL']
+categories = ['linux']
+tags = ['RHEL', 'Rocky']
 draft = false
 +++
 

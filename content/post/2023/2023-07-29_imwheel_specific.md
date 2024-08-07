@@ -4,6 +4,7 @@ summary = "How to apply imwheel settings to specific program in Ubuntu"
 date = 2023-07-29T00:00:00+00:00
 cover = ""
 slug = "imwheel_specific_in_ubuntu"
+categories = ['linux']
 tags = ['Ubuntu', 'Imwheel']
 draft = false
 +++

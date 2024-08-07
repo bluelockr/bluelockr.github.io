@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>RHEL on bluelockr&#39;s blog</title>
-    <link>http://localhost:1313/tags/rhel/</link>
-    <description>Recent content in RHEL on bluelockr&#39;s blog</description>
+    <title>RHEL on </title>
+    <link>//localhost:1313/tags/rhel/</link>
+    <description>Recent content in RHEL on </description>
     <generator>Hugo</generator>
-    <language>ko</language>
-    <lastBuildDate>Mon, 05 Aug 2024 06:16:06 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/rhel/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Fri, 17 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/rhel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rocky Linux 9.2 서버 네트워크 설정 실습</title>
-      <link>http://localhost:1313/post/2023/rocky_server_network_configuration/</link>
+      <link>//localhost:1313/post/2023/rocky_server_network_configuration/</link>
       <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/rocky_server_network_configuration/</guid>
+      <guid>//localhost:1313/post/2023/rocky_server_network_configuration/</guid>
       <description>*** 이 글은 공부 중 실습용으로 작성한 것으로, 실제 서비스에 적용하지 마시기 바랍니다. ***&#xA;⭐로그인 Rocky Linux 설치 장면은 생략하겠습니다.&#xA;서버 부팅에 성공하면 우선 로그인해줘야 합니다.&#xA;ID : root 비번 : (Rocky Linux 설치할 때 지정했던 비밀번호) ⭐네트워크 설정 https://docs.rockylinux.org/guides/network/basic_network_configuration/&#xA;🔼록키 리눅스 네트워크 설정법&#xA;먼저 터미널에 다음 명령어를 입력하여 네트워크 관리자를 엽니다.&#xA;nmtui 다음으로는 아래와 같이 진행합니다. IP는 본인에게 적합하게 설정합니다. 버추얼박스 네트워크 설정의 경우 어떻게 설정해야할지 모르겠다면 다음 글을 참고해주세요</description>
     </item>
     <item>
       <title>Virtualbox Rocky Linux 9.2에 Kubernetes Cluster 설치하는 법</title>
-      <link>http://localhost:1313/post/2023/rocky_kube_cluster_setup/</link>
+      <link>//localhost:1313/post/2023/rocky_kube_cluster_setup/</link>
       <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/rocky_kube_cluster_setup/</guid>
+      <guid>//localhost:1313/post/2023/rocky_kube_cluster_setup/</guid>
       <description>How to set Kubernetes Cluster to Rocky Linux 9.2 in Virtualbox</description>
     </item>
     <item>
       <title>Rocky Linux 9 한글 입력 설정</title>
-      <link>http://localhost:1313/post/2023/rocky_korean_input/</link>
+      <link>//localhost:1313/post/2023/rocky_korean_input/</link>
       <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/rocky_korean_input/</guid>
+      <guid>//localhost:1313/post/2023/rocky_korean_input/</guid>
       <description>Rocky Linux 9 Korean Input Settings</description>
     </item>
   </channel>

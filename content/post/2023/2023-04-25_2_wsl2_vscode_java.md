@@ -4,6 +4,7 @@ summary = "How to Set up Vscode Java Dev Env using WSL2"
 date = 2023-04-25T00:00:00+00:00
 cover = ""
 slug = "vscode_wsl2_java_dev_env"
+categories = ['programming']
 tags = ['Windows', 'VSCODE', 'Java', 'WSL']
 draft = false
 +++

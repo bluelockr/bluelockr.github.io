@@ -1,38 +1,72 @@
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.55.0"
+
 baseURL = "https://bluelockr.github.io"
-languageCode = "ko"
-title = "bluelockr's blog"
-theme = "github-style"
-googleAnalytics = "G-NRBPMYGL5R"
-pygmentsCodeFences = true
-pygmentsUseClasses = true
+title = "Your title"
+themesDir = "../.."
+theme = "m10c"
+paginate = 8
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 2 
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 4
 
 [params]
   author = "Bluelockr"
-  description = "공부하며 얻은 지식을 기록하는 블로그"
-  github = ""
-  facebook = ""
-  twitter = ""
-  linkedin = ""
-  instagram = ""
-  tumblr = ""
-  email = ""
-  url = "https://bluelockr.github.com"
-  keywords = "blog, google analytics"
-  rss = false
-  lastmod = true
-  favicon = "/images/github.png"
-  location = "South Korea"
-  userStatusEmoji = "💬"
-  [[params.links]]
-    title = "Link"
-    href = "https://github.com/bluelockr"
-  [[params.links]]
-    title = "Link2"
-    href = "https://bluelockr.github.io"
-    icon = "https://bluelockr.github.io/images/avatar.png"
+  description = "Bluelockr's Github Blog"
+  menu_item_separator = " - "
+  [[params.social]]
+    icon = "github"
+    name = "Github"
+    url = "https://github.com/bluelockr"
+  #[[params.social]]
+    #icon = "twitter"
+    #name = "Twitter"
+    #url = "https://twitter.com/gohugoio"
 
-[frontmatter]
-  lastmod = ["lastmod", ":fileModTime", ":default"]
+  # Default theme
+  #[params.style]
+  #  darkestColor = "#242930"
+  #  darkColor = "#353b43"
+  #  lightColor = "#afbac4"
+  #  lightestColor = "#ffffff"
+  #  primaryColor = "#57cc8a"
+
+  # Green theme
+  #[params.style]
+  #  darkestColor = "#315659"
+  #  darkColor = "#253031"
+  #  lightColor = "#96a879"
+  #  lightestColor = "#fffff"
+  #  primaryColor = "#dad865"
+
+  # Red theme
+  [params.style]
+    darkestColor = "#000000"
+    darkColor = "#353b43"
+    lightColor = "#d3d3d3"
+    lightestColor = "#e3e3e3"
+    primaryColor = "#d35050"
 
 [markup.goldmark.renderer]
-  unsafe = true # Enable HTML in Markdown Files.
+  unsafe = true

@@ -4,6 +4,7 @@ summary = "How to Share Clipboard between hosts and guests in Virtualbox"
 date = 2023-09-17T00:00:00+00:00
 cover = ""
 slug = "virtualbox_clipboard"
+categories = ['application']
 tags = ['Windows', 'Linux', 'Virtualbox']
 draft = false
 +++

@@ -4,6 +4,7 @@ summary = "pfSense installation error in Virtualbox"
 date = 2023-10-04T00:00:00+00:00
 cover = ""
 slug = "pfsense_installation_error_in_virtualbox"
+categories = ['application']
 tags = ['Linux', 'Virtualbox']
 draft = false
 +++

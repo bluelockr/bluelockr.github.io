@@ -4,6 +4,7 @@ summary = "Disable Quick Launch Password Requirement"
 date = 2023-04-25T00:00:00+00:00
 cover = ""
 slug = "no_quick_launch_pw"
+categories = ['linux']
 tags = ['Ubuntu', 'Linuxmint']
 draft = false
 +++

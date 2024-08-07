@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: $lightest-color; //본문 배경 색상
+  color: $darkest-color; //본문 글꼴 색상
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $darkest-color; //본문 소제목 색상
+}
+
+a {
+  color: $darkest-color; //링크 색상
+  transition: color 0.35s;
+  text-decoration: none;
+
+  &:hover {
+    color: $light-color;
+  }
+}
+
+// Browsers seem to use a smaller default font-size with monospaced code
+// blocks (like 80% of the size of normal text) and that looks pretty bad with
+// small inline code-blocks in the middle of normal text (mainly because of
+// the very noticeable difference in x-height). This CSS corrects that problem.
+code {
+  font-family: monospace,monospace;
+  font-size: 1em;
+  color: rgba($lightest-color, .8); //코드 블럭 폰트 색상
+
+  // Fixes iOS font sizing anomaly
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+pre {
+  font-size: 1rem;
+  line-height: 1.2em;
+  margin: 0;
+  overflow: auto;
+
+  // A larger monospaced block of text (that isn't mixed with normal text)
+  // generally looks heavier than normal text with the same font size. For this
+  // reason using a smaller monospaced font size makes sense in this situation.
+  code {
+    font-size: 1em;
+  }
+}
+
+::selection {
+  background: rgba($light-color, .25);
+}
+::-moz-selection {
+  background: rgba($dark-color, .25); // 본문 글에서 마우스 드래그 앤 드롭으로 선택한 범위의 색상
+}

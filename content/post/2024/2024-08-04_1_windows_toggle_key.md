@@ -1,12 +1,15 @@
-+++
-title = "윈도우에서 Ctrl, Shift, Alt키를 토글키로 변경하기"
-summary = "How to toggle Ctrl, Shift, Alt key in windows"
-date = 2024-08-04T00:00:00+00:00
-cover = ""
-slug = "windows_toggle_key"
-tags = ['windows']
-draft = false
-+++
+---
+title: "윈도우에서 Ctrl, Shift, Alt키를 토글키로 변경하기"
+summary: "How to toggle Ctrl, Shift, Alt key in windows"
+draft: false
+date: 2022-08-04T09:16:45.000Z
+slug: "windows_toggle_key"
+description: "Markdown is a powerful tool for creating rich text using a plain text editor. This cheatsheet is a quick reference for Markdown syntax."
+categories:
+  - windows
+tags:
+  - windows
+---
 
 ```bash
 # Environment
@@ -31,6 +34,7 @@ Ctrl키와 Shift키를 하도 많이 누르다 보면 새끼 손가락에 무리
 ```
 
 일단 제어판에 들어가야 합니다.(윈도우 11 설정앱에서는 잘 안 됨)
+
 ## 1️⃣
 <img src="/../../images/2024/2024-08-04_1_windows_toggle_key/1.jpg" width="600">
 

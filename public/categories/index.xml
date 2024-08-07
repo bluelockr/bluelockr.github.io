@@ -1,11 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on bluelockr&#39;s blog</title>
-    <link>http://localhost:1313/categories/</link>
-    <description>Recent content in Categories on bluelockr&#39;s blog</description>
+    <title>Categories on </title>
+    <link>//localhost:1313/categories/</link>
+    <description>Recent content in Categories on </description>
     <generator>Hugo</generator>
-    <language>ko</language>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sat, 03 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Application</title>
+      <link>//localhost:1313/categories/application/</link>
+      <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/categories/application/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>//localhost:1313/categories/linux/</link>
+      <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/categories/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network</title>
+      <link>//localhost:1313/categories/network/</link>
+      <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/categories/network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>//localhost:1313/categories/programming/</link>
+      <pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/categories/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>//localhost:1313/categories/windows/</link>
+      <pubDate>Thu, 04 Aug 2022 09:16:45 +0000</pubDate>
+      <guid>//localhost:1313/categories/windows/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

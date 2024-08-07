@@ -4,6 +4,7 @@ summary = "AWS VPC Peering (feat. Cloudshell)"
 date = 2023-09-28T00:00:00+00:00
 cover = ""
 slug = "aws_vpc_peering_using_cloudshell"
+categories = ['network']
 tags = ['Network', 'AWS']
 draft = false
 +++

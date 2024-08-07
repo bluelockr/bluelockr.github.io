@@ -4,6 +4,7 @@ summary = "VPC Connection using NAT Instance"
 date = 2023-09-29T00:00:00+00:00
 cover = ""
 slug = "vpc_connection_using_nat_instance"
+categories = ['network']
 tags = ['Network', 'AWS']
 draft = false
 +++

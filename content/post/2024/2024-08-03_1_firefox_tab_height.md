@@ -4,7 +4,8 @@ summary = "How to Adjust Firefox Tab Height"
 date = 2024-08-03T00:00:00+00:00
 cover = ""
 slug = "firefox_tab_height"
-tags = ['web_browser']
+categories = ['application']
+tags = ['firefox']
 draft = false
 +++
 
@@ -16,14 +17,10 @@ OS : Windows 11
 <br>
 
 ## 1️⃣
-<kbd>
-    <img src="/../../images/2024/2024-08-03_1_firefox_tab_height/1.png" width="600">
-</kbd>
+<img style='border:1px solid #000000' src="/../../images/2024/2024-08-03_1_firefox_tab_height/1.png" width="600">
 
 ## 2️⃣
-<kbd>
-    <img src="/../../images/2024/2024-08-03_1_firefox_tab_height/2.png" width="600">
-</kbd>
+<img src="/../../images/2024/2024-08-03_1_firefox_tab_height/2.png" width="600">
 
 ## 3️⃣
 <kbd>

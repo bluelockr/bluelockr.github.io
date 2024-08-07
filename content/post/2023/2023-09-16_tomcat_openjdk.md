@@ -4,6 +4,7 @@ summary = "How to Install Tomcat in Linux with OpenJDK21"
 date = 2023-09-16T00:00:00+00:00
 cover = ""
 slug = "linux_tomcat_openjdk_installation"
+categories = ['linux']
 tags = ['Linux', 'OpenJDK', 'Tomcat']
 draft = false
 +++

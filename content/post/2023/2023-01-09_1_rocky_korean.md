@@ -4,7 +4,8 @@ summary = "Rocky Linux 9 Korean Input Settings"
 date = 2023-01-09T00:00:00+00:00
 cover = ""
 slug = "rocky_korean_input"
-tags = ['RHEL']
+categories = ['linux']
+tags = ['RHEL', 'Rocky']
 draft = false
 +++
 Rocky Linux 9 버전은 리눅스 민트와 달리 한글 입력 설정을 기본적으로 세팅해주지 않기 때문에 따로 설정해줘야 합니다.

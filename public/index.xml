@@ -1,187 +1,194 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>bluelockr&#39;s blog</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on bluelockr&#39;s blog</description>
+    <title></title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on </description>
     <generator>Hugo</generator>
-    <language>ko</language>
-    <lastBuildDate>Tue, 06 Aug 2024 09:21:16 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>윈도우에서 Ctrl, Shift, Alt키를 토글키로 변경하기</title>
-      <link>http://localhost:1313/post/2024/windows_toggle_key/</link>
-      <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2024/windows_toggle_key/</guid>
-      <description>How to toggle Ctrl, Shift, Alt key in windows</description>
-    </item>
+    <language>en</language>
+    <lastBuildDate>Sat, 03 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>파이어폭스 탭 높이 좁게 만들기</title>
-      <link>http://localhost:1313/post/2024/firefox_tab_height/</link>
+      <link>//localhost:1313/post/2024/firefox_tab_height/</link>
       <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2024/firefox_tab_height/</guid>
+      <guid>//localhost:1313/post/2024/firefox_tab_height/</guid>
       <description>How to Adjust Firefox Tab Height</description>
     </item>
     <item>
       <title>Rocky Linux 9.2 서버 네트워크 설정 실습</title>
-      <link>http://localhost:1313/post/2023/rocky_server_network_configuration/</link>
+      <link>//localhost:1313/post/2023/rocky_server_network_configuration/</link>
       <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/rocky_server_network_configuration/</guid>
+      <guid>//localhost:1313/post/2023/rocky_server_network_configuration/</guid>
       <description>*** 이 글은 공부 중 실습용으로 작성한 것으로, 실제 서비스에 적용하지 마시기 바랍니다. ***&#xA;⭐로그인 Rocky Linux 설치 장면은 생략하겠습니다.&#xA;서버 부팅에 성공하면 우선 로그인해줘야 합니다.&#xA;ID : root 비번 : (Rocky Linux 설치할 때 지정했던 비밀번호) ⭐네트워크 설정 https://docs.rockylinux.org/guides/network/basic_network_configuration/&#xA;🔼록키 리눅스 네트워크 설정법&#xA;먼저 터미널에 다음 명령어를 입력하여 네트워크 관리자를 엽니다.&#xA;nmtui 다음으로는 아래와 같이 진행합니다. IP는 본인에게 적합하게 설정합니다. 버추얼박스 네트워크 설정의 경우 어떻게 설정해야할지 모르겠다면 다음 글을 참고해주세요</description>
     </item>
     <item>
       <title>GNS3에서 Alpine Linux 노드에서 라우터로 텔넷 접속하기</title>
-      <link>http://localhost:1313/post/2023/gns3_alpine_node_telnet/</link>
+      <link>//localhost:1313/post/2023/gns3_alpine_node_telnet/</link>
       <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/gns3_alpine_node_telnet/</guid>
+      <guid>//localhost:1313/post/2023/gns3_alpine_node_telnet/</guid>
       <description>How to Telnet to GNS3 Node from Alpine Linux Node</description>
     </item>
     <item>
       <title>AWS S3 게이트웨이 엔드포인트 설정하기</title>
-      <link>http://localhost:1313/post/2023/aws_s3_gateway_endpoint_configuration/</link>
+      <link>//localhost:1313/post/2023/aws_s3_gateway_endpoint_configuration/</link>
       <pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/aws_s3_gateway_endpoint_configuration/</guid>
+      <guid>//localhost:1313/post/2023/aws_s3_gateway_endpoint_configuration/</guid>
       <description>How to set up S3 Gateway Endpoint</description>
     </item>
     <item>
       <title>AWS Client VPN 상호 인증</title>
-      <link>http://localhost:1313/post/2023/aws_client_vpn_mutual_authentication/</link>
+      <link>//localhost:1313/post/2023/aws_client_vpn_mutual_authentication/</link>
       <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/aws_client_vpn_mutual_authentication/</guid>
+      <guid>//localhost:1313/post/2023/aws_client_vpn_mutual_authentication/</guid>
       <description>AWS Client VPN Mutual Authentication</description>
     </item>
     <item>
       <title>Virtualbox에 pfSense 설치 시 오류</title>
-      <link>http://localhost:1313/post/2023/pfsense_installation_error_in_virtualbox/</link>
+      <link>//localhost:1313/post/2023/pfsense_installation_error_in_virtualbox/</link>
       <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/pfsense_installation_error_in_virtualbox/</guid>
+      <guid>//localhost:1313/post/2023/pfsense_installation_error_in_virtualbox/</guid>
       <description>pfSense installation error in Virtualbox</description>
     </item>
     <item>
       <title>NAT 인스턴스로 VPC 간 연결하기</title>
-      <link>http://localhost:1313/post/2023/vpc_connection_using_nat_instance/</link>
+      <link>//localhost:1313/post/2023/vpc_connection_using_nat_instance/</link>
       <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/vpc_connection_using_nat_instance/</guid>
+      <guid>//localhost:1313/post/2023/vpc_connection_using_nat_instance/</guid>
       <description>VPC Connection using NAT Instance</description>
     </item>
     <item>
       <title>AWS VPC 피어링 연결하기</title>
-      <link>http://localhost:1313/post/2023/aws_vpc_peering_using_cloudshell/</link>
+      <link>//localhost:1313/post/2023/aws_vpc_peering_using_cloudshell/</link>
       <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/aws_vpc_peering_using_cloudshell/</guid>
+      <guid>//localhost:1313/post/2023/aws_vpc_peering_using_cloudshell/</guid>
       <description>AWS VPC Peering (feat. Cloudshell)</description>
     </item>
     <item>
       <title>Windows에서 AWS Vault 설치 및 사용</title>
-      <link>http://localhost:1313/post/2023/windows_aws_vault_quick_start/</link>
+      <link>//localhost:1313/post/2023/windows_aws_vault_quick_start/</link>
       <pubDate>Wed, 27 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/windows_aws_vault_quick_start/</guid>
+      <guid>//localhost:1313/post/2023/windows_aws_vault_quick_start/</guid>
       <description>AWS Vault Quick Start in Windows</description>
     </item>
     <item>
       <title>CloudShell로 EC2 인스턴스 pem키 없이 SSH 접속하기</title>
-      <link>http://localhost:1313/post/2023/ec2_ssh_with_cloudshell_no_pem/</link>
+      <link>//localhost:1313/post/2023/ec2_ssh_with_cloudshell_no_pem/</link>
       <pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/ec2_ssh_with_cloudshell_no_pem/</guid>
+      <guid>//localhost:1313/post/2023/ec2_ssh_with_cloudshell_no_pem/</guid>
       <description>SSH Connection to EC2 Instance without pem key using Cloudshells</description>
     </item>
     <item>
       <title>Windows에서 Git Secret 사용법</title>
-      <link>http://localhost:1313/post/2023/windows_git_secret/</link>
+      <link>//localhost:1313/post/2023/windows_git_secret/</link>
       <pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/windows_git_secret/</guid>
+      <guid>//localhost:1313/post/2023/windows_git_secret/</guid>
       <description>How to Use Git Secret in Windows</description>
     </item>
     <item>
       <title>Virtualbox Rocky Linux 9.2에 Kubernetes Cluster 설치하는 법</title>
-      <link>http://localhost:1313/post/2023/rocky_kube_cluster_setup/</link>
+      <link>//localhost:1313/post/2023/rocky_kube_cluster_setup/</link>
       <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/rocky_kube_cluster_setup/</guid>
+      <guid>//localhost:1313/post/2023/rocky_kube_cluster_setup/</guid>
       <description>How to set Kubernetes Cluster to Rocky Linux 9.2 in Virtualbox</description>
     </item>
     <item>
       <title>Virtualbox Ubuntu 22.04에 Kubernetes Cluster 설치하는 법</title>
-      <link>http://localhost:1313/post/2023/ubuntu_kube_cluster_setup/</link>
+      <link>//localhost:1313/post/2023/ubuntu_kube_cluster_setup/</link>
       <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/ubuntu_kube_cluster_setup/</guid>
+      <guid>//localhost:1313/post/2023/ubuntu_kube_cluster_setup/</guid>
       <description>How to set Kubernetes Cluster to Ubuntu 22.04 in Virtualbox</description>
     </item>
     <item>
       <title>Virtualbox 가상머신 안의 Linux에 NAT Network인 상태에서 SSH 접속(일반/RSA)하는 법</title>
-      <link>http://localhost:1313/post/2023/ssh_to_virtualbox_nat_network_common_rsa/</link>
+      <link>//localhost:1313/post/2023/ssh_to_virtualbox_nat_network_common_rsa/</link>
       <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/ssh_to_virtualbox_nat_network_common_rsa/</guid>
+      <guid>//localhost:1313/post/2023/ssh_to_virtualbox_nat_network_common_rsa/</guid>
       <description>SSH Connection(Common/RSA) to Virtualbox NAT Network</description>
     </item>
     <item>
       <title>Virtualbox에서 Linux 클립보드(복사-붙여넣기) 사용하는 법</title>
-      <link>http://localhost:1313/post/2023/virtualbox_clipboard/</link>
+      <link>//localhost:1313/post/2023/virtualbox_clipboard/</link>
       <pubDate>Sun, 17 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/virtualbox_clipboard/</guid>
+      <guid>//localhost:1313/post/2023/virtualbox_clipboard/</guid>
       <description>How to Share Clipboard between hosts and guests in Virtualbox</description>
     </item>
     <item>
       <title>리눅스에 Tomcat 설치하는 법(feat.OpenJDK21)</title>
-      <link>http://localhost:1313/post/2023/linux_tomcat_openjdk_installation/</link>
+      <link>//localhost:1313/post/2023/linux_tomcat_openjdk_installation/</link>
       <pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/linux_tomcat_openjdk_installation/</guid>
+      <guid>//localhost:1313/post/2023/linux_tomcat_openjdk_installation/</guid>
       <description>How to Install Tomcat in Linux with OpenJDK21</description>
     </item>
     <item>
       <title>리눅스에 Docker로 Tomcat 설치하는 법</title>
-      <link>http://localhost:1313/post/2023/linux_tomcat_docker/</link>
+      <link>//localhost:1313/post/2023/linux_tomcat_docker/</link>
       <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/linux_tomcat_docker/</guid>
+      <guid>//localhost:1313/post/2023/linux_tomcat_docker/</guid>
       <description>How to install Tomcat in linux using Docker</description>
     </item>
     <item>
       <title>Linux RAID 설정하는 법</title>
-      <link>http://localhost:1313/post/2023/linux_raid/</link>
+      <link>//localhost:1313/post/2023/linux_raid/</link>
       <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/linux_raid/</guid>
+      <guid>//localhost:1313/post/2023/linux_raid/</guid>
       <description>How to Configure RAID in Linux</description>
     </item>
     <item>
       <title>Ubuntu에서 imwheel 설정 특정 프로그램만 적용하기</title>
-      <link>http://localhost:1313/post/2023/imwheel_specific_in_ubuntu/</link>
+      <link>//localhost:1313/post/2023/imwheel_specific_in_ubuntu/</link>
       <pubDate>Sat, 29 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/imwheel_specific_in_ubuntu/</guid>
+      <guid>//localhost:1313/post/2023/imwheel_specific_in_ubuntu/</guid>
       <description>How to apply imwheel settings to specific program in Ubuntu</description>
     </item>
     <item>
       <title>WSL2로 VSCODE C언어 개발 환경 구축하기</title>
-      <link>http://localhost:1313/post/2023/vscode_wsl2_clang_dev_env/</link>
+      <link>//localhost:1313/post/2023/vscode_wsl2_clang_dev_env/</link>
       <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/vscode_wsl2_clang_dev_env/</guid>
+      <guid>//localhost:1313/post/2023/vscode_wsl2_clang_dev_env/</guid>
       <description>How to Set up Vscode C Language Dev Env using WSL2</description>
     </item>
     <item>
       <title>WSL2로 VSCODE Java 개발 환경 구축하기</title>
-      <link>http://localhost:1313/post/2023/vscode_wsl2_java_dev_env/</link>
+      <link>//localhost:1313/post/2023/vscode_wsl2_java_dev_env/</link>
       <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/vscode_wsl2_java_dev_env/</guid>
+      <guid>//localhost:1313/post/2023/vscode_wsl2_java_dev_env/</guid>
       <description>How to Set up Vscode Java Dev Env using WSL2</description>
     </item>
     <item>
       <title>WSL2로 VSCODE Python 개발 환경 구축하기</title>
-      <link>http://localhost:1313/post/2023/vscode_wsl2_python_dev_env/</link>
+      <link>//localhost:1313/post/2023/vscode_wsl2_python_dev_env/</link>
       <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/vscode_wsl2_python_dev_env/</guid>
+      <guid>//localhost:1313/post/2023/vscode_wsl2_python_dev_env/</guid>
       <description>How to Set up Vscode Python Dev Env using WSL2</description>
     </item>
     <item>
       <title>리눅스 민트 빠른 실행 아이콘 기본 키 암호 입력 없애기</title>
-      <link>http://localhost:1313/post/2023/no_quick_launch_pw/</link>
+      <link>//localhost:1313/post/2023/no_quick_launch_pw/</link>
       <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/no_quick_launch_pw/</guid>
+      <guid>//localhost:1313/post/2023/no_quick_launch_pw/</guid>
       <description>Disable Quick Launch Password Requirement</description>
     </item>
     <item>
       <title>Rocky Linux 9 한글 입력 설정</title>
-      <link>http://localhost:1313/post/2023/rocky_korean_input/</link>
+      <link>//localhost:1313/post/2023/rocky_korean_input/</link>
       <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2023/rocky_korean_input/</guid>
+      <guid>//localhost:1313/post/2023/rocky_korean_input/</guid>
       <description>Rocky Linux 9 Korean Input Settings</description>
+    </item>
+    <item>
+      <title>윈도우에서 Ctrl, Shift, Alt키를 토글키로 변경하기</title>
+      <link>//localhost:1313/post/2024/windows_toggle_key/</link>
+      <pubDate>Thu, 04 Aug 2022 09:16:45 +0000</pubDate>
+      <guid>//localhost:1313/post/2024/windows_toggle_key/</guid>
+      <description>How to toggle Ctrl, Shift, Alt key in windows</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>//localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/about/</guid>
+      <description>공부하면서 또는 컴퓨터를 다루면서 얻은 지식을 기록하는 블로그입니다.</description>
     </item>
   </channel>
 </rss>
