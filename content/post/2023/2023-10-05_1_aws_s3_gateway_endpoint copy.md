@@ -100,7 +100,7 @@ S3 > 버킷 > 버킷 만들기
 
 ## ⭐S3 버킷에 인스턴스 내의 파일 업로드
 
-### EC2 Instance Connect Endpoint 설정
+### 💧EC2 Instance Connect Endpoint 설정
 
 VPC > 엔드포인트 > 엔드포인트 생성
 - 이름 태그 : ec2-conn-endpoint
@@ -109,7 +109,7 @@ VPC > 엔드포인트 > 엔드포인트 생성
 - 보안 그룹 : practice-sec
 - 서브넷 : practice-subnet-private어쩌고
 
-### 프라이빗 서브넷 인스턴스 접속
+### 💧프라이빗 서브넷 인스턴스 접속
 
 EC2 > 인스턴스 > (private-server 체크) > 연결 > EC2 인스턴스 연결
 - 연결 유형 : EC2 인스턴스 연결 엔드포인트를 사용하여 연결
@@ -118,7 +118,7 @@ EC2 > 인스턴스 > (private-server 체크) > 연결 > EC2 인스턴스 연결
 
 참고로 EC2 인스턴스 연결 엔드포인트를 생성하기까지는 몇 분 정도 걸립니다.
 
-### S3에 파일 업로드
+### 💧S3에 파일 업로드
 
 ```bash
 aws configure

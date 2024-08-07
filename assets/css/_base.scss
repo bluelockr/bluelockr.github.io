@@ -13,8 +13,18 @@ body {
   color: $darkest-color; //본문 글꼴 색상
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
   color: $darkest-color; //본문 소제목 색상
+  background: linear-gradient(to right, #fff5b1 0%, #e0e0e0 100%);
+  border-radius: 10px;
+  padding-left: 0.3em;
+}
+
+h3, h4, h5, h6 {
+  color: $darkest-color; //본문 소제목 색상
+  background: linear-gradient(to right, #f1f8ff 0%, #e0e0e0 100%);
+  border-radius: 10px;
+  padding-left: 0.7em;
 }
 
 a {
