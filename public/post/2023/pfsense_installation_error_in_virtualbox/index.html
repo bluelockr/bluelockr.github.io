@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Bluelockr" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="/css/main.min.2c83f1cbd00680b7b884207159235e593ee9c83571c75179427220b3f75dd93c.css" />
+    <link rel="stylesheet" href="/css/main.min.ee49dfff1debf702cd86b956cc6c95ef1126f84176dd6e2084d3526f5022c37b.css" />
     
 
     
@@ -93,36 +93,30 @@
     </header>
     <div class="post-content">
       <h2 id="panic--could-not-malloc-163840-bytes-with-m_waitok-from-오류">⭐panic : Could not malloc 163840 bytes with M_WAITOK from 오류</h2>
-<blockquote>
-<p>Consoles: internal video/keyboard<br>
-BIOS CD is cd0<br>
-BIOS drive C: is disk0<br>
-panic: Could not malloc 163840 bytes with M_WAITOK from /var/jenkins/workspace/pfSense-CE-snapshot-2_7_0-main/sources/FreeBSD-src-RELENG_2_7_0/<br>
-sys/contrib/openzfs/module/zstd/zfs_zstd.c line 788<br>
-&ndash;&gt; press a key on the console to reboot &lt;&ndash;</p>
-</blockquote>
-<p>원인 : 램 용량 부족입니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Consoles: internal video/keyboard  
+</span></span><span style="display:flex;"><span>BIOS CD is cd0  
+</span></span><span style="display:flex;"><span>BIOS drive C: is disk0  
+</span></span><span style="display:flex;"><span>panic: Could not malloc <span style="color:#ae81ff">163840</span> bytes with M_WAITOK from /var/jenkins/workspace/pfSense-CE-snapshot-2_7_0-main/sources/FreeBSD-src-RELENG_2_7_0/  
+</span></span><span style="display:flex;"><span>sys/contrib/openzfs/module/zstd/zfs_zstd.c line <span style="color:#ae81ff">788</span>  
+</span></span><span style="display:flex;"><span>--press a key on the console to reboot &lt;--  
+</span></span></code></pre></div><p>원인 : 램 용량 부족입니다.</p>
 <h2 id="cpu-doesnt-support-long-mode">⭐CPU doesn&rsquo;t support long mode</h2>
-<blockquote>
-<p>can&rsquo;t find &lsquo;/etc/hostid&rsquo;<br>
-/boot/kernel/zfs.ko size 0x5ba0d8 at 0x35a9000<br>
-can&rsquo;t find &lsquo;/boot/entrophy&rsquo;<br>
-CPU doesn&rsquo;t support long mode</p>
-</blockquote>
-<p>원인 : 운영체제는 64비트인데 VM 설정이 32bit입니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>can<span style="color:#e6db74">&#39;t find &#39;</span>/etc/hostid<span style="color:#e6db74">&#39;  
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">/boot/kernel/zfs.ko size 0x5ba0d8 at 0x35a9000  
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">can&#39;</span>t find <span style="color:#e6db74">&#39;/boot/entrophy&#39;</span>  
+</span></span><span style="display:flex;"><span>CPU doesn<span style="color:#960050;background-color:#1e0010">&#39;</span>t support long mode  
+</span></span></code></pre></div><p>원인 : 운영체제는 64비트인데 VM 설정이 32bit입니다.</p>
 <p><a href="https://lasthackers.com/virtualbox-opnsense-cpu-doesnt-support-long-mode-error/">https://lasthackers.com/virtualbox-opnsense-cpu-doesnt-support-long-mode-error/</a></p>
 <h2 id="-panic-running-without-device-atpic-requires-a-local-apic">⭐ panic: running without device atpic requires a local APIC</h2>
-<blockquote>
-<p>GDC: no debug prots present<br>
-KDB: debugger backends: ddb<br>
-KDB: current backend: ddb<br>
-&mdash;&laquo;BOOT&raquo;&mdash;<br>
-panic: running without device atpic requires a local APIC<br>
-cpuid = 0  subnet
-time = 1<br>
-KDB: enter: panic</p>
-</blockquote>
-<p>원인 : I/O APIC 사용 설정이 안 되어 있습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>GDC: no debug prots present  
+</span></span><span style="display:flex;"><span>KDB: debugger backends: ddb  
+</span></span><span style="display:flex;"><span>KDB: current backend: ddb  
+</span></span><span style="display:flex;"><span>---<span style="color:#e6db74">&lt;&lt;BOOT&gt;&gt;---  
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">panic: running without device atpic requires a local APIC  
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">cpuid = 0  subnet
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">time = 1  
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">KDB</span>: enter: panic  
+</span></span></code></pre></div><p>원인 : I/O APIC 사용 설정이 안 되어 있습니다.</p>
 <p><a href="http://flummox-engineering.blogspot.com/2014/01/freebsd-running-without-device-atpic.html">http://flummox-engineering.blogspot.com/2014/01/freebsd-running-without-device-atpic.html</a></p>
 <p>그 외에도 다른 문제점이 발생하거든 VM 네트워크 설정이나 플로피 디스크 사용 해제 여부도 살펴보시기 바랍니다.</p>
 

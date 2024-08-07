@@ -9,6 +9,13 @@
     <lastBuildDate>Sun, 04 Aug 2024 09:16:45 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>SCOOP로 VSCODE C언어 개발 환경 구축하기</title>
+      <link>//localhost:1313/post/2024/vscode_wsl2_clang_dev_env/</link>
+      <pubDate>Sun, 04 Aug 2024 09:16:45 +0000</pubDate>
+      <guid>//localhost:1313/post/2024/vscode_wsl2_clang_dev_env/</guid>
+      <description>How to Set up Vscode C Language Dev Env using WSL2</description>
+    </item>
+    <item>
       <title>윈도우에서 Ctrl, Shift, Alt키를 토글키로 변경하기</title>
       <link>//localhost:1313/post/2024/windows_toggle_key/</link>
       <pubDate>Sun, 04 Aug 2024 09:16:45 +0000</pubDate>

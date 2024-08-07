@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Bluelockr" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="/css/main.min.2c83f1cbd00680b7b884207159235e593ee9c83571c75179427220b3f75dd93c.css" />
+    <link rel="stylesheet" href="/css/main.min.ee49dfff1debf702cd86b956cc6c95ef1126f84176dd6e2084d3526f5022c37b.css" />
     
 
     
@@ -130,12 +130,10 @@ MFA 사용자 지정명이 <strong>mymfa</strong> (AWS 관리 콘솔의 IAM 메�
 <p><strong>C:\Users\myhost\.aws</strong> 폴더로 이동하면 안에 <strong>config</strong> 파일이 있습니다.<br>
 열어보면 Vault에 추가해준 프로필이 등록되어있습니다.<br>
 여기에 MFA 설정을 다음과 같이 집어넣고 저장합니다.</p>
-<blockquote>
-<p>[profile <strong>student</strong>]
-region = ap-northeast-2
-mfa_serial = arn:aws:iam::<strong>123456789101</strong>:mfa/<strong>mymfa</strong></p>
-</blockquote>
-<h2 id="aws-vault-작동-확인">AWS Vault 작동 확인</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#ae81ff">\[</span>profile **student**<span style="color:#ae81ff">\]</span>
+</span></span><span style="display:flex;"><span>region <span style="color:#f92672">=</span> ap-northeast-2
+</span></span><span style="display:flex;"><span>mfa_serial <span style="color:#f92672">=</span> arn:aws:iam::**123456789101**:mfa/**mymfa**
+</span></span></code></pre></div><h2 id="aws-vault-작동-확인">AWS Vault 작동 확인</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 임시 credential을 사용하여 aws s3 목록 확인</span>
 </span></span><span style="display:flex;"><span>aws-vault exec student -- aws s3 ls
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 임시 credential을 사용하지 않으면 정상작동 안 됨</span>
