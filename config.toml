@@ -63,7 +63,7 @@ paginate = 8
     darkestColor = "#474747"
     darkColor = "#995560"
     lightColor = "#d3d3d3"
-    lightestColor = "#e3e3e3"
+    lightestColor = "#ffffff"
     primaryColor = "#d35050"
 
 [markup.goldmark.renderer]
