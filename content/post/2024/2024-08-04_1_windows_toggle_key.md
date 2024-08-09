@@ -4,7 +4,7 @@ summary: "How to toggle Ctrl, Shift, Alt key in windows"
 draft: false
 date: 2024-08-04T09:16:45.000Z
 slug: "windows_toggle_key"
-description: "Markdown is a powerful tool for creating rich text using a plain text editor. This cheatsheet is a quick reference for Markdown syntax."
+description: "How to toggle Ctrl, Shift, Alt key in windows"
 categories:
   - windows
 tags:
