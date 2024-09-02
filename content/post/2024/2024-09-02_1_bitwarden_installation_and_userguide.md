@@ -3,7 +3,7 @@ title: "패스워드 관리자 Bitwarden 설치 및 기본 사용법"
 summary: "How to install and use Bitwarden"
 description: "How to install and use Bitwarden"
 draft: false
-date: 2024-09-02T00:00:00.000Z
+date: 2024-09-02_1T00:00:00.000Z
 slug: "bitwarden_installation_and_userguide"
 tags:
   - Application
@@ -12,7 +12,6 @@ tags:
 
 ```bash
 # 환경(Environment)
-운영체제 : Windows 11
 웹브라우저 : Microsoft Edge
 스마트폰 : Samsung Galaxy A8 2018(Google Android)
 ```
@@ -25,13 +24,13 @@ tags:
 <br>
 <br>
 
-<img style='border:1px solid #000000; border-radius: 10px; border-radius: 10px' src="/../../images/2024/2024-09-02_bitwarden_installation_and_userguide/1.png" width="400">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_1_bitwarden_installation_and_userguide/1.png" width="400">
 
 '계정 만들기'로 들어갑니다.
 <br>
 <br>
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_bitwarden_installation_and_userguide/2.png" width="400">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_1_bitwarden_installation_and_userguide/2.png" width="400">
 
 필요한 항목들을 모두 입력하여 계정을 만들어 줍니다.
 <br>
@@ -46,7 +45,7 @@ tags:
 <br>
 <br>
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_bitwarden_installation_and_userguide/3.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_1_bitwarden_installation_and_userguide/3.png" width="600">
 
 복구 코드 :   
 계정에 접근할 수 있는 마지막 수단입니다.  
@@ -74,20 +73,20 @@ Microsoft Edge 기준으로 설명합니다.
 위 링크를 클릭하여 Chrome 웹 스토어로 들어갑니다.  
 여기서 확장 프로그램을 설치할 수 있습니다.
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_bitwarden_installation_and_userguide/4.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_1_bitwarden_installation_and_userguide/4.png" width="600">
 
 이렇게 확장 프로그램을 설치하고 나서는 위처럼 도구 모음에 표시해주는 것이 좋습니다.
 <br>
 <br>
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_bitwarden_installation_and_userguide/5.png" width="400">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_1_bitwarden_installation_and_userguide/5.png" width="400">
 <br>
 🔼 Microsoft Edge에서 도구 모음에 표시해주는 방법
 <br>
 <br>
 <br>
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_bitwarden_installation_and_userguide/6.png" width="400">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_1_bitwarden_installation_and_userguide/6.png" width="400">
 <br>
 🔼 Google Chrome에서 도구 모음에 표시해주는 방법
 <br>
@@ -99,13 +98,13 @@ Microsoft Edge 기준으로 설명합니다.
 
 ### 💧 사이트 추가
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_bitwarden_installation_and_userguide/7.png" width="400">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_1_bitwarden_installation_and_userguide/7.png" width="400">
 
 아까 도구모음에 추가한 확장 프로그램 아이콘을 클릭해주고 로그인합니다.
 <br>
 <br>
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_bitwarden_installation_and_userguide/8.png" width="400">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_1_bitwarden_installation_and_userguide/8.png" width="400">
 
 보관함으로 이동해주고 '+' 버튼을 눌러서 보관함에 사이트를 추가해줍니다.
 ** 보관함 : Bitwarden 내에서 사이트의 아이디와 비밀번호가 저장되어있는 공간
@@ -119,7 +118,7 @@ Microsoft Edge 기준으로 설명합니다.
 <br>
 <br>
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_bitwarden_installation_and_userguide/9.png" width="400">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_1_bitwarden_installation_and_userguide/9.png" width="400">
 
 위 사진을 참고하여 원하시는 사이트를 보관함에 추가하면 됩니다.
 <br>
@@ -128,7 +127,7 @@ Microsoft Edge 기준으로 설명합니다.
 
 ### 💧 사이트에 로그인하는 방법
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_bitwarden_installation_and_userguide/10.png" width="400">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_1_bitwarden_installation_and_userguide/10.png" width="400">
 
 위 사진대로 따라하면 마스터 비밀번호를 입력하라고 나올 겁니다.  
 입력해줍니다.  
@@ -136,7 +135,7 @@ Microsoft Edge 기준으로 설명합니다.
 <br>
 <br>
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_bitwarden_installation_and_userguide/11.png" width="400">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_1_bitwarden_installation_and_userguide/11.png" width="400">
 
 
 저는 쿠팡을 예시로 들어보겠습니다.  
@@ -148,19 +147,19 @@ Microsoft Edge 기준으로 설명합니다.
 
 ### 💧 추가했던 사이트 편집/삭제
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_bitwarden_installation_and_userguide/12.png" width="400">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_1_bitwarden_installation_and_userguide/12.png" width="400">
 
 보관함 목록에서 원하는 사이트를 위와 같이 클릭합니다.
 <br>
 <br>
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_bitwarden_installation_and_userguide/13.png" width="400">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_1_bitwarden_installation_and_userguide/13.png" width="400">
 
 탭 메뉴에서는 조금 다르게 뜨는데, 위와 같이 다른 버튼을 눌러주면 됩니다.
 <br>
 <br>
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_bitwarden_installation_and_userguide/14.png" width="400">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-02_1_bitwarden_installation_and_userguide/14.png" width="400">
 
 편집 버튼을 눌러 편집하거나 보관함에 저장했던 사이트의 정보를 삭제할 수 있습니다.  
 <br>
