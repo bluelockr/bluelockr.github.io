@@ -4,8 +4,7 @@ summary = "Disable Quick Launch Password Requirement"
 date = 2023-04-25T00:00:00+00:00
 cover = ""
 slug = "no_quick_launch_pw"
-categories = ['linux']
-tags = ['Ubuntu', 'Linuxmint']
+tags = ['linux', 'Ubuntu', 'Linuxmint']
 draft = false
 +++
 윈도우로 치자면 빠른 실행 아이콘에 해당되는 곳에 크롬(chrome) 아이콘을 등록시켜놨더니,  

@@ -4,8 +4,7 @@ summary = "How to set Kubernetes Cluster to Ubuntu 22.04 in Virtualbox"
 date = 2023-09-21T00:00:00+00:00
 cover = ""
 slug = "ubuntu_kube_cluster_setup"
-categories = ['linux']
-tags = ['Ubuntu', 'Virtualbox', 'Kubernetes']
+tags = ['Linux', 'Ubuntu', 'Virtualbox', 'Kubernetes']
 draft = false
 +++
 쿠버네티스 설치하실 정도면 어느 정도는 기본기가 있으신 분이라고 가정하고 그냥 설명하겠습니다.

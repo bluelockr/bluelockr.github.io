@@ -4,8 +4,7 @@ summary = "SSH Connection(Common/RSA) to Virtualbox NAT Network"
 date = 2023-09-21T00:00:00+00:00
 cover = ""
 slug = "ssh_to_virtualbox_nat_network_common_rsa"
-categories = ['application']
-tags = ['Windows', 'Linux', 'Virtualbox']
+tags = ['Application', 'Windows', 'Linux', 'Virtualbox']
 draft = false
 +++
 ## ⭐SSH 설치

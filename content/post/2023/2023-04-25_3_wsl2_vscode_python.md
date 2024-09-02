@@ -4,8 +4,7 @@ summary = "How to Set up Vscode Python Dev Env using WSL2"
 date = 2023-04-25T00:00:00+00:00
 cover = ""
 slug = "vscode_wsl2_python_dev_env"
-categories = ['programming']
-tags = ['Windows', 'VSCODE', 'Python', 'WSL']
+tags = ['Programming', 'Windows', 'VSCODE', 'Python', 'WSL']
 draft = false
 +++
 ## ⭐Visual Studio Code 설치

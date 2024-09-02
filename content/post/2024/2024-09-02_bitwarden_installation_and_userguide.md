@@ -5,10 +5,9 @@ description: "How to install and use Bitwarden"
 draft: false
 date: 2024-09-02T00:00:00.000Z
 slug: "bitwarden_installation_and_userguide"
-categories:
-  - Application
 tags:
-  - bitwarden
+  - Application
+  - Bitwarden
 ---
 
 ```bash

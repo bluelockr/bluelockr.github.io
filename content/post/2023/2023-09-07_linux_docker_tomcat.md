@@ -4,7 +4,6 @@ summary = "How to install Tomcat in linux using Docker"
 date = 2023-09-07T00:00:00+00:00
 cover = ""
 slug = "linux_tomcat_docker"
-categories = ['linux']
 tags = ['Linux', 'Docker', 'Tomcat']
 draft = false
 +++

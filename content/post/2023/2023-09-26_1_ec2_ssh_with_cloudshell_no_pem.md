@@ -4,7 +4,6 @@ summary = "SSH Connection to EC2 Instance without pem key using Cloudshells"
 date = 2023-09-26T00:00:00+00:00
 cover = ""
 slug = "ec2_ssh_with_cloudshell_no_pem"
-categories = ['network']
 tags = ['Network', 'AWS']
 draft = false
 +++

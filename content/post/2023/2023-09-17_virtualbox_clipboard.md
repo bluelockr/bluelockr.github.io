@@ -4,8 +4,7 @@ summary = "How to Share Clipboard between hosts and guests in Virtualbox"
 date = 2023-09-17T00:00:00+00:00
 cover = ""
 slug = "virtualbox_clipboard"
-categories = ['application']
-tags = ['Windows', 'Linux', 'Virtualbox']
+tags = ['Application', 'Windows', 'Linux', 'Virtualbox']
 draft = false
 +++
 보통 윈도우에서 버추얼박스를 사용해 그 안에 있는 가상머신에 우분투를 돌리게 되는데,

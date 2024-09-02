@@ -4,7 +4,6 @@ summary = "How to set up S3 Gateway Endpoint"
 date = 2023-10-05T00:00:00+00:00
 cover = ""
 slug = "aws_s3_gateway_endpoint_configuration"
-categories = ['network']
 tags = ['Network', 'AWS']
 draft = false
 +++

@@ -5,10 +5,9 @@ description: "How to go back to old Outlook"
 draft: false
 date: 2024-08-26T00:00:00.000Z
 slug: "outlook_new_to_old"
-categories:
-  - Application
 tags:
-  - outlook
+  - Application
+  - Outlook
 ---
 
 ## ⭐ 방법 1(Solution No.1)

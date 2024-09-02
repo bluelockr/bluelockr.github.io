@@ -4,8 +4,7 @@ summary = "How to Adjust Firefox Tab Height"
 date = 2024-08-03T00:00:00+00:00
 cover = ""
 slug = "firefox_tab_height"
-categories = ['application']
-tags = ['firefox']
+tags = ['Application', 'Firefox']
 draft = false
 +++
 

@@ -5,10 +5,8 @@ description: "How to import/export ics file to/from Outlook(New) Calendar"
 draft: false
 date: 2024-08-26T00:00:00.000Z
 slug: "outlook_calendar_import_export_ics"
-categories:
-  - Application
 tags:
-  - outlook
+  - Outlook
 ---
 
 ## ⭐ English Guide

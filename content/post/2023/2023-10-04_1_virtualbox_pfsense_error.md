@@ -4,8 +4,7 @@ summary = "pfSense installation error in Virtualbox"
 date = 2023-10-04T00:00:00+00:00
 cover = ""
 slug = "pfsense_installation_error_in_virtualbox"
-categories = ['application']
-tags = ['Linux', 'Virtualbox']
+tags = ['Application', 'Linux', 'Virtualbox']
 draft = false
 +++
 ## ⭐panic : Could not malloc 163840 bytes with M_WAITOK from 오류

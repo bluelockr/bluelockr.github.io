@@ -4,7 +4,6 @@ summary = "AWS Client VPN Mutual Authentication"
 date = 2023-10-04T00:00:00+00:00
 cover = ""
 slug = "aws_client_vpn_mutual_authentication"
-categories = ['network']
 tags = ['Network', 'AWS']
 draft = false
 +++

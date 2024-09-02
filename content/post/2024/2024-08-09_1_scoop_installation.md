@@ -5,11 +5,9 @@ description: "How to install programs simply in windows like in linux"
 draft: false
 date: 2024-08-09T00:00:00.000Z
 slug: "windows_scoop"
-categories:
-  - windows
 tags:
-  - windows
-  - scoop
+  - Windows
+  - Scoop
 ---
 
 윈도우에서 프로그램을 설치하려면 직접 프로그램 제작사 홈페이지에 들어가서 설치 파일(.exe)을 다운로드해서 실행하던지 마이크로소프트 스토어에서 설치해야 하는데,
