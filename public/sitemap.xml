@@ -2,20 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/2fas/</loc>
+    <lastmod>2024-09-02T22:14:22+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/2024/2fas_installation_and_userguide/</loc>
+    <lastmod>2024-09-02T22:14:22+09:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/application/</loc>
-    <lastmod>2024-09-02T16:52:58+09:00</lastmod>
+    <lastmod>2024-09-02T22:14:22+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/bitwarden/</loc>
-    <lastmod>2024-09-02T16:52:58+09:00</lastmod>
+    <lastmod>2024-09-02T22:12:46+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-09-02T16:52:58+09:00</lastmod>
+    <lastmod>2024-09-02T22:14:22+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-09-02T16:52:58+09:00</lastmod>
+    <lastmod>2024-09-02T22:14:22+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/2024/bitwarden_installation_and_userguide/</loc>
-    <lastmod>2024-09-02T16:50:39+09:00</lastmod>
+    <lastmod>2024-09-02T22:12:46+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/outlook/</loc>
     <lastmod>2024-09-02T15:10:13+09:00</lastmod>
@@ -183,8 +189,5 @@
   </url><url>
     <loc>http://localhost:1313/post/</loc>
     <lastmod>2024-09-02T11:04:53+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/2024/bitwarden_installation_and_userguide/</loc>
-    <lastmod>2024-09-02T16:52:58+09:00</lastmod>
   </url>
 </urlset>

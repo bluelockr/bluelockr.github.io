@@ -3,7 +3,7 @@ title: "패스워드 관리자 Bitwarden 설치 및 기본 사용법"
 summary: "How to install and use Bitwarden"
 description: "How to install and use Bitwarden"
 draft: false
-date: 2024-09-02_1T00:00:00.000Z
+date: 2024-09-02T00:00:00.000Z
 slug: "bitwarden_installation_and_userguide"
 tags:
   - Application
