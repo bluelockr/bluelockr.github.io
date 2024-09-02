@@ -91,7 +91,7 @@ scoop uninstall powertoys everything
 (There are programs you installed by scoop is located in **'C:\Users\%USERPROFILE%\scoop\apps'** as you see.  
 Input **'C:\Users\%USERPROFILE%\scoop\apps'** in the URL line of the file explorer and press Enter key. You will get there then.)
 
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-09_1_scoop_installation/1.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-09_1_scoop_installation/1.png" width="600">
 <br>
 <br>
 
@@ -102,6 +102,6 @@ Input **'C:\Users\%USERPROFILE%\scoop\apps'** in the URL line of the file explor
 위의 링크에서 프로그램 이름과 해당 프로그램이 있는 버킷명을 확인할 수 있습니다.  
 (You can find out whether specific program is in the scoop bucket and what that bucket is by searching in the above link.)
 
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-09_1_scoop_installation/2.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-09_1_scoop_installation/2.png" width="600">
 
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-09_1_scoop_installation/3.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-09_1_scoop_installation/3.png" width="600">

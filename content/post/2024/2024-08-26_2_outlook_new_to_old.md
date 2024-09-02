@@ -13,14 +13,14 @@ tags:
 
 ## ⭐ 방법 1(Solution No.1)
 
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-26_2_outlook_new_to_old/1.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-26_2_outlook_new_to_old/1.png" width="600">
 <br>
 <br>
 <br>
 
 ## ⭐ 방법 2(Solution No.2)
 
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-26_2_outlook_new_to_old/2.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-26_2_outlook_new_to_old/2.png" width="600">
 <br>
 <br>
 <br>

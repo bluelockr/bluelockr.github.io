@@ -45,12 +45,12 @@ IP는 본인에게 적합하게 설정합니다. 버추얼박스 네트워크 �
 이번에는 NAT 네트워크 설정은 저 같은 경우,  
 호스트(버추얼박스를 돌리는 윈도우 10) IP 대역이 192.168.0.0/24 대역이니까 똑같이 192.168.0.0/24 대역으로 맞춰줄겁니다.
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/1.png" width="600"><br>
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-11-17_1_rocky_server_network/1.png" width="600"><br>
 🔼버추얼박스 NAT 네트워크 설정
 <br>
 <br>
 <br>
-<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/2.png" width="600"><br>
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-11-17_1_rocky_server_network/2.png" width="600"><br>
 🔼로키 리눅스 가상머신 네트워크 설정
 <br>
 <br>
@@ -64,17 +64,17 @@ GW : 192.168.0.1
 DNS : 8.8.8.8
 ```
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/3.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-11-17_1_rocky_server_network/3.png" width="600">
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/4.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-11-17_1_rocky_server_network/4.png" width="600">
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/5.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-11-17_1_rocky_server_network/5.png" width="600">
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/6.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-11-17_1_rocky_server_network/6.png" width="600">
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/7.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-11-17_1_rocky_server_network/7.png" width="600">
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/8.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-11-17_1_rocky_server_network/8.png" width="600">
 
 ```bash
 nmcli con down enp0s3 && nmcli con up enp0s3
@@ -129,7 +129,7 @@ vi /etc/ssh/sshd_config
 
 해당 파일에서 #PermitRootLogin without-password 를 PermitRootLogin yes로 수정하면 됩니다.
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/9.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-11-17_1_rocky_server_network/9.png" width="600">
 
 ```bash
 systemctl restart sshd
@@ -138,6 +138,6 @@ systemctl restart sshd
 <br>
 <br>
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/10.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-11-17_1_rocky_server_network/10.png" width="600">
 
 이렇게 SSH 접속에 성공했습니다.

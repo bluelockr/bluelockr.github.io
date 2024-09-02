@@ -36,13 +36,13 @@ Ctrl키와 Shift키를 하도 많이 누르다 보면 새끼 손가락에 무리
 일단 제어판에 들어가야 합니다.(윈도우 11 설정앱에서는 잘 안 됨)
 
 ## 1️⃣
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-04_1_windows_toggle_key/1.jpg" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-04_1_windows_toggle_key/1.jpg" width="600">
 
 ## 2️⃣
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-04_1_windows_toggle_key/2.jpg" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-04_1_windows_toggle_key/2.jpg" width="600">
 
 ## 3️⃣
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-04_1_windows_toggle_key/3.jpg" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-04_1_windows_toggle_key/3.jpg" width="600">
 
 ## 4️⃣
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-04_1_windows_toggle_key/4.jpg" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-04_1_windows_toggle_key/4.jpg" width="600">

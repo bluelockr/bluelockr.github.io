@@ -17,22 +17,22 @@ OS : Windows 11
 <br>
 
 ## 1️⃣
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-03_1_firefox_tab_height/1.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-03_1_firefox_tab_height/1.png" width="600">
 
 ## 2️⃣
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-03_1_firefox_tab_height/2.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-03_1_firefox_tab_height/2.png" width="600">
 
 ## 3️⃣
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-03_1_firefox_tab_height/3.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-03_1_firefox_tab_height/3.png" width="600">
 
 ## 4️⃣
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-03_1_firefox_tab_height/4.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-03_1_firefox_tab_height/4.png" width="600">
 
 ## 5️⃣
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-03_1_firefox_tab_height/5.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-03_1_firefox_tab_height/5.png" width="600">
 
 ## 6️⃣
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-03_1_firefox_tab_height/6.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-03_1_firefox_tab_height/6.png" width="600">
 
 <br>
 <br>

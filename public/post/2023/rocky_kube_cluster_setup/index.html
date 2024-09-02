@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 02 Sep 2024 11:04:53 &#43;0900"
+                  Modified <relative-time datetime="Mon, 02 Sep 2024 14:54:35 &#43;0900"
                     class="no-wrap">
-                    Mon, 02 Sep 2024 11:04:53 &#43;0900</relative-time>
+                    Mon, 02 Sep 2024 14:54:35 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -236,20 +236,20 @@
 <p><strong>저는 호스트 아이피 대역이 192.168.0.0/24라서,</strong><br>
 <strong>게스트 아이피는 호스트 아이피 대역 내인 192.168.0.10과 20으로 설정했습니다.</strong></p>
 <h3 id="버추얼박스-자체-네트워크-설정">💧버추얼박스 자체 네트워크 설정</h3>
-<p><img style='border:1px solid #000000' src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/1.png" width="600"><br></p>
-<p><img style='border:1px solid #000000' src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/2.png" width="600"><br></p>
+<p><img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/1.png" width="600"><br></p>
+<p><img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/2.png" width="600"><br></p>
 <p><span style="background-color:khaki"> <strong>[NAT Networks]</strong> </span><br>
 <strong>Name : NatNetwork</strong><br>
 <strong>IP Prefix : 192.168.0.0/24</strong><br>
 <strong>Enable DHCP</strong></p>
 <h3 id="rocky-linux가-설치된-가상머신vm-설정">💧Rocky Linux가 설치된 가상머신(VM) 설정</h3>
-<p><img style='border:1px solid #000000' src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/3.png" width="600"><br></p>
+<p><img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/3.png" width="600"><br></p>
 <p><span style="background-color:khaki"> <strong>[어댑터 1]</strong> </span><br>
 <strong>NAT 네트워크</strong><br>
 <strong>이름 : NatNetwork</strong></p>
 <p><em>NAT Networks 대신에 &lsquo;어댑터에 브리지&rsquo; 옵션을 선택해줘도 됩니다.</em></p>
 <h3 id="rocky-linux-내부의-ip-설정">💧Rocky Linux 내부의 IP 설정</h3>
-<p><img style='border:1px solid #000000' src="/../../images/2023/2023-09-21_2_ubuntu_kube/1.png" width="600"><br></p>
+<p><img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-09-21_2_ubuntu_kube/1.png" width="600"><br></p>
 <p><strong>IPv4 Method : Manual(수동)</strong><br>
 <strong>IP : 192.168.0.10</strong><br>
 <strong>SM : 255.255.255.0</strong><br>
@@ -324,7 +324,7 @@
 <p><span style="color:blueviolet"> <strong>master node VM이 종료되면 master node VM을 복제합니다.</strong> </span></p>
 <p>복제할 때 이름은 worker로 해줍니다.</p>
 <h2 id="worker-노드-ip-호스트명-설정">⭐worker 노드 IP, 호스트명 설정</h2>
-<p><img style='border:1px solid #000000' src="/../../images/2023/2023-09-21_2_ubuntu_kube/2.png" width="600"><br></p>
+<p><img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-09-21_2_ubuntu_kube/2.png" width="600"><br></p>
 <p><span style="color:blueviolet"> <strong>worker node VM을 실행합니다.</strong> </span></p>
 <p><strong>IPv4 Method : Manual</strong><br>
 <strong>IP : 192.168.0.20</strong><br>
@@ -341,7 +341,7 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo su
 </span></span><span class="line"><span class="cl">sudo kubeadm init --control-plane-endpoint<span class="o">=</span>master
 </span></span></code></pre></div><p>시간이 오래 걸립니다. 멈춘 거 아니에요ㅋㅋ</p>
-<p><img style='border:1px solid #000000' src="/../../images/2023/2023-09-21_2_ubuntu_kube/3.png" width="600"><br>
+<p><img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-09-21_2_ubuntu_kube/3.png" width="600"><br>
 🔼귀차니즘 때문에 Ubuntu Kubernetes Cluster 구성 포스팅에 있던 이미지 그대로 갖다 씀(&hellip;)</p>
 <p>다 끝나면 <strong>kubeadm join</strong> 어쩌고 하는 내용이 맨 뒤에 나오는데, 이를 복사해줍니다.</p>
 <p>cat &gt; token.txt 명령어를 사용해 따로 저장해주면 더욱 좋습니다.</p>

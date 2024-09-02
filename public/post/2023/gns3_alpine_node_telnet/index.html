@@ -182,7 +182,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      539 Words
+                      513 Words
                     
 
                   </div>
@@ -216,15 +216,15 @@
               <div class="Box-body px-5 pb-5" style="z-index: 1">
                 <article class="markdown-body entry-content container-lg"><p>GNS3 설치 과정과 IOU 불러오는 과정 등은 생략하겠습니다.</p>
 <h2 id="템플릿-불러오기">⭐템플릿 불러오기</h2>
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/1.png" width="300">
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/2.png" width="800">
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/3.png" width="400">
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/4.png" width="600">
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/5.png" width="600">
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/6.png" width="600">
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/7.png" width="600">
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/8.png" width="600">
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/9.png" width="800">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/1.png" width="300">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/2.png" width="800">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/3.png" width="400">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/4.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/5.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/6.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/7.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/8.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/9.png" width="800">
 <br>
 <br>
 <br>
@@ -232,7 +232,7 @@
 <h3 id="패키지-설치">💧패키지 설치</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vi /etc/network/interfaces
 </span></span></code></pre></div><p>아래 파일과 같이 주석(#)을 삭제하여 DHCP를 활성화 시킵니다.</p>
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/10.png" width="800">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/10.png" width="800">
 <p>저장한 뒤 아래 명령어를 사용하여 네트워크를 활성화 시킨 뒤 텔넷 관련 프로그램을 설치합니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ifup eth0
 </span></span><span class="line"><span class="cl">ping 8.8.8.8
@@ -242,7 +242,7 @@
 </span></span><span class="line"><span class="cl">vi /etc/network/interfaces
 </span></span></code></pre></div><p>아래 파일과 같이 주석(#)을 추가하고 삭제하여 DHCP를 비활성화 시키고 정적 IP를 활성화 시킵니다.</p>
 <p>저는 192.168.0.10/24 에 게이트웨이는 192.168.0.1로 설정하였습니다.</p>
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/11.png" width="800">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/11.png" width="800">
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ifdown eth0
 </span></span><span class="line"><span class="cl">ifup eth0
 </span></span></code></pre></div><br>
@@ -273,10 +273,7 @@
 <br>
 <br>
 <h2 id="텔넷-접속">⭐텔넷 접속</h2>
-<p>알파인 리눅스 터미널 창을 가서 다음과 같이 입력합니다.</p>
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/12.png" width="300">
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">telnet 192.168.0.2
-</span></span></code></pre></div><p>암호를 입력하면 접속 가능합니다.</p>
+<p>알파인 리눅스 터미널 창을 가서 다�</p>
 </article>
               </div>
             </div>

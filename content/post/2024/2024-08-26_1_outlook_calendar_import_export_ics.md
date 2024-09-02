@@ -15,13 +15,13 @@ tags:
 
 ### Import
 
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-26_1_outlook_calendar_import_export_ics/1.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-26_1_outlook_calendar_import_export_ics/1.png" width="600">
 <br>
 <br>
 
 ### Export
 
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-26_1_outlook_calendar_import_export_ics/2.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-26_1_outlook_calendar_import_export_ics/2.png" width="600">
 <br>
 <br>
 <br>
@@ -31,13 +31,13 @@ tags:
 
 ### Import
 
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-26_1_outlook_calendar_import_export_ics/3.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-26_1_outlook_calendar_import_export_ics/3.png" width="600">
 <br>
 <br>
 
 ### Export
 
-<img style='border:1px solid #000000' src="/../../images/2024/2024-08-26_1_outlook_calendar_import_export_ics/4.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-08-26_1_outlook_calendar_import_export_ics/4.png" width="600">
 <br>
 <br>
 <br>

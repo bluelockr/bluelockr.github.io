@@ -13,23 +13,23 @@ GNS3 설치 과정과 IOU 불러오는 과정 등은 생략하겠습니다.
 
 ## ⭐템플릿 불러오기
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/1.png" width="300">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/1.png" width="300">
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/2.png" width="800">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/2.png" width="800">
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/3.png" width="400">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/3.png" width="400">
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/4.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/4.png" width="600">
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/5.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/5.png" width="600">
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/6.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/6.png" width="600">
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/7.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/7.png" width="600">
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/8.png" width="600">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/8.png" width="600">
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/9.png" width="800">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/9.png" width="800">
 <br>
 <br>
 <br>
@@ -44,7 +44,7 @@ vi /etc/network/interfaces
 
 아래 파일과 같이 주석(#)을 삭제하여 DHCP를 활성화 시킵니다.
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/10.png" width="800">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/10.png" width="800">
 
 저장한 뒤 아래 명령어를 사용하여 네트워크를 활성화 시킨 뒤 텔넷 관련 프로그램을 설치합니다.
 
@@ -61,7 +61,7 @@ vi /etc/network/interfaces
 
 저는 192.168.0.10/24 에 게이트웨이는 192.168.0.1로 설정하였습니다.
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/11.png" width="800">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/11.png" width="800">
 
 ```bash
 ifdown eth0
@@ -107,7 +107,7 @@ R1# copy running-config startup-config
 
 알파인 리눅스 터미널 창을 가서 다음과 같이 입력합니다.
 
-<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/12.png" width="300">
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/12.png" width="300">
 
 ```bash
 telnet 192.168.0.2
