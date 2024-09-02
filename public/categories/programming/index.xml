@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on bluelockr&#39;s blog</title>
+    <link>http://localhost:1313/categories/programming/</link>
+    <description>Recent content in Programming on bluelockr&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Mon, 02 Sep 2024 11:04:53 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows에서 Git Secret 사용법</title>
+      <link>http://localhost:1313/post/2023/windows_git_secret/</link>
+      <pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/windows_git_secret/</guid>
+      <description>How to Use Git Secret in Windows</description>
+    </item>
+    <item>
+      <title>WSL2로 VSCODE C언어 개발 환경 구축하기</title>
+      <link>http://localhost:1313/post/2023/vscode_wsl2_clang_dev_env/</link>
+      <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/vscode_wsl2_clang_dev_env/</guid>
+      <description>How to Set up Vscode C Language Dev Env using WSL2</description>
+    </item>
+    <item>
+      <title>WSL2로 VSCODE Java 개발 환경 구축하기</title>
+      <link>http://localhost:1313/post/2023/vscode_wsl2_java_dev_env/</link>
+      <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/vscode_wsl2_java_dev_env/</guid>
+      <description>How to Set up Vscode Java Dev Env using WSL2</description>
+    </item>
+    <item>
+      <title>WSL2로 VSCODE Python 개발 환경 구축하기</title>
+      <link>http://localhost:1313/post/2023/vscode_wsl2_python_dev_env/</link>
+      <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/vscode_wsl2_python_dev_env/</guid>
+      <description>How to Set up Vscode Python Dev Env using WSL2</description>
+    </item>
+  </channel>
+</rss>

@@ -6,14 +6,21 @@
     <description>Recent content in Windows on bluelockr&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ko</language>
-    <lastBuildDate>Tue, 06 Aug 2024 05:35:23 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 02 Sep 2024 11:04:53 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>윈도우에서 Scoop로 간단하게 프로그램 설치하기</title>
+      <link>http://localhost:1313/post/2024/windows_scoop/</link>
+      <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2024/windows_scoop/</guid>
+      <description>How to install programs simply in windows like in linux</description>
+    </item>
     <item>
       <title>윈도우에서 Ctrl, Shift, Alt키를 토글키로 변경하기</title>
       <link>http://localhost:1313/post/2024/windows_toggle_key/</link>
-      <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 04 Aug 2024 09:16:45 +0000</pubDate>
       <guid>http://localhost:1313/post/2024/windows_toggle_key/</guid>
-      <description>How to toggle in windows</description>
+      <description>How to toggle Ctrl, Shift, Alt key in windows</description>
     </item>
     <item>
       <title>Windows에서 AWS Vault 설치 및 사용</title>

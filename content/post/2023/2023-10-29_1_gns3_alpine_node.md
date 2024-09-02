@@ -4,6 +4,7 @@ summary = "How to Telnet to GNS3 Node from Alpine Linux Node"
 date = 2023-10-29T00:00:00+00:00
 cover = ""
 slug = "gns3_alpine_node_telnet"
+categories = ['network']
 tags = ['Network', 'GNS3']
 draft = false
 +++
@@ -12,23 +13,26 @@ GNS3 설치 과정과 IOU 불러오는 과정 등은 생략하겠습니다.
 
 ## ⭐템플릿 불러오기
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/1.png)  
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/1.png" width="300">
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/2.png)  
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/2.png" width="800">
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/3.png)  
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/3.png" width="400">
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/4.png)  
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/4.png" width="600">
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/5.png)  
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/5.png" width="600">
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/6.png)  
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/6.png" width="600">
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/7.png)  
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/7.png" width="600">
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/8.png)  
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/8.png" width="600">
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/9.png)  
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/9.png" width="800">
+<br>
+<br>
+<br>
 
 ## ⭐알파인 리눅스 노드 텔넷 설정
 
@@ -40,7 +44,7 @@ vi /etc/network/interfaces
 
 아래 파일과 같이 주석(#)을 삭제하여 DHCP를 활성화 시킵니다.
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/10.png)  
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/10.png" width="800">
 
 저장한 뒤 아래 명령어를 사용하여 네트워크를 활성화 시킨 뒤 텔넷 관련 프로그램을 설치합니다.
 
@@ -57,12 +61,15 @@ vi /etc/network/interfaces
 
 저는 192.168.0.10/24 에 게이트웨이는 192.168.0.1로 설정하였습니다.
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/11.png)  
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/11.png" width="800">
 
 ```bash
 ifdown eth0
 ifup eth0
 ```
+<br>
+<br>
+<br>
 
 ## ⭐라우터 텔넷 설정
 
@@ -92,12 +99,15 @@ R1(config-if)# ip address 192.168.0.1 255.255.255.0
 R1(config-if)# end
 R1# copy running-config startup-config
 ```
+<br>
+<br>
+<br>
 
 ## ⭐텔넷 접속
 
 알파인 리눅스 터미널 창을 가서 다음과 같이 입력합니다.
 
-![Alt text](/../../images/2023/2023-10-29_1_gns3_alpine_node/12.png)  
+<img style='border:1px solid #000000' src="/../../images/2023/2023-10-29_1_gns3_alpine_node/12.png" width="300">
 
 ```bash
 telnet 192.168.0.2

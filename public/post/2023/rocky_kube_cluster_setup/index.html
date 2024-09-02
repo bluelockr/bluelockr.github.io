@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 05 Aug 2024 06:16:06 &#43;0900"
+                  Modified <relative-time datetime="Mon, 02 Sep 2024 11:04:53 &#43;0900"
                     class="no-wrap">
-                    Mon, 05 Aug 2024 06:16:06 &#43;0900</relative-time>
+                    Mon, 02 Sep 2024 11:04:53 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -182,7 +182,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      1139 Words
+                      1143 Words
                     
 
                   </div>
@@ -224,31 +224,32 @@
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
                 <article class="markdown-body entry-content container-lg"><p>쿠버네티스 설치하실 정도면 어느 정도는 기본기가 있으신 분이라고 가정하고 그냥 설명하겠습니다.</p>
-<h2 id="virtualbox에-rocky-linux-설치">Virtualbox에 Rocky Linux 설치</h2>
+<h2 id="virtualbox에-rocky-linux-설치">⭐Virtualbox에 Rocky Linux 설치</h2>
 <p>다른 블로그의 글을 참조하시길 바랍니다.</p>
 <p><a href="https://mainia.tistory.com/2379">https://mainia.tistory.com/2379</a><br>
 🔼버추얼박스(VirtualBox) 이용해서 우분투(Ubuntu) 설치하기</p>
 <p><a href="https://rainbow96bear.tistory.com/entry/Kubernetes-CNI-%EC%84%A4%EC%B9%98-%EB%B0%8F-pod-%EC%83%9D%EC%84%B1-Weave">https://rainbow96bear.tistory.com/entry/Kubernetes-CNI-%EC%84%A4%EC%B9%98-%EB%B0%8F-pod-%EC%83%9D%EC%84%B1-Weave</a></p>
 <p>위 글에 따르면 버추얼박스 가상머신(VM)을 생성할 때 디스크 용량을 넉넉하게 잡아주는 게 좋다고 합니다.<br>
-50GB~100GB 정도로 설정해줍니다.</p>
+50GB~100GB 정도로 설정해줍니다.<br>
+<br></p>
 <h2 id="네트워크-설정">⭐네트워크 설정</h2>
 <p><strong>저는 호스트 아이피 대역이 192.168.0.0/24라서,</strong><br>
 <strong>게스트 아이피는 호스트 아이피 대역 내인 192.168.0.10과 20으로 설정했습니다.</strong></p>
 <h3 id="버추얼박스-자체-네트워크-설정">💧버추얼박스 자체 네트워크 설정</h3>
-<p><img src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/1.png" alt="Alt text"></p>
-<p><img src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/2.png" alt="Alt text"></p>
+<p><img style='border:1px solid #000000' src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/1.png" width="600"><br></p>
+<p><img style='border:1px solid #000000' src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/2.png" width="600"><br></p>
 <p><span style="background-color:khaki"> <strong>[NAT Networks]</strong> </span><br>
 <strong>Name : NatNetwork</strong><br>
 <strong>IP Prefix : 192.168.0.0/24</strong><br>
 <strong>Enable DHCP</strong></p>
 <h3 id="rocky-linux가-설치된-가상머신vm-설정">💧Rocky Linux가 설치된 가상머신(VM) 설정</h3>
-<p><img src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/3.png" alt="Alt text"></p>
+<p><img style='border:1px solid #000000' src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/3.png" width="600"><br></p>
 <p><span style="background-color:khaki"> <strong>[어댑터 1]</strong> </span><br>
 <strong>NAT 네트워크</strong><br>
 <strong>이름 : NatNetwork</strong></p>
 <p><em>NAT Networks 대신에 &lsquo;어댑터에 브리지&rsquo; 옵션을 선택해줘도 됩니다.</em></p>
 <h3 id="rocky-linux-내부의-ip-설정">💧Rocky Linux 내부의 IP 설정</h3>
-<p><img src="/../../images/2023/2023-09-21_2_ubuntu_kube/1.png" alt="Alt text"></p>
+<p><img style='border:1px solid #000000' src="/../../images/2023/2023-09-21_2_ubuntu_kube/1.png" width="600"><br></p>
 <p><strong>IPv4 Method : Manual(수동)</strong><br>
 <strong>IP : 192.168.0.10</strong><br>
 <strong>SM : 255.255.255.0</strong><br>
@@ -323,7 +324,7 @@
 <p><span style="color:blueviolet"> <strong>master node VM이 종료되면 master node VM을 복제합니다.</strong> </span></p>
 <p>복제할 때 이름은 worker로 해줍니다.</p>
 <h2 id="worker-노드-ip-호스트명-설정">⭐worker 노드 IP, 호스트명 설정</h2>
-<p><img src="/../../images/2023/2023-09-21_2_ubuntu_kube/2.png" alt="Alt text"></p>
+<p><img style='border:1px solid #000000' src="/../../images/2023/2023-09-21_2_ubuntu_kube/2.png" width="600"><br></p>
 <p><span style="color:blueviolet"> <strong>worker node VM을 실행합니다.</strong> </span></p>
 <p><strong>IPv4 Method : Manual</strong><br>
 <strong>IP : 192.168.0.20</strong><br>
@@ -340,7 +341,7 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo su
 </span></span><span class="line"><span class="cl">sudo kubeadm init --control-plane-endpoint<span class="o">=</span>master
 </span></span></code></pre></div><p>시간이 오래 걸립니다. 멈춘 거 아니에요ㅋㅋ</p>
-<p><img src="/../../images/2023/2023-09-21_2_ubuntu_kube/3.png" alt="Alt text"><br>
+<p><img style='border:1px solid #000000' src="/../../images/2023/2023-09-21_2_ubuntu_kube/3.png" width="600"><br>
 🔼귀차니즘 때문에 Ubuntu Kubernetes Cluster 구성 포스팅에 있던 이미지 그대로 갖다 씀(&hellip;)</p>
 <p>다 끝나면 <strong>kubeadm join</strong> 어쩌고 하는 내용이 맨 뒤에 나오는데, 이를 복사해줍니다.</p>
 <p>cat &gt; token.txt 명령어를 사용해 따로 저장해주면 더욱 좋습니다.</p>
@@ -357,7 +358,7 @@
 <p><span style="color:blueviolet"> <strong>다시 master node VM로 건너가서,</strong> </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get nodes
 </span></span></code></pre></div><p>아직은 not ready 상태입니다.</p>
-<h3 id="pod-network-addon-설치">Pod Network Addon 설치</h3>
+<h3 id="pod-network-addon-설치">💧Pod Network Addon 설치</h3>
 <p>여기에 pod network addon을 설치해주어야 합니다.</p>
 <p><a href="https://kubernetes.io/docs/concepts/cluster-administration/addons/#networking-and-network-policy">https://kubernetes.io/docs/concepts/cluster-administration/addons/#networking-and-network-policy</a><br>
 🔼Pod Network Addon 목록</p>

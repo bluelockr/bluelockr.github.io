@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 05 Aug 2024 06:16:06 &#43;0900"
+                  Modified <relative-time datetime="Mon, 02 Sep 2024 11:04:53 &#43;0900"
                     class="no-wrap">
-                    Mon, 05 Aug 2024 06:16:06 &#43;0900</relative-time>
+                    Mon, 02 Sep 2024 11:04:53 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -233,7 +233,8 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo yum install openssh-server -y
 </span></span><span class="line"><span class="cl">sudo systemctl start sshd
 </span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> sshd
-</span></span></code></pre></div><h2 id="방화벽-설정">⭐방화벽 설정</h2>
+</span></span></code></pre></div><br>
+<h2 id="방화벽-설정">⭐방화벽 설정</h2>
 <p>방화벽에서 해당 포트를 열어줘야 합니다.</p>
 <p><span style="color:#dd4814"> <strong>[Ubuntu의 경우]</strong> </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ufw allow <span class="m">22</span>
@@ -242,21 +243,25 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo firewall-cmd --permanent --zone<span class="o">=</span>public --add-port<span class="o">=</span>22/tcp
 </span></span><span class="line"><span class="cl">sudo firewall-cmd --reload
 </span></span><span class="line"><span class="cl">sudo firewall-cmd --list-ports
-</span></span></code></pre></div><p>만일 가상머신에서 실험하는 용도로 사용할 거라면 <strong>아예 방화벽 자체를 비활성하는 방법도 있습니다.</strong></p>
+</span></span></code></pre></div><p>만일 가상머신에서 실험하는 용도로 사용할 거라면 <strong>아예 방화벽 자체를 비활성하는 방법도 있습니다.</strong><br>
+<br></p>
 <p><span style="color:#dd4814"> <strong>[Ubuntu의 경우]</strong> </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl stop ufw
 </span></span><span class="line"><span class="cl">sudo systemctl disable ufw
 </span></span></code></pre></div><p><span style="color:darkcyan"> <strong>[Rocky Linux의 경우]</strong> </span></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl stop firewalld
 </span></span><span class="line"><span class="cl">sudo systemctl disable firewalld
-</span></span></code></pre></div><h2 id="호스트-ip-확인">⭐호스트 IP 확인</h2>
+</span></span></code></pre></div><br>
+<h2 id="호스트-ip-확인">⭐호스트 IP 확인</h2>
 <p>CMD창에서 ipconfig로 IP 대역을 확인합니다.</p>
 <p>NAT Network의 기준이 되는 내 컴퓨터의 IP 주소는 <strong>호스트 주소</strong>라고 하고,
 Virtualbox 가상 머신(VM) 안의 IP 주소는 <strong>게스트 주소</strong>라고 합니다.</p>
 <p>만일 호스트 IP가 <strong>192.168.0.2</strong>고,
 서브넷 마스크가 <strong>255.255.255.0</strong>이면,
 게스트 IP 192.168.0까지는 같게 설정하고 그 뒤로는 다르게 설정하면 됩니다.</p>
-<p>저는 게스트 IP를 <strong>192.168.0.10</strong>으로 설정하기로 하고 진행해보겠습니다.</p>
+<p>저는 게스트 IP를 <strong>192.168.0.10</strong>으로 설정하기로 하고 진행해보겠습니다.
+<br>
+<br></p>
 <h2 id="virtualbox-nat-network-설정">⭐Virtualbox NAT Network 설정</h2>
 <p><img src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/1.png" alt="Alt text"></p>
 <p><img src="/../../images/2023/2023-09-21_1_virtualbox_ssh_nat_network/2.png" alt="Alt text"></p>
@@ -288,7 +293,8 @@ Enable DHCP</p>
 <p>IP : <strong>192.168.0.10</strong><br>
 SM : 255.255.255.0<br>
 GW : 192.168.0.1<br>
-DNS : 8.8.8.8</p>
+DNS : 8.8.8.8<br>
+<br></p>
 <h2 id="ssh-접속-일반">⭐SSH 접속 (일반)</h2>
 <p>저는 CMD 창을 통해 접속했지만, Putty 등의 프로그램을 사용해도 상관없습니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 여기서 ubuntu는 가상머신 안의 로컬 호스트명.</span>
@@ -299,7 +305,8 @@ DNS : 8.8.8.8</p>
 </span></span></code></pre></div><p>이라고 입력했는데, -p 2222는 아까 포트포워딩에서 지정했던 2222번 포트로 접속하겠다는 이야기고,</p>
 <p>ubuntu는 가상머신(VM) 내 운영체제의 user명,</p>
 <p>@뒤에 오는 localhost는 주소를 의미합니다.</p>
-<p>127.0.0.1과 같이 숫자로 써도 상관없습니다.</p>
+<p>127.0.0.1과 같이 숫자로 써도 상관없습니다.
+<br></p>
 <h2 id="ssh-접속-rsa-사용">⭐SSH 접속 (RSA 사용)</h2>
 <p>RSA를 사용하여 SSH 접속하는 방법도 있습니다.<br>
 물론 버추얼박스 내의 리눅스에 SSH RSA 접속하려면, 위에서 쭈욱 설명드렸던 것처럼 먼저 NAT Network 관련 설정들을 모두 마치신 상태에,<br>
@@ -334,9 +341,9 @@ Save private key 버튼을 눌러 개인키를 저장합니다.<br>
 이런 문제를 해결하기 위해서는 Git Bash를 이용해주는 것이 좋다고 하여 Git Bash로 진행하였습니다.</p>
 <p>우선 Windows에서 Git Bash를 실행합니다.<br>
 꼭 관리자 권한으로 열지 않아도 됩니다.</p>
-<pre tabindex="0"><code>ssh-keygen
-엔터 3번
-</code></pre><p>저는 비밀번호를 설정하지 않을 거기 때문에 엔터를 3번 눌러줬습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen
+</span></span><span class="line"><span class="cl">엔터 3번
+</span></span></code></pre></div><p>저는 비밀번호를 설정하지 않을 거기 때문에 엔터를 3번 눌러줬습니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> .ssh
 </span></span><span class="line"><span class="cl">scp -P <span class="m">2222</span> id_rsa.pub ubuntu@localhost:.
 </span></span><span class="line"><span class="cl">yes

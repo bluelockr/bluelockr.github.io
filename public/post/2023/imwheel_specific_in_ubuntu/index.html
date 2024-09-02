@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 05 Aug 2024 06:16:06 &#43;0900"
+                  Modified <relative-time datetime="Mon, 02 Sep 2024 11:04:53 &#43;0900"
                     class="no-wrap">
-                    Mon, 05 Aug 2024 06:16:06 &#43;0900</relative-time>
+                    Mon, 02 Sep 2024 11:04:53 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -223,15 +223,15 @@
 </span></span></code></pre></div><p>그리고 다음 내용을 붙여넣어줍니다.<br>
 여기서 gwenview는 프로그램 이름입니다.<br>
 (And Paste following Lines.)</p>
-<pre tabindex="0"><code>&#34;^gwenview$&#34;  
-@Exclude
-  
-&#34;.*&#34;  
-None, Up, Button4, 3  
-None, Down, Button5, 3  
-None, Thumb1, Alt_L|Left  
-None, Thumb2, Alt_L|Right
-</code></pre><p>여기서 &ldquo;.*&ldquo;는 모든 프로그램에 적용한다는 의미이고,<br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="s2">&#34;^gwenview</span>$<span class="s2">&#34;</span>  
+</span></span><span class="line"><span class="cl">@Exclude
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;.*&#34;</span>  
+</span></span><span class="line"><span class="cl">None, Up, Button4, <span class="m">3</span>  
+</span></span><span class="line"><span class="cl">None, Down, Button5, <span class="m">3</span>  
+</span></span><span class="line"><span class="cl">None, Thumb1, Alt_L<span class="p">|</span>Left  
+</span></span><span class="line"><span class="cl">None, Thumb2, Alt_L<span class="p">|</span>Right
+</span></span></code></pre></div><p>여기서 &ldquo;.*&ldquo;는 모든 프로그램에 적용한다는 의미이고,<br>
 @는 imwheel 설정을 적용받지 않을 프로그램을 지정하는 것입니다.<br>
 저는 gwenview에서 한 번 스크롤 할 때마다 한 장씩 다음 이미지로 넘기려고 일부러 이렇게 설정했습니다.<br>
 (&rdquo;.*&rdquo; means applying imwheel settings to all programs.<br>

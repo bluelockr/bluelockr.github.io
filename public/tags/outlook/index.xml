@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Outlook on bluelockr&#39;s blog</title>
+    <link>http://localhost:1313/tags/outlook/</link>
+    <description>Recent content in Outlook on bluelockr&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Mon, 02 Sep 2024 11:04:53 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/outlook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Outlook(New)에서 Outlook(Old)로 돌아가는 법</title>
+      <link>http://localhost:1313/post/2024/outlook_new_to_old/</link>
+      <pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2024/outlook_new_to_old/</guid>
+      <description>How to go back to old Outlook</description>
+    </item>
+    <item>
+      <title>Outlook(New)에서 캘린더 ics파일 불러오기/내보내기</title>
+      <link>http://localhost:1313/post/2024/outlook_calendar_import_export_ics/</link>
+      <pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2024/outlook_calendar_import_export_ics/</guid>
+      <description>How to import/export ics file to/from Outlook(New) Calendar</description>
+    </item>
+  </channel>
+</rss>

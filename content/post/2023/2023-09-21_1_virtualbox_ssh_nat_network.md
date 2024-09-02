@@ -4,6 +4,7 @@ summary = "SSH Connection(Common/RSA) to Virtualbox NAT Network"
 date = 2023-09-21T00:00:00+00:00
 cover = ""
 slug = "ssh_to_virtualbox_nat_network_common_rsa"
+categories = ['application']
 tags = ['Windows', 'Linux', 'Virtualbox']
 draft = false
 +++
@@ -26,7 +27,7 @@ sudo yum install openssh-server -y
 sudo systemctl start sshd
 sudo systemctl enable sshd
 ```
-  
+<br>
 
 ## ⭐방화벽 설정
 
@@ -46,10 +47,10 @@ sudo firewall-cmd --permanent --zone=public --add-port=22/tcp
 sudo firewall-cmd --reload
 sudo firewall-cmd --list-ports
 ```
-  
 
 만일 가상머신에서 실험하는 용도로 사용할 거라면 **아예 방화벽 자체를 비활성하는 방법도 있습니다.**  
-  
+<br>
+
 <span style="color:#dd4814"> **\[Ubuntu의 경우\]** </span>
 
 ```bash
@@ -63,7 +64,7 @@ sudo systemctl disable ufw
 sudo systemctl stop firewalld
 sudo systemctl disable firewalld
 ```
-
+<br>
 
 ## ⭐호스트 IP 확인
  
@@ -77,7 +78,8 @@ Virtualbox 가상 머신(VM) 안의 IP 주소는 **게스트 주소**라고 합�
 게스트 IP 192.168.0까지는 같게 설정하고 그 뒤로는 다르게 설정하면 됩니다.
 
 저는 게스트 IP를 **192.168.0.10**으로 설정하기로 하고 진행해보겠습니다.
-  
+<br>
+<br>
 
 ## ⭐Virtualbox NAT Network 설정
 
@@ -129,7 +131,7 @@ IP : **192.168.0.10**
 SM : 255.255.255.0  
 GW : 192.168.0.1  
 DNS : 8.8.8.8  
-  
+<br>
 
 ## ⭐SSH 접속 (일반)
 
@@ -150,7 +152,7 @@ ubuntu는 가상머신(VM) 내 운영체제의 user명,
 @뒤에 오는 localhost는 주소를 의미합니다.  
   
 127.0.0.1과 같이 숫자로 써도 상관없습니다.
-  
+<br> 
 
 ## ⭐SSH 접속 (RSA 사용)
 
@@ -204,7 +206,7 @@ vi authorized_keys
 우선 Windows에서 Git Bash를 실행합니다.  
 꼭 관리자 권한으로 열지 않아도 됩니다.  
 
-```
+```bash
 ssh-keygen
 엔터 3번
 ```

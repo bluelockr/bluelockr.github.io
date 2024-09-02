@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scoop on bluelockr&#39;s blog</title>
+    <link>http://localhost:1313/tags/scoop/</link>
+    <description>Recent content in Scoop on bluelockr&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Mon, 02 Sep 2024 11:04:53 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/scoop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>윈도우에서 Scoop로 간단하게 프로그램 설치하기</title>
+      <link>http://localhost:1313/post/2024/windows_scoop/</link>
+      <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2024/windows_scoop/</guid>
+      <description>How to install programs simply in windows like in linux</description>
+    </item>
+  </channel>
+</rss>

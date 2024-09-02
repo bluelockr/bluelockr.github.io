@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 05 Aug 2024 06:16:06 &#43;0900"
+                  Modified <relative-time datetime="Mon, 02 Sep 2024 11:04:53 &#43;0900"
                     class="no-wrap">
-                    Mon, 05 Aug 2024 06:16:06 &#43;0900</relative-time>
+                    Mon, 02 Sep 2024 11:04:53 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -328,10 +328,8 @@ ssh -i &ldquo;mykeypair.pem&rdquo; ec2-user@xxxxxxxx 형식으로 되어있는 �
 <p>프라이빗 인스턴스기 떄문에 퍼블릭 IP는 할당하지 않습니다.</p>
 <h2 id="핑-테스트">⭐핑 테스트</h2>
 <h3 id="인터넷-nat-인스턴스-간-통신">인터넷-NAT 인스턴스 간 통신</h3>
-<blockquote>
-<p>인터넷 -&gt; nat instance -&gt; private instance</p>
-</blockquote>
-<p>위와 같은 구조로 통신이 되게 되는데,<br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">인터넷 -&gt; nat instance -&gt; private instance  
+</span></span></code></pre></div><p>위와 같은 구조로 통신이 되게 되는데,<br>
 우선 인터넷과 NAT Instance 간에 통신이 되는지 확인하겠습니다.</p>
 <p>EC2 &gt; 인스턴스 &gt; (nat-instance 체크) &gt; 연결 &gt; SSH 클라이언트</p>
 <ul>
@@ -339,10 +337,8 @@ ssh -i &ldquo;mykeypair.pem&rdquo; ec2-user@xxxxxxxx 형식으로 되어있는 �
 </ul>
 <p>이제 *pem 키 파일을 다운받은 곳으로 이동하여 해당 폴더에서 터미널을 열어주고 복붙한 명령어를 실행합니다.</p>
 <p>nat-instance에 SSH 접속이 성공하면 핑 테스트를 진행합니다.</p>
-<blockquote>
-<p>ping 8.8.8.8</p>
-</blockquote>
-<p>핑이 가면 연결 성공입니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ping 8.8.8.8
+</span></span></code></pre></div><p>핑이 가면 연결 성공입니다.</p>
 <h3 id="nat-인스턴스-private-인스턴스-간-통신">NAT 인스턴스-Private 인스턴스 간 통신</h3>
 <p>이제 nat-instance에서 private-instance로 ssh 접속을 해야 합니다.<br>
 그러러면 먼저 윈도우에 있는 키를 nat-instance로 복사해야 합니다.</p>

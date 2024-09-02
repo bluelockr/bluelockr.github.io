@@ -4,6 +4,7 @@ summary = "AWS Client VPN Mutual Authentication"
 date = 2023-10-04T00:00:00+00:00
 cover = ""
 slug = "aws_client_vpn_mutual_authentication"
+categories = ['network']
 tags = ['Network', 'AWS']
 draft = false
 +++
@@ -150,7 +151,7 @@ VPC > Client VPN 엔드포인트 > 클라이언트 구성 다운로드
 
 다운로드한 클라이언트 구성 파일에 다음과 같은 내용을 추가하고 저장합니다.
 
-```
+```bash
 <cert>
 (client1.domain.tld.crt 파일의 내용 복붙)
 </cert>

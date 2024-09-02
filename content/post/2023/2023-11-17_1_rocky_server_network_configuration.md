@@ -4,11 +4,14 @@ summary = ""
 date = 2023-11-17T00:00:00+00:00
 cover = ""
 slug = "rocky_server_network_configuration"
-tags = ['RHEL']
+categories = ['linux']
+tags = ['RHEL', 'Rocky']
 draft = false
 +++
 
 *** 이 글은 공부 중 실습용으로 작성한 것으로, 실제 서비스에 적용하지 마시기 바랍니다. ***
+
+<br>
 
 ## ⭐로그인
 Rocky Linux 설치 장면은 생략하겠습니다.
@@ -18,6 +21,7 @@ Rocky Linux 설치 장면은 생략하겠습니다.
 ID : root
 비번 : (Rocky Linux 설치할 때 지정했던 비밀번호)
 ```
+<br>
 
 ## ⭐네트워크 설정
 
@@ -41,37 +45,46 @@ IP는 본인에게 적합하게 설정합니다. 버추얼박스 네트워크 �
 이번에는 NAT 네트워크 설정은 저 같은 경우,  
 호스트(버추얼박스를 돌리는 윈도우 10) IP 대역이 192.168.0.0/24 대역이니까 똑같이 192.168.0.0/24 대역으로 맞춰줄겁니다.
 
-![Alt text](/../../images/2023/2023-11-17_1_rocky_server_network/1.png)  
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/1.png" width="600"><br>
 🔼버추얼박스 NAT 네트워크 설정
-  
-![Alt text](/../../images/2023/2023-11-17_1_rocky_server_network/2.png)  
+<br>
+<br>
+<br>
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/2.png" width="600"><br>
 🔼로키 리눅스 가상머신 네트워크 설정
-
+<br>
+<br>
+<br>
 로키 리눅스 서버 내 네트워크 설정은 다음과 같이 진행할 겁니다.
 
+```bash
 IP : Manual(수동)
 IP : 192.168.0.10
 GW : 192.168.0.1
 DNS : 8.8.8.8
+```
 
-![Alt text](/../../images/2023/2023-11-17_1_rocky_server_network/3.png)  
-  
-![Alt text](/../../images/2023/2023-11-17_1_rocky_server_network/4.png)  
-  
-![Alt text](/../../images/2023/2023-11-17_1_rocky_server_network/5.png)  
-  
-![Alt text](/../../images/2023/2023-11-17_1_rocky_server_network/6.png)  
-  
-![Alt text](/../../images/2023/2023-11-17_1_rocky_server_network/7.png)  
-  
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/3.png" width="600">
+
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/4.png" width="600">
+
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/5.png" width="600">
+
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/6.png" width="600">
+
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/7.png" width="600">
+
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/8.png" width="600">
+
 ```bash
 nmcli con down enp0s3 && nmcli con up enp0s3
 ip add
 ```
 
-![Alt text](/../../images/2023/2023-11-17_1_rocky_server_network/8.png)  
-
 IP가 192.168.0.10으로 바뀌었으면 성공입니다.
+<br>
+<br>
+<br>
 
 ## ⭐SSH 접속
 
@@ -116,12 +129,15 @@ vi /etc/ssh/sshd_config
 
 해당 파일에서 #PermitRootLogin without-password 를 PermitRootLogin yes로 수정하면 됩니다.
 
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/9.png" width="600">
+
 ```bash
 systemctl restart sshd
 ```
+<br>
+<br>
+<br>
 
-![Alt text](/../../images/2023/2023-11-17_1_rocky_server_network/9.png)
-
-![Alt text](/../../images/2023/2023-11-17_1_rocky_server_network/10.png)
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/10.png" width="600">
 
 이렇게 SSH 접속에 성공했습니다.

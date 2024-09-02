@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 05 Aug 2024 06:16:06 &#43;0900"
+                  Modified <relative-time datetime="Mon, 02 Sep 2024 11:04:53 &#43;0900"
                     class="no-wrap">
-                    Mon, 05 Aug 2024 06:16:06 &#43;0900</relative-time>
+                    Mon, 02 Sep 2024 11:04:53 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -252,12 +252,10 @@ MFA 사용자 지정명이 <strong>mymfa</strong> (AWS 관리 콘솔의 IAM 메�
 <p><strong>C:\Users\myhost\.aws</strong> 폴더로 이동하면 안에 <strong>config</strong> 파일이 있습니다.<br>
 열어보면 Vault에 추가해준 프로필이 등록되어있습니다.<br>
 여기에 MFA 설정을 다음과 같이 집어넣고 저장합니다.</p>
-<blockquote>
-<p>[profile <strong>student</strong>]
-region = ap-northeast-2
-mfa_serial = arn:aws:iam::<strong>123456789101</strong>:mfa/<strong>mymfa</strong></p>
-</blockquote>
-<h2 id="aws-vault-작동-확인">AWS Vault 작동 확인</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="se">\[</span>profile **student**<span class="se">\]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">region</span> <span class="o">=</span> ap-northeast-2
+</span></span><span class="line"><span class="cl"><span class="nv">mfa_serial</span> <span class="o">=</span> arn:aws:iam::**123456789101**:mfa/**mymfa**
+</span></span></code></pre></div><h2 id="aws-vault-작동-확인">AWS Vault 작동 확인</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 임시 credential을 사용하여 aws s3 목록 확인</span>
 </span></span><span class="line"><span class="cl">aws-vault <span class="nb">exec</span> student -- aws s3 ls
 </span></span><span class="line"><span class="cl"><span class="c1"># 임시 credential을 사용하지 않으면 정상작동 안 됨</span>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Application on bluelockr&#39;s blog</title>
+    <link>http://localhost:1313/categories/application/</link>
+    <description>Recent content in Application on bluelockr&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ko</language>
+    <lastBuildDate>Mon, 02 Sep 2024 11:04:53 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/application/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>패스워드 관리자 Bitwarden 설치 및 기본 사용법</title>
+      <link>http://localhost:1313/post/2024/bitwarden_installation_and_userguide/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2024/bitwarden_installation_and_userguide/</guid>
+      <description>How to install and use Bitwarden</description>
+    </item>
+    <item>
+      <title>Outlook(New)에서 Outlook(Old)로 돌아가는 법</title>
+      <link>http://localhost:1313/post/2024/outlook_new_to_old/</link>
+      <pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2024/outlook_new_to_old/</guid>
+      <description>How to go back to old Outlook</description>
+    </item>
+    <item>
+      <title>Outlook(New)에서 캘린더 ics파일 불러오기/내보내기</title>
+      <link>http://localhost:1313/post/2024/outlook_calendar_import_export_ics/</link>
+      <pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2024/outlook_calendar_import_export_ics/</guid>
+      <description>How to import/export ics file to/from Outlook(New) Calendar</description>
+    </item>
+    <item>
+      <title>파이어폭스 탭 높이 좁게 만들기</title>
+      <link>http://localhost:1313/post/2024/firefox_tab_height/</link>
+      <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2024/firefox_tab_height/</guid>
+      <description>How to Adjust Firefox Tab Height</description>
+    </item>
+    <item>
+      <title>Virtualbox에 pfSense 설치 시 오류</title>
+      <link>http://localhost:1313/post/2023/pfsense_installation_error_in_virtualbox/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/pfsense_installation_error_in_virtualbox/</guid>
+      <description>pfSense installation error in Virtualbox</description>
+    </item>
+    <item>
+      <title>Virtualbox 가상머신 안의 Linux에 NAT Network인 상태에서 SSH 접속(일반/RSA)하는 법</title>
+      <link>http://localhost:1313/post/2023/ssh_to_virtualbox_nat_network_common_rsa/</link>
+      <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/ssh_to_virtualbox_nat_network_common_rsa/</guid>
+      <description>SSH Connection(Common/RSA) to Virtualbox NAT Network</description>
+    </item>
+    <item>
+      <title>Virtualbox에서 Linux 클립보드(복사-붙여넣기) 사용하는 법</title>
+      <link>http://localhost:1313/post/2023/virtualbox_clipboard/</link>
+      <pubDate>Sun, 17 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023/virtualbox_clipboard/</guid>
+      <description>How to Share Clipboard between hosts and guests in Virtualbox</description>
+    </item>
+  </channel>
+</rss>

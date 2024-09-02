@@ -168,9 +168,9 @@ nmtui 다음으로는 아래와 같이 진행합니다. IP는 본인에게 적�
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 05 Aug 2024 06:16:06 &#43;0900"
+                  Modified <relative-time datetime="Mon, 02 Sep 2024 11:04:53 &#43;0900"
                     class="no-wrap">
-                    Mon, 05 Aug 2024 06:16:06 &#43;0900</relative-time>
+                    Mon, 02 Sep 2024 11:04:53 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -216,6 +216,15 @@ nmtui 다음으로는 아래와 같이 진행합니다. IP는 본인에게 적�
                       RHEL
                     </a>
                     
+                    <a class="muted-link mr-3" href="/tags/rocky">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      Rocky
+                    </a>
+                    
                     
                   </div>
                 </div>
@@ -224,12 +233,14 @@ nmtui 다음으로는 아래와 같이 진행합니다. IP는 본인에게 적�
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
                 <article class="markdown-body entry-content container-lg"><p>*** 이 글은 공부 중 실습용으로 작성한 것으로, 실제 서비스에 적용하지 마시기 바랍니다. ***</p>
+<br>
 <h2 id="로그인">⭐로그인</h2>
 <p>Rocky Linux 설치 장면은 생략하겠습니다.</p>
 <p>서버 부팅에 성공하면 우선 로그인해줘야 합니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ID : root
 </span></span><span class="line"><span class="cl">비번 : <span class="o">(</span>Rocky Linux 설치할 때 지정했던 비밀번호<span class="o">)</span>
-</span></span></code></pre></div><h2 id="네트워크-설정">⭐네트워크 설정</h2>
+</span></span></code></pre></div><br>
+<h2 id="네트워크-설정">⭐네트워크 설정</h2>
 <p><a href="https://docs.rockylinux.org/guides/network/basic_network_configuration/">https://docs.rockylinux.org/guides/network/basic_network_configuration/</a><br>
 🔼록키 리눅스 네트워크 설정법</p>
 <p>먼저 터미널에 다음 명령어를 입력하여 네트워크 관리자를 엽니다.</p>
@@ -241,24 +252,33 @@ IP는 본인에게 적합하게 설정합니다. 버추얼박스 네트워크 �
 <p>방법은 똑같지만,</p>
 <p>이번에는 NAT 네트워크 설정은 저 같은 경우,<br>
 호스트(버추얼박스를 돌리는 윈도우 10) IP 대역이 192.168.0.0/24 대역이니까 똑같이 192.168.0.0/24 대역으로 맞춰줄겁니다.</p>
-<p><img src="/../../images/2023/2023-11-17_1_rocky_server_network/1.png" alt="Alt text"><br>
-🔼버추얼박스 NAT 네트워크 설정</p>
-<p><img src="/../../images/2023/2023-11-17_1_rocky_server_network/2.png" alt="Alt text"><br>
-🔼로키 리눅스 가상머신 네트워크 설정</p>
-<p>로키 리눅스 서버 내 네트워크 설정은 다음과 같이 진행할 겁니다.</p>
-<p>IP : Manual(수동)
-IP : 192.168.0.10
-GW : 192.168.0.1
-DNS : 8.8.8.8</p>
-<p><img src="/../../images/2023/2023-11-17_1_rocky_server_network/3.png" alt="Alt text"></p>
-<p><img src="/../../images/2023/2023-11-17_1_rocky_server_network/4.png" alt="Alt text"></p>
-<p><img src="/../../images/2023/2023-11-17_1_rocky_server_network/5.png" alt="Alt text"></p>
-<p><img src="/../../images/2023/2023-11-17_1_rocky_server_network/6.png" alt="Alt text"></p>
-<p><img src="/../../images/2023/2023-11-17_1_rocky_server_network/7.png" alt="Alt text"></p>
+<p><img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/1.png" width="600"><br>
+🔼버추얼박스 NAT 네트워크 설정
+<br>
+<br>
+<br>
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/2.png" width="600"><br>
+🔼로키 리눅스 가상머신 네트워크 설정
+<br>
+<br>
+<br>
+로키 리눅스 서버 내 네트워크 설정은 다음과 같이 진행할 겁니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">IP : Manual<span class="o">(</span>수동<span class="o">)</span>
+</span></span><span class="line"><span class="cl">IP : 192.168.0.10
+</span></span><span class="line"><span class="cl">GW : 192.168.0.1
+</span></span><span class="line"><span class="cl">DNS : 8.8.8.8
+</span></span></code></pre></div><img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/3.png" width="600">
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/4.png" width="600">
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/5.png" width="600">
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/6.png" width="600">
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/7.png" width="600">
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/8.png" width="600">
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmcli con down enp0s3 <span class="o">&amp;&amp;</span> nmcli con up enp0s3
 </span></span><span class="line"><span class="cl">ip add
-</span></span></code></pre></div><p><img src="/../../images/2023/2023-11-17_1_rocky_server_network/8.png" alt="Alt text"></p>
-<p>IP가 192.168.0.10으로 바뀌었으면 성공입니다.</p>
+</span></span></code></pre></div><p>IP가 192.168.0.10으로 바뀌었으면 성공입니다.
+<br>
+<br>
+<br></p>
 <h2 id="ssh-접속">⭐SSH 접속</h2>
 <h3 id="ssh-설치">💧SSH 설치</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yum install openssh-server openssh-clients -y
@@ -280,9 +300,12 @@ DNS : 8.8.8.8</p>
 🔼ROOT SSH 접속 설정법</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vi /etc/ssh/sshd_config
 </span></span></code></pre></div><p>해당 파일에서 #PermitRootLogin without-password 를 PermitRootLogin yes로 수정하면 됩니다.</p>
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/9.png" width="600">
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl restart sshd
-</span></span></code></pre></div><p><img src="/../../images/2023/2023-11-17_1_rocky_server_network/9.png" alt="Alt text"></p>
-<p><img src="/../../images/2023/2023-11-17_1_rocky_server_network/10.png" alt="Alt text"></p>
+</span></span></code></pre></div><br>
+<br>
+<br>
+<img style='border:1px solid #000000' src="/../../images/2023/2023-11-17_1_rocky_server_network/10.png" width="600">
 <p>이렇게 SSH 접속에 성공했습니다.</p>
 </article>
               </div>

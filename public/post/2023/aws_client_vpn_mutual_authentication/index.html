@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 05 Aug 2024 06:16:06 &#43;0900"
+                  Modified <relative-time datetime="Mon, 02 Sep 2024 11:04:53 &#43;0900"
                     class="no-wrap">
-                    Mon, 05 Aug 2024 06:16:06 &#43;0900</relative-time>
+                    Mon, 02 Sep 2024 11:04:53 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -340,14 +340,14 @@
 </ul>
 <p>VPC &gt; Client VPN 엔드포인트 &gt; 클라이언트 구성 다운로드</p>
 <p>다운로드한 클라이언트 구성 파일에 다음과 같은 내용을 추가하고 저장합니다.</p>
-<pre tabindex="0"><code>&lt;cert&gt;
-(client1.domain.tld.crt 파일의 내용 복붙)
-&lt;/cert&gt;
-
-&lt;key&gt;
-(client1.domain.tld.key 파일의 내용 복붙)
-&lt;/key&gt;
-</code></pre><p>client1.domain.tld.crt나 key 파일의 내용을 복붙할 떄는 아까와 마찬가지로 begin, end절까지 모두 포함시킵니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&lt;cert&gt;
+</span></span><span class="line"><span class="cl"><span class="o">(</span>client1.domain.tld.crt 파일의 내용 복붙<span class="o">)</span>
+</span></span><span class="line"><span class="cl">&lt;/cert&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;key&gt;
+</span></span><span class="line"><span class="cl"><span class="o">(</span>client1.domain.tld.key 파일의 내용 복붙<span class="o">)</span>
+</span></span><span class="line"><span class="cl">&lt;/key&gt;
+</span></span></code></pre></div><p>client1.domain.tld.crt나 key 파일의 내용을 복붙할 떄는 아까와 마찬가지로 begin, end절까지 모두 포함시킵니다.</p>
 <p>client1.domain.tld.crt나 key 파일은 C드라이브의 easyrsa 폴더 안에 있습니다.</p>
 <h2 id="aws-client-vpn-설치-및-연결">⭐AWS Client VPN 설치 및 연결</h2>
 <p><a href="https://aws.amazon.com/ko/vpn/client-vpn-vpc-download/">https://aws.amazon.com/ko/vpn/client-vpn-vpc-download/</a></p>

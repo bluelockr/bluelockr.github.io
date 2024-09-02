@@ -4,6 +4,7 @@ summary = "How to apply imwheel settings to specific program in Ubuntu"
 date = 2023-07-29T00:00:00+00:00
 cover = ""
 slug = "imwheel_specific_in_ubuntu"
+categories = ['linux']
 tags = ['Ubuntu', 'Imwheel']
 draft = false
 +++
@@ -23,7 +24,7 @@ vi ~/.imwheelrc
 여기서 gwenview는 프로그램 이름입니다.  
 (And Paste following Lines.)
 
-```
+```bash
 "^gwenview$"  
 @Exclude
   

@@ -4,6 +4,7 @@ summary = "VPC Connection using NAT Instance"
 date = 2023-09-29T00:00:00+00:00
 cover = ""
 slug = "vpc_connection_using_nat_instance"
+categories = ['network']
 tags = ['Network', 'AWS']
 draft = false
 +++
@@ -149,7 +150,9 @@ EC2 > 인스턴스 > 인스턴스 시작
 
 ### 인터넷-NAT 인스턴스 간 통신
 
-> 인터넷 -> nat instance -> private instance  
+```bash
+인터넷 -> nat instance -> private instance  
+```
 
 위와 같은 구조로 통신이 되게 되는데,  
 우선 인터넷과 NAT Instance 간에 통신이 되는지 확인하겠습니다.
@@ -161,7 +164,9 @@ EC2 > 인스턴스 > (nat-instance 체크) > 연결 > SSH 클라이언트
 
 nat-instance에 SSH 접속이 성공하면 핑 테스트를 진행합니다.
 
-> ping 8.8.8.8
+```bash
+ping 8.8.8.8
+```
 
 핑이 가면 연결 성공입니다.
 

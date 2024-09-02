@@ -4,6 +4,7 @@ summary = "How to Configure RAID in Linux"
 date = 2023-09-05T00:00:00+00:00
 cover = ""
 slug = "linux_raid"
+categories = ['linux']
 tags = ['Linux', 'RAID']
 draft = false
 +++

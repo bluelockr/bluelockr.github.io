@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Mon, 05 Aug 2024 06:16:06 &#43;0900"
+                  Modified <relative-time datetime="Mon, 02 Sep 2024 11:04:53 &#43;0900"
                     class="no-wrap">
-                    Mon, 05 Aug 2024 06:16:06 &#43;0900</relative-time>
+                    Mon, 02 Sep 2024 11:04:53 &#43;0900</relative-time>
                   
                 </div>
               </div>
@@ -182,7 +182,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      612 Words
+                      671 Words
                     
 
                   </div>
@@ -214,16 +214,18 @@
 
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
-                <article class="markdown-body entry-content container-lg"><p><span style="background-color:red"> 주의! </span><br>
-<span style="color:red">학습하면서 얻은 정보를 토대로 적은 것이므로 부정확하거나 미비한 정보가 있을 수 있습니다.</span><br>
-<span style="color:red">이 점에 유의하면서 학습용 자료로서만 참고해주시기 바랍니다.</span></p>
+                <article class="markdown-body entry-content container-lg"><p>&lt;span style=&ldquo;background-color:red&quot;주의! &lt;/span
+<span style="color:red">학습하면서 얻은 정보를 토대로 적은 것이므로 부정확하거나 미비한 정보가 있을 수 있습니다.&lt;/span
+<span style="color:red">이 점에 유의하면서 학습용 자료로서만 참고해주시기 바랍니다.&lt;/span</p>
 <p>참고 :<br>
 <a href="https://faun.pub/git-secrets-installation-in-windows-60a29ff1260c">https://faun.pub/git-secrets-installation-in-windows-60a29ff1260c</a><br>
-<a href="https://2vup.com/git-secret-dotenv/">https://2vup.com/git-secret-dotenv/</a></p>
+<a href="https://2vup.com/git-secret-dotenv/">https://2vup.com/git-secret-dotenv/</a>
+<br></p>
 <h2 id="git-설치">⭐Git 설치</h2>
 <p><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
 <p>Git이 컴퓨터에 설치되어있어야 합니다.<br>
-위 링크에서 다운받아줍니다.</p>
+위 링크에서 다운받아줍니다.
+<br></p>
 <h2 id="git-secrets-설치">⭐Git-secrets 설치</h2>
 <p>git bash를 실행하여 다음과 같이 진행해줍니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git update-git-for-windows
@@ -231,33 +233,29 @@
 </span></span></code></pre></div><p>Powershell을 관리자 권한으로 실행한 뒤 git-secrets가 설치되어있는 곳으로 이동합니다.<br>
 보통은 c:\users\유저명\에 위치해있습니다.<br>
 저는 유저명이 <strong>mypc</strong>라고 가정하고 진행하겠습니다.</p>
-<blockquote>
-<p>cd c:\users\<strong>mypc</strong>\git-secrets<br>
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned<br>
-a <br>
-./install.ps1</p>
-</blockquote>
-<p>이제 git clone 등으로 내려받은 자신의 Repository 폴더가 있는 곳으로 이동합니다.<br>
-저는 사용자명 폴더 아래에 <strong>student.github.io</strong>라고 가정하고 해보겠습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> c:<span class="se">\u</span>sers<span class="se">\\</span>**mypc**<span class="se">\g</span>it-secrets  
+</span></span><span class="line"><span class="cl">Set-ExecutionPolicy -ExecutionPolicy RemoteSigned  
+</span></span><span class="line"><span class="cl">a    
+</span></span><span class="line"><span class="cl">./install.ps1  
+</span></span></code></pre></div><p>이제 git clone 등으로 내려받은 자신의 Repository 폴더가 있는 곳으로 이동합니다.<br>
+저는 사용자명 폴더 아래에 <strong>student.github.io</strong>라고 가정하고 해보겠습니다.
+<br></p>
 <h2 id="git-hook">⭐Git hook</h2>
-<blockquote>
-<p>cd c:\users\<strong>mypc</strong>\<strong>student.github.io</strong><br>
-git secrets &ndash;install<br>
-git secrets &ndash;install ~/.git-templates/git-secrets<br>
-git config &ndash;global init.templateDir ~/.git-templates/git-secrets<br>
-git secrets &ndash;register-aws &ndash;global</p>
-</blockquote>
-<p>모두 성공적으로 마치고 나면 ~폴더가 자신의 Repository 폴더 아래에 생겨나 있습니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> c:<span class="se">\u</span>sers<span class="se">\\</span>**mypc**<span class="se">\\</span>**student.github.io**  
+</span></span><span class="line"><span class="cl">git secrets --install  
+</span></span><span class="line"><span class="cl">git secrets --install ~/.git-templates/git-secrets  
+</span></span><span class="line"><span class="cl">git config --global init.templateDir ~/.git-templates/git-secrets  
+</span></span><span class="line"><span class="cl">git secrets --register-aws --global  
+</span></span></code></pre></div><p>모두 성공적으로 마치고 나면 ~폴더가 자신의 Repository 폴더 아래에 생겨나 있습니다.</p>
 <p>만일 잘 되는지 확인해보려거든 config.toml이나 config.yaml 같은 설정 파일이 위치한 곳에 가서 파일 하나를 만들고 거기에 가짜 AWS Secret키 등을 집어넣어서 Commit 테스트를 해보시는 것도 방법입니다.</p>
 <p>VSCODE로 Commit을 하던, 터미널에서 Commit을 하던 위 사진과 같이 금지 문구를 필터링하여 걸러내는 것을 보실 수 있습니다.</p>
 <p>만일 잘 안 되거든 git secrets와 관련된 모든 폴더를 다 통쨰로 삭제하고 처음부터 다시해봅니다.</p>
-<blockquote>
-<p>xxxxx.github.io 폴더 안의 ~ 폴더<br>
-.git-secrets 폴더<br>
-git-secrets 폴더<br>
-.gitconfig<br>
-.git-for-windows-updater</p>
-</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">xxxxx.github.io 폴더 안의 ~ 폴더  
+</span></span><span class="line"><span class="cl">.git-secrets 폴더  
+</span></span><span class="line"><span class="cl">git-secrets 폴더  
+</span></span><span class="line"><span class="cl">.gitconfig  
+</span></span><span class="line"><span class="cl">.git-for-windows-updater
+</span></span></code></pre></div><br>
 <h2 id="파일-암호화">⭐파일 암호화</h2>
 <p><a href="https://kimmj.github.io/git/git-secret/">https://kimmj.github.io/git/git-secret/</a></p>
 <p>위 링크를 참고하시기 바랍니다.</p>
