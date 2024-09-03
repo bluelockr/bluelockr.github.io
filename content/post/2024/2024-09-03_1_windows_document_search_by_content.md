@@ -53,7 +53,7 @@ OS : Windows 11 Home
 <br>
 <br>
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-03_1_windows_document_search_by_content/6.png" width="400">  
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-03_1_windows_document_search_by_content/6.png" width="800">  
 <br>
 
 이제 위와 같이 파일 내용으로 파일을 검색할 수 있습니다.  
@@ -66,7 +66,7 @@ OS : Windows 11 Home
 <img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-03_1_windows_document_search_by_content/7.png" width="400">  
 <br>
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-03_1_windows_document_search_by_content/8.png" width="400">  
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-03_1_windows_document_search_by_content/8.png" width="600">  
 <br>
 
 혹시 잘 안 되시거든 윈도우 키+R을 누르신 후 services.msc를 실행시켜주신 뒤,  
