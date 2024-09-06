@@ -21,21 +21,14 @@ OS : Windows 11 Home
 
 ## ⭐ 1Password 설치
 
-<details>
-<summary>접기/펼치기</summary>
-
 [https://1password.com/ko/downloads/](https://1password.com/ko/downloads/)
 
 1Password에서는 데스크탑 프로그램, 웹 브라우저 확장 프로그램, 스마트폰 앱까지 모두 지원합니다.  
 위 링크에서 다운받아주면 됩니다.
 <br>
 <br>
-</details>
 
 ## ⭐ 확장 프로그램 메뉴
-
-<details>
-<summary>접기/펼치기</summary>
 
 <img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/1.png" width="600">  
 <br>
@@ -47,9 +40,6 @@ OS : Windows 11 Home
 
 ### 💧 확장 프로그램 설정 - 일반
 
-<details>
-<summary>접기/펼치기</summary>
-
 <img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/2.png" width="600">  
 <br>
 
@@ -57,12 +47,8 @@ OS : Windows 11 Home
 * 1Password 데스크톱 앱과 확장 프로그램 통합
 <br>
 <br>
-</details>
 
 ### 💧 확장 프로그램 설정 - 보안
-
-<details>
-<summary>접기/펼치기</summary>
 
 <img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/3.png" width="600">  
 <br>
@@ -80,12 +66,8 @@ OS : Windows 11 Home
 
 <br>
 <br>
-</details>
 
 ### 💧 확장 프로그램 설정 - 자동으로 채우기 및 저장
-
-<details>
-<summary>접기/펼치기</summary>
 
 <img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/5.png" width="600">  
 <br>
@@ -94,12 +76,8 @@ OS : Windows 11 Home
 
 <br>
 <br>
-</details>
 
 ### 💧 확장 프로그램 설정 - 계정 및 금고
-
-<details>
-<summary>접기/펼치기</summary>
 
 <img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/6.png" width="600">  
 <br>
@@ -134,12 +112,8 @@ OS : Windows 11 Home
 
 <br>
 <br>
-</details>
 
 ### 💧 확장 프로그램 설정 - 외관 및 단축키
-
-<details>
-<summary>접기/펼치기</summary>
 
 <img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/8.png" width="600">  
 
@@ -152,14 +126,8 @@ OS : Windows 11 Home
 <br>
 <br>
 <br>
-</details>
-</details>
-
 
 ## ⭐ 1Password 데스크탑 앱
-
-<details>
-<summary>접기/펼치기</summary>
 
 <img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/9.png" width="600">  
 <br>
@@ -184,8 +152,6 @@ CSV 파일로 백업하면 비밀번호 없이도 열 수 있습니다.
 
 ### 💧 데스크탑 앱 - 설정 - 일반
 
-<details>
-<summary>접기/펼치기</summary>
 <img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/10.png" width="600">  
 <br>
 
@@ -198,12 +164,9 @@ CSV 파일로 백업하면 비밀번호 없이도 열 수 있습니다.
 
 <br>
 <br>
-</details>
 
 ### 💧 데스크탑 앱 - 설정 - 스타일
 
-<details>
-<summary>접기/펼치기</summary>
 <img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/11.png" width="600">  
 <br>
 
@@ -214,12 +177,9 @@ CSV 파일로 백업하면 비밀번호 없이도 열 수 있습니다.
 
 <br>
 <br>
-</details>
 
 ### 💧 데스크탑 앱 - 설정 - 보안
 
-<details>
-<summary>접기/펼치기</summary>
 <img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/12.png" width="600">  
 <br>
 
@@ -229,24 +189,18 @@ CSV 파일로 백업하면 비밀번호 없이도 열 수 있습니다.
 
 <br>
 <br>
-</details>
 
 ### 💧 데스크탑 앱 - 설정 - 브라우저
 
-<details>
-<summary>접기/펼치기</summary>
 <img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/13.png" width="600">  
 <br>
 
 * 브라우저와 데스크톱 앱 연결
 <br>
 <br>
-</details>
 
 ### 💧 데스크탑 앱 - 설정 - 연구실
 
-<details>
-<summary>접기/펼치기</summary>
 <img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/14.png" width="600">  
 <br>
 
@@ -261,5 +215,3 @@ CSV 파일로 백업하면 비밀번호 없이도 열 수 있습니다.
 데스크탑 앱(PC카톡, 스팀 등등)에 로그인할 때 자동채우기용으로 유용하게 쓰입니다.
 
 이 정도만 알아두어도 사용에는 큰 지장이 없을 겁니다.
-</details>
-</details>
