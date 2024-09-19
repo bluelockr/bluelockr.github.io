@@ -18,7 +18,8 @@
 
     
     <meta name="description"
-  content="See What I’ve Written Lately" />
+  content="See What I’ve Written Lately
+" />
 <meta name="keywords"
   content='blog, google analytics' />
 <meta name="robots" content="noodp" />
@@ -28,7 +29,8 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Post - bluelockr&#39;s blog" />
 <meta name="twitter:description"
-  content="See What I’ve Written Lately" />
+  content="See What I’ve Written Lately
+" />
 <meta name="twitter:site" content="http://localhost:1313/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image"
@@ -38,7 +40,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Post - bluelockr&#39;s blog">
 <meta property="og:description"
-  content="See What I’ve Written Lately" />
+  content="See What I’ve Written Lately
+" />
 <meta property="og:url" content="http://localhost:1313/post/" />
 <meta property="og:site_name" content="Post" />
 <meta property="og:image"
@@ -155,7 +158,7 @@
                 </path>
               </svg>
               Posts
-              <span class="Counter">32</span>
+              <span class="Counter">33</span>
             </a>
             <a class="UnderlineNav-item " href="http://localhost:1313//tags/">
               <svg class="octicon octicon-repo UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16"
@@ -435,7 +438,7 @@
         </path>
       </svg>
       Posts
-      <span class="Counter ">32</span>
+      <span class="Counter ">33</span>
     </a>
     <a class='UnderlineNav-item  '
       href="http://localhost:1313//tags/">
@@ -446,7 +449,7 @@
         </path>
       </svg>
       Tags
-      <span class="Counter ">32</span>
+      <span class="Counter ">33</span>
     </a>
   </nav>
 </div>
@@ -734,6 +737,75 @@
         
       
       <ul>
+        
+        <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
+          <div class="col-12 d-inline-block">
+            <div class="d-inline-block mb-1">
+              <h3 class="wb-break-all">
+                <a href="http://localhost:1313/post/2023/rocky_server_network_configuration/">Rocky Linux 9.2 서버 네트워크 설정 실습</a>
+              </h3>
+            </div>
+
+            <div>
+              <div class="col-12 d-inline-block text-gray mb-2 pr-4">
+                <p>*** 이 글은 공부 중 실습용으로 작성한 것으로, 실제 서비스에 적용하지 마시기 바랍니다. ***</p>
+<br>
+<h2 id="로그인">⭐로그인</h2>
+<p>Rocky Linux 설치 장면은 생략하겠습니다.</p>
+<p>서버 부팅에 성공하면 우선 로그인해줘야 합니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ID : root
+</span></span><span class="line"><span class="cl">비번 : <span class="o">(</span>Rocky Linux 설치할 때 지정했던 비밀번호<span class="o">)</span>
+</span></span></code></pre></div><br>
+<h2 id="네트워크-설정">⭐네트워크 설정</h2>
+<p><a href="https://docs.rockylinux.org/guides/network/basic_network_configuration/">https://docs.rockylinux.org/guides/network/basic_network_configuration/</a><br>
+🔼록키 리눅스 네트워크 설정법</p>
+<p>먼저 터미널에 다음 명령어를 입력하여 네트워크 관리자를 엽니다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nmtui
+</span></span></code></pre></div><p>다음으로는 아래와 같이 진행합니다.
+IP는 본인에게 적합하게 설정합니다. 버추얼박스 네트워크 설정의 경우 어떻게 설정해야할지 모르겠다면 다음 글을 참고해주세요</p>
+              </div>
+            </div>
+
+            <div class="f6 text-gray mt-2">
+              
+              
+              <a class="muted-link mr-3" href="/tags/linux">
+                <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                  <path fill-rule="evenodd"
+                    d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                  </path>
+                </svg>
+                Linux
+              </a>
+              
+              <a class="muted-link mr-3" href="/tags/rhel">
+                <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                  <path fill-rule="evenodd"
+                    d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                  </path>
+                </svg>
+                RHEL
+              </a>
+              
+              <a class="muted-link mr-3" href="/tags/rocky">
+                <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                  <path fill-rule="evenodd"
+                    d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                  </path>
+                </svg>
+                Rocky
+              </a>
+              
+              
+
+              Created
+              <relative-time datetime=" Fri, 17 Nov 2023 00:00:00 &#43;0000" class="no-wrap"
+                title=" Fri, 17 Nov 2023 00:00:00 &#43;0000">
+                Fri, 17 Nov 2023 00:00:00 &#43;0000
+              </relative-time>
+            </div>
+          </div>
+        </li>
         
         <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
           <div class="col-12 d-inline-block">
@@ -1171,70 +1243,6 @@
               <relative-time datetime=" Tue, 26 Sep 2023 00:00:00 &#43;0000" class="no-wrap"
                 title=" Tue, 26 Sep 2023 00:00:00 &#43;0000">
                 Tue, 26 Sep 2023 00:00:00 &#43;0000
-              </relative-time>
-            </div>
-          </div>
-        </li>
-        
-        <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
-          <div class="col-12 d-inline-block">
-            <div class="d-inline-block mb-1">
-              <h3 class="wb-break-all">
-                <a href="http://localhost:1313/post/2023/rocky_kube_cluster_setup/">Virtualbox Rocky Linux 9.2에 Kubernetes Cluster 설치하는 법</a>
-              </h3>
-            </div>
-
-            <div>
-              <div class="col-12 d-inline-block text-gray mb-2 pr-4">
-                How to set Kubernetes Cluster to Rocky Linux 9.2 in Virtualbox
-              </div>
-            </div>
-
-            <div class="f6 text-gray mt-2">
-              
-              
-              <a class="muted-link mr-3" href="/tags/linux">
-                <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                  <path fill-rule="evenodd"
-                    d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
-                  </path>
-                </svg>
-                Linux
-              </a>
-              
-              <a class="muted-link mr-3" href="/tags/rhel">
-                <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                  <path fill-rule="evenodd"
-                    d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
-                  </path>
-                </svg>
-                RHEL
-              </a>
-              
-              <a class="muted-link mr-3" href="/tags/virtualbox">
-                <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                  <path fill-rule="evenodd"
-                    d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
-                  </path>
-                </svg>
-                Virtualbox
-              </a>
-              
-              <a class="muted-link mr-3" href="/tags/kubernetes">
-                <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-                  <path fill-rule="evenodd"
-                    d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
-                  </path>
-                </svg>
-                Kubernetes
-              </a>
-              
-              
-
-              Created
-              <relative-time datetime=" Thu, 21 Sep 2023 00:00:00 &#43;0000" class="no-wrap"
-                title=" Thu, 21 Sep 2023 00:00:00 &#43;0000">
-                Thu, 21 Sep 2023 00:00:00 &#43;0000
               </relative-time>
             </div>
           </div>

@@ -1,10 +1,10 @@
 ---
-title: "1Password 8 PC버전 기본 사용법"
-summary: "1Password 8 basic guide for pc version"
-description: "1Password 8 basic guide for pc version"
+title: "1Password 8 메뉴 정리"
+summary: "1Password 8 menus"
+description: "1Password 8 menus"
 draft: false
-date: 2024-09-06T00:00:00.000Z
-slug: "1password8_basic_guide_for_pc"
+date: 2024-09-19T00:00:00.000Z
+slug: "1password8_menus"
 tags:
   - Application
 ---
@@ -30,7 +30,7 @@ OS : Windows 11 Home
 
 ## ⭐ 확장 프로그램 메뉴
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/1.png" width="600">  
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-19_2_1password8_menus/1.png" width="600">  
 <br>
 
 일단 확장 프로그램 메뉴 위주로 살펴봅니다.  
@@ -40,7 +40,7 @@ OS : Windows 11 Home
 
 ### 💧 확장 프로그램 설정 - 일반
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/2.png" width="600">  
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-19_2_1password8_menus/2.png" width="600">  
 <br>
 
 * 브라우저 기본 비밀번호 관리 프로그램으로 설정
@@ -50,14 +50,14 @@ OS : Windows 11 Home
 
 ### 💧 확장 프로그램 설정 - 보안
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/3.png" width="600">  
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-19_2_1password8_menus/3.png" width="600">  
 <br>
 
 '1Password 열기' 버튼을 누르면 1Password 데스크탑 앱의 보안 탭이 열립니다.
 <br>
 <br>
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/4.png" width="600">  
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-19_2_1password8_menus/4.png" width="600">  
 <br>
 
 * Windows Hello 기능 사용
@@ -69,7 +69,7 @@ OS : Windows 11 Home
 
 ### 💧 확장 프로그램 설정 - 자동으로 채우기 및 저장
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/5.png" width="600">  
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-19_2_1password8_menus/5.png" width="600">  
 <br>
 
 * 자동으로 채우기 설정(자동채우기=자동입력=Autofill=Autotype)
@@ -79,7 +79,7 @@ OS : Windows 11 Home
 
 ### 💧 확장 프로그램 설정 - 계정 및 금고
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/6.png" width="600">  
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-19_2_1password8_menus/6.png" width="600">  
 <br>
 
 * 계정 삭제
@@ -90,7 +90,7 @@ OS : Windows 11 Home
 계정의 중요한 설정(2FA, 백업코드, 시크릿키, 복구코드 등)을 설정할 수 있습니다.
 <br>
 <br> 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/7.png" width="600">  
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-19_2_1password8_menus/7.png" width="600">  
 <br>
 내 프로필 페이지의 모습입니다.
 
@@ -115,7 +115,7 @@ OS : Windows 11 Home
 
 ### 💧 확장 프로그램 설정 - 외관 및 단축키
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/8.png" width="600">  
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-19_2_1password8_menus/8.png" width="600">  
 
 * 언어
 * 테마
@@ -129,7 +129,7 @@ OS : Windows 11 Home
 
 ## ⭐ 1Password 데스크탑 앱
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/9.png" width="600">  
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-19_2_1password8_menus/9.png" width="600">  
 <br>
 <br>
 
@@ -152,7 +152,7 @@ CSV 파일로 백업하면 비밀번호 없이도 열 수 있습니다.
 
 ### 💧 데스크탑 앱 - 설정 - 일반
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/10.png" width="600">  
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-19_2_1password8_menus/10.png" width="600">  
 <br>
 
 * 알림 영역에 고정
@@ -167,7 +167,7 @@ CSV 파일로 백업하면 비밀번호 없이도 열 수 있습니다.
 
 ### 💧 데스크탑 앱 - 설정 - 스타일
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/11.png" width="600">  
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-19_2_1password8_menus/11.png" width="600">  
 <br>
 
 * 테마
@@ -180,7 +180,7 @@ CSV 파일로 백업하면 비밀번호 없이도 열 수 있습니다.
 
 ### 💧 데스크탑 앱 - 설정 - 보안
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/12.png" width="600">  
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-19_2_1password8_menus/12.png" width="600">  
 <br>
 
 * Windows Hello
@@ -192,7 +192,7 @@ CSV 파일로 백업하면 비밀번호 없이도 열 수 있습니다.
 
 ### 💧 데스크탑 앱 - 설정 - 브라우저
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/13.png" width="600">  
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-19_2_1password8_menus/13.png" width="600">  
 <br>
 
 * 브라우저와 데스크톱 앱 연결
@@ -201,10 +201,10 @@ CSV 파일로 백업하면 비밀번호 없이도 열 수 있습니다.
 
 ### 💧 데스크탑 앱 - 설정 - 연구실
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/14.png" width="600">  
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-19_2_1password8_menus/14.png" width="600">  
 <br>
 
-<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-06_1_1password8_basic_guide_for_pc/15.png" width="600">  
+<img style='border:1px solid #000000; border-radius: 10px' src="/../../images/2024/2024-09-19_2_1password8_menus/15.png" width="600">  
 <br>
 
 * 자동 입력
