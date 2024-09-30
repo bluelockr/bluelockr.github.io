@@ -28,8 +28,8 @@ All you need to do is find 'dmg' from Keychain Access and delete it.)
 <img style=' border-radius: 10px' src="/../../images/2024/2024-09-29_1_delete_dmg_password_from_keychain/2.png" width="600">  
 <br>
 
-먼저 Spotlight에서 'KeyChain Access'를 검색하여 실행한 뒤
-(주로 CMD+SpaceBar 또는 F3키를 누르면 됩니다.)
+먼저 Spotlight에서 'KeyChain Access'를 검색하여 실행한 뒤  
+(주로 CMD+SpaceBar 또는 F3키를 누르면 됩니다.)  
 (First of All, PRESS CMD+SpaceBar or F3 to run Spotlight and search for 'Keychain Access'.)
 
 <img style='border-radius: 10px' src="/../../images/2024/2024-09-29_1_delete_dmg_password_from_keychain/3.png" width="400">  
