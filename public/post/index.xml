@@ -8,10 +8,17 @@
     <language>ko</language>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>키체인에 등록된 dmg 파일 비밀번호 제거하는 법</title>
-      <link>http://localhost:1313/post/2024/delete_dmg_password_from_keychain.md/</link>
+      <title>고정키와 Globe키 같이 사용하는 법</title>
+      <link>http://localhost:1313/post/2024/sticky_key_with_globe_key_in_mac/</link>
       <pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2024/delete_dmg_password_from_keychain.md/</guid>
+      <guid>http://localhost:1313/post/2024/sticky_key_with_globe_key_in_mac/</guid>
+      <description>How to use Sticky Key with Globe Key in Mac</description>
+    </item>
+    <item>
+      <title>키체인에 등록된 dmg 파일 비밀번호 제거하는 법</title>
+      <link>http://localhost:1313/post/2024/delete_dmg_password_from_keychain/</link>
+      <pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2024/delete_dmg_password_from_keychain/</guid>
       <description>How to delete dmg file password from Keychain</description>
     </item>
     <item>

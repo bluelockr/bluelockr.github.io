@@ -1,12 +1,14 @@
 ---
 title: "키체인에 등록된 dmg 파일 비밀번호 제거하는 법"
 summary: "How to delete dmg file password from Keychain"
-description: "delete_dmg_password_from_keychain.md"
+description: "delete_dmg_password_from_keychain"
 draft: false
 date: 2024-09-29T00:00:00.000Z
-slug: "delete_dmg_password_from_keychain.md"
+slug: "delete_dmg_password_from_keychain"
 tags:
+  - Mac
   - Application
+  - Keychain
 ---
 
 ```bash
