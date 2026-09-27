@@ -40,7 +40,7 @@ shift+space 등으로 한영키 전환하려고 했지만 되지 않았습니다
 
 # 4. 한영키 전환 등록
 
-<img style=' border-radius: 10px' src="/../../images/2026/2026-09-27_1_from_mac_to_windows_rdp_hangul_key_settings/1.png" width="800">
+<img style=' border-radius: 10px' src="/../../images/2026/2026-09-29_1_from_mac_to_windows_rdp_hangul_key_settings/1.png" width="800">
 <br>
 
 우측 cmd키를 누르면 `Packet`키 등으로 표시가 됩니다. 이를 `IME Hangul`키에 매핑합니다.
