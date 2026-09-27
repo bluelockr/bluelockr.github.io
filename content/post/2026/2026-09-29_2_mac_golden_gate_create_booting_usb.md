@@ -29,7 +29,7 @@ softwareupdate --fetch-full-installer --full-installer-version 27.0
 ```
 
 # 3. USB 플래시 드라이브 포맷
-맥의 디스크 유틸리티를 이용하여 포맷하되 `HPFS+`로 포맷하고 이름은 `MyVolume`으로 설정합니다.
+맥의 디스크 유틸리티를 이용하여 포맷하되 `JHFS+`로 포맷하고 이름은 `MyVolume`으로 설정합니다.
 
 # 4. 설치 USB 제작
 ```bash
